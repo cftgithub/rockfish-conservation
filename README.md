@@ -23,7 +23,14 @@ Rockfish is a vulnerable fish specie that is being overfished by commercial and 
 
 *Design Layouts*
 
-TBD
+![App Process Flow](./out/client/processFlow/processFlow.svg)
+
+Potential approach:
+* One person does Species and Training Pages
+* One person does Home page and templating for site design
+* One person does Creel page
+* One person does Regulations and Fishing Page
+* Mark floats across all pages for fish info and general help
 
 *Collaborator Roles*
 
@@ -33,7 +40,7 @@ Riley Chatwin:
 
 Megan Swenson:
 
-Mark Syphus:
+Mark Syphus:  Fish technical information
 
 Chiafong Tsao:
 
@@ -45,4 +52,5 @@ Chiafong Tsao:
 * MongoDB/Mongoose ORM
 * MySQL/Sequelize
 * Heroku
+* UML/Plant UML
 
