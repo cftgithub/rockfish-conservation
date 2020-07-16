@@ -1,0 +1,52 @@
+@startuml "processFlow"
+
+scale 2048 width
+skinparam wrapwidth 200
+skinparam maxMessageSize 500
+skinparam backgroundColor #FFFFFF
+
+title Rockfish Conservation App Process Flow
+
+class Home {
+    Why important
+    What we do
+    How we do it
+}
+
+class Species {
+    Profiles of species
+}
+
+
+class Training {
+    Identification game
+}
+
+
+class Creel {
+    Community submitted catch data
+}
+
+
+class Fishing {
+    Safe gear, catching, and releasing
+}
+
+class Regulations {
+    How to get involved in making change
+}
+
+Home-->Creel
+Species<--Home
+Training<--Home
+Home-->Fishing
+Home-->Regulations
+
+note left of Species: fishbase.org API
+note right of Training: elaborate on msyphus.github.io/fish-finder
+note top of Creel: Database CRUD
+note "External links; maybe scrape data" as data
+data .. Fishing
+data .. Regulations
+
+@enduml
