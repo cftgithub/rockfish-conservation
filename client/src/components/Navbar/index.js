@@ -29,7 +29,7 @@ function Navbar() {
             className={
               window.location.pathname === "/species" ? "active" : ""}
           >
-            Species</Link>
+            Species Identification</Link>
         </li>
         <li className="nav-item nav-link">
           <Link to="/creel"

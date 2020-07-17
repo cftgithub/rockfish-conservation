@@ -16,23 +16,23 @@ Rockfish is a vulnerable fish specie that is being overfished by commercial and 
 * Must not expose sensitive API key information on the server
 
 ## Plan, Design and Research
-*Intended Application/Value of the Application*
+**_Intended Application/Value of the Application_**
 * Provide rockfish conservation awareness to users.
 * Educate users on rockfish identification.
 * Educate proper catch and release procedures to users.
 
-*Design Layouts*
+**_Design Layouts_**
 
 ![App Process Flow](./out/client/processFlow/processFlow.svg)
 
 Potential approach:
-* One person does Species and Training Pages
-* One person does Home page and templating for site design
-* One person does Creel page
+* One person does Species and Training Page
+* One person does Home Page and templating for site design
+* One person does Creel Page
 * One person does Regulations and Fishing Page
 * Mark floats across all pages for fish info and general help
 
-*Collaborator Roles*
+**_Collaborator Roles_**
 
 Aaron Bertagnole:
 
@@ -42,9 +42,9 @@ Megan Swenson:
 
 Mark Syphus:  Fish technical information
 
-Chiafong Tsao:
+Chiafong Tsao: Species/Training page; Navbar
 
-*Project Schedule*
+**_Project Schedule_**
 
 ## Technologies Used
 * ReactJS
