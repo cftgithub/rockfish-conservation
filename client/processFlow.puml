@@ -5,8 +5,6 @@ skinparam wrapwidth 200
 skinparam maxMessageSize 500
 skinparam backgroundColor #FFFFFF
 
-title Rockfish Conservation App Process Flow
-
 class Home {
     Why important
     What we do
@@ -32,25 +30,22 @@ class Fishing {
     Safe gear, catching, and releasing
 }
 
-class Regulations {
-    How to get involved in making change
-}
+hide circle
+
 
 Home-->Creel
 Species<--Home
 Training<--Home
 Home-->Fishing
-Home-->Regulations
 
 note left of Species: fishbase.org API
 note right of Training: elaborate on msyphus.github.io/fish-finder
-note top of Creel: Database CRUD
-note bottom of Fishing: Make game instead of info page?
+note top of Creel: Database CRUD.  <b>Future Dev:</b>  Fisheries Agency access for monitoring.
+note bottom of Fishing: <b>Nice to Have:</b> Make game instead of info page
 note "External links; maybe scrape data" as data
-note "Could save species from profiles list that are used to populate the game" as idea1
-note "Could use the Creel data to populate the game so players are practicing on what's most likely to be caught" as idea2
+note "<b>Future Dev:</b>  Could save species from profiles list that are used to populate the game" as idea1
+note "<b>Future Dev:</b>  Could use the Creel data to populate the game so players are practicing on what's most likely to be caught" as idea2
 data .. Fishing
-data .. Regulations
 Species ..> idea1
 idea1 ..> Training
 Creel ..> idea2
