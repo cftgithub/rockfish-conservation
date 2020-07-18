@@ -38,7 +38,7 @@ Species<--Home
 Training<--Home
 Home-->Fishing
 
-note left of Species: fishbase.org API
+note left of Species: fishwatch.gov API
 note right of Training: elaborate on msyphus.github.io/fish-finder
 note top of Creel: Database CRUD.  <b>Future Dev:</b>  Fisheries Agency access for monitoring.
 note bottom of Fishing: <b>Nice to Have:</b> Make game instead of info page

@@ -24,15 +24,17 @@ class Logout {}
 class Home{}
 
 class API {
-    fishbase RopenSci
+    fishwatch.gov
 }
 
 class Species {
     + Common Name
     + Scientific Name
     + Image
-    + Conservation Status
-    + Basic info
+    + Population Status
+    + Fishing Rate
+    + Location
+    + Biology
 }
 
 hide circle
