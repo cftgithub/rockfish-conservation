@@ -1,0 +1,45 @@
+@startuml "dataFlow"
+
+scale 2048 width
+skinparam wrapwidth 200
+skinparam maxMessageSize 500
+skinparam backgroundColor #FFFFFF
+
+class Login {
+    username, password
+}
+
+class Creel {
+   + View catch history
+   + Add new catches 
+    -- Species
+    -- Length
+    -- Date Caught
+    -- Location Caught
+   + Edit or delete catches
+}
+
+class Logout {}
+
+class Home{}
+
+class API {
+    fishbase RopenSci
+}
+
+class Species {
+    + Common Name
+    + Scientific Name
+    + Image
+    + Conservation Status
+    + Basic info
+}
+
+hide circle
+hide Logout members
+hide Home members
+
+Login --> Creel : redirect
+Logout --> Home : redirect
+API --> Species : onload get all <i>Sebastes</i>
+@enduml
