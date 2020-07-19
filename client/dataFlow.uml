@@ -19,12 +19,15 @@ class Creel {
    + Edit or delete catches
 }
 
+class MongoDB {}
+
 class Logout {}
 
 class Home{}
 
-class API {
-    fishwatch.gov
+class JSON {
+    + Species JSON
+    + Equipment JSON
 }
 
 class Species {
@@ -35,11 +38,22 @@ class Species {
     + Biology
 }
 
+class Equipment {
+    + Name
+    + Image
+    + Description
+    + Safety Info
+}
+
 hide circle
 hide Logout members
 hide Home members
+hide MongoDB members
 
 Login --> Creel : redirect
+Creel --> MongoDB : Mongoose
+MongoDB --> Creel
 Logout --> Home : redirect
-API --> Species : onload get all <i>Sebastes</i>
+JSON --> Species
+JSON --> Equipment
 @enduml
