@@ -38,14 +38,11 @@ Species<--Home
 Training<--Home
 Home-->Fishing
 
-note left of Species: fishwatch.gov API
 note right of Training: elaborate on msyphus.github.io/fish-finder
 note top of Creel: Database CRUD.  <b>Future Dev:</b>  Fisheries Agency access for monitoring.
 note bottom of Fishing: <b>Nice to Have:</b> Make game instead of info page
-note "External links; maybe scrape data" as data
 note "<b>Future Dev:</b>  Could save species from profiles list that are used to populate the game" as idea1
 note "<b>Future Dev:</b>  Could use the Creel data to populate the game so players are practicing on what's most likely to be caught" as idea2
-data .. Fishing
 Species ..> idea1
 idea1 ..> Training
 Creel ..> idea2

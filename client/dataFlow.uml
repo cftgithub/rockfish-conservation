@@ -32,8 +32,6 @@ class Species {
     + Scientific Name
     + Image
     + Population Status
-    + Fishing Rate
-    + Location
     + Biology
 }
 
