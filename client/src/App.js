@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "./pages/Home/Home.js";
+import Home from "./pages/Home";
 import Species from "./pages/Species";
 import Creel from "./pages/Creel";
-import Regulations from "./pages/Regulations";
+import Fishing from "./pages/Fishing";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
@@ -18,7 +18,8 @@ function App() {
           <Route exact path="/home" component={Home} />
           <Route exact path="/species" component={Species} />
           <Route exact path="/creel" component={Creel} />
-          <Route exact path="/regulations" component={Regulations} />
+          <Route exact path="/fishing" component={Fishing} />
+          {/* <Route exact path="/login" component={Login} /> */}
         </Wrapper>
         <Footer />
       </div>

@@ -1,19 +1,13 @@
-.footer {
-  height: 40px;
-  background: #E5E5E5;
-  position: relative;
-  margin-bottom: 0;
-  left: 0;
-  right: 0;
-}
-  
 .footer span {
   position: absolute;
   text-align: center;
-  margin-bottom: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  padding: 3px;
-  background: #B8B8B8;
+  background: rgb(1, 59, 82);
+  height: 40px;
+  color: white;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
 }
-  

@@ -1,3 +1,7 @@
-a.active {
-    padding-left: 20px;
+.navbar {
+    background-color: rgb(252, 111, 46);
+}
+
+.navbar-brand {
+    color: white;
 }
