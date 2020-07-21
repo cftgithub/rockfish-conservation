@@ -1,0 +1,28 @@
+html .body {
+    height: 100%;
+}
+
+.home-page {
+    background-image: url("../../images/ocean.jpeg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.page-title {
+    font-size: 60px;
+    font-weight: bold;
+    padding-top: 60px;
+    color: white;
+}
+
+.text-box {
+    /* background-color: rgb(65, 65, 65, 0.8); */
+    color: white;
+    margin: 100px 50px 100px 50px;
+    font-size: 40px;
+}

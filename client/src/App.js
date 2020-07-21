@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home.js";
 import Species from "./pages/Species";
 import Creel from "./pages/Creel";
 import Regulations from "./pages/Regulations";
