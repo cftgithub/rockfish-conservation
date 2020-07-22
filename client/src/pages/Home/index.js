@@ -1,13 +1,23 @@
 import React, { Component } from "react";
 import "./style.css";
 import InfoCard from "../../components/InfoCard";
-// import Video from "../../components/Video";
+import Player from "video-react";
+// import Player from "../../components/Video";
 
 class Home extends Component {
+    state = {
+        src: "https://www.pexels.com/video/bird-s-eye-view-of-ocean-waves-1918465/"
+    };
+
+    // Functions for home page
 
     render() {
         return (
             <div className="homepage container-fluid text-center">
+                <Player>
+                    <source src={this.state.source} />
+                    {/* <ControlBar autoHide={true} /> */}
+                </Player>
                 <div className="row text-center">
                     <div className="col-lg-12 col-md-auto p-0 d-flex justify-content-center text-center">
                     <InfoCard
