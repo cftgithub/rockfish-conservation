@@ -10,7 +10,7 @@ function Navbar() {
         <div className="navbar-header">
           <NavLink className="navbar-brand" to="/">
             Rockfish Conservation
-        </NavLink>
+          </NavLink>
         </div>
         <ul className="nav nav-tabs mr-auto">
           <li className="nav-item nav-link">
