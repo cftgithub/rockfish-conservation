@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     // link tag changes page path without reloading the entire page
-    <nav className="navbar bg-light navbar-light">
+    <nav className="navbar bg-light navbar-light fixed-top">
       <div className="container-fluid">
         <div className="navbar-header">
           <Link className="navbar-brand" to="/">

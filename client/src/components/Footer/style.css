@@ -1,10 +1,23 @@
-  .footer span {
+  .footer {
     position: absolute;
-    text-align: center;
     bottom: 0;
     left: 0;
     right: 0;
     padding: 3px;
     background: #B8B8B8;
   }
+
+  html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
   
