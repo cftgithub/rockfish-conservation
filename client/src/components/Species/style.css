@@ -1,7 +1,7 @@
 .fish {
-    height: 175px;
-    width: 200px;
-  }
+  height: 175px;
+  width: 200px;
+}
   
 .img-card {
   height: 100%;
@@ -18,10 +18,10 @@
 }
 
 .content {
-    text-align: center;
-    padding-bottom: 8px;
+  text-align: center;
+  padding-bottom: 8px;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }

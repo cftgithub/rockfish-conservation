@@ -1,12 +1,18 @@
 import React, { Component } from "react";
 import "./style.css";
 import InfoCard from "../../components/InfoCard";
-import { Player } from "video-react";
+import {
+    Player,
+    ControlBar
+} from 'video-react';
+import "../../../node_modules/video-react/dist/video-react.css";
+import videos from "../../assets/videos/ocean.mp4";
 // import Player from "../../components/Video";
 
 class Home extends Component {
     state = {
         src: "https://www.pexels.com/video/bird-s-eye-view-of-ocean-waves-1918465/"
+        // "../../images/ocean.mp4"
     };
 
     // Functions for home page
@@ -14,9 +20,11 @@ class Home extends Component {
     render() {
         return (
             <div className="homepage container-fluid text-center">
-                <Player>
-                    <source src={this.state.source} />
-                    {/* <ControlBar autoHide={true} /> */}
+                <Player 
+                    autoPlay 
+                    src={videos}
+                    fluid="true">
+                    <ControlBar autoHide={false} className="control-bar" />
                 </Player>
                 <div className="row text-center">
                     <div className="col-lg-12 col-md-auto p-0 d-flex justify-content-center text-center">
