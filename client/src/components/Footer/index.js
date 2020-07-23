@@ -6,7 +6,6 @@ function Footer () {
         <footer id="sticky-footer" className="footer py-4">
             <div className="container">
             <p className="m-0 text-center">Rockfish Conservation 2020</p>
-
             </div>
         </footer>
     );
