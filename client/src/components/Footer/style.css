@@ -1,13 +1,19 @@
-.footer span {
+.footer {
   position: absolute;
-  text-align: center;
   bottom: 0;
   left: 0;
   right: 0;
+  padding: 3px;
   background: rgb(1, 43, 56);
-  height: 40px;
   color: white;
-  padding: 10px;
   font-family: 'Montserrat', sans-serif;
-  border: none;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  position: fixed;
+  bottom: 0;
 }

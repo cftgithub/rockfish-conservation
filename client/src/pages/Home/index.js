@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./style.css";
 import InfoCard from "../../components/InfoCard";
-import Player from "video-react";
+import { Player } from "video-react";
 // import Player from "../../components/Video";
 
 class Home extends Component {
