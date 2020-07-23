@@ -3,27 +3,27 @@ import "./style.css";
 import InfoCard from "../../components/InfoCard";
 import { Player, ControlBar, LoadingSpinner } from 'video-react';
 import "../../../node_modules/video-react/dist/video-react.css";
-import videos from "../../assets/videos/video.mp4";
-// import Player from "../../components/Video";
+import video from "../../assets/videos/video.mp4";
 
 class Home extends Component {
     state = {
-        src: "https://www.pexels.com/video/bird-s-eye-view-of-ocean-waves-1918465/"
-        // "../../images/ocean.mp4"
+        
     };
 
     // Functions for home page
 
     render() {
         return (
-            <>
+            <div className="homepage container-fluid text-center">
                 <Player 
                     autoPlay
                     loop
-                    src={videos}>
+                    muted
+                    playsInline
+                    src={video}
+                    className="background-video">
                     <ControlBar disabled />
                     <LoadingSpinner disabled />
-                    <div className="homepage container-fluid text-center">
                         <div className="row text-center">
                             <div className="col-lg-12 col-md-auto p-0 d-flex justify-content-center text-center">
                             <InfoCard
@@ -59,9 +59,8 @@ class Home extends Component {
                                 </h5>
                             </div> */}
                         </div>
-                    </div>
                 </Player>
-            </>
+            </div>
         );
     }
 }   
