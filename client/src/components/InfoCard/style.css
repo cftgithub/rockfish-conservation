@@ -6,6 +6,8 @@
     width: 20rem;
     padding: 5px;
     border: none;
+    display: inline;
+    /* z-index: 1; */
 }
 
 .card-title {
