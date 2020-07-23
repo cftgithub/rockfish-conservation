@@ -12,44 +12,44 @@ class Creel extends Component {
           <div className='card-body text-center'>
             <h5 className='card-title text-center '>Enter Rockfish data.</h5>
             <p className='card-text'></p>
-            <div class='input-group-prepend'>
-              <span class='input-group-text' id='inputGroup-sizing-sm'>
+            <div className='input-group-prepend'>
+              <span className='input-group-text' id='inputGroup-sizing-sm'>
                 Species
               </span>
             </div>
             <input
               type='text'
-              class='form-control'
+              className='form-control'
               aria-label='Small'
               aria-describedby='inputGroup-sizing-sm'></input>
-            <div class='input-group-prepend'>
-              <span class='input-group-text' id='inputGroup-sizing-sm'>
+            <div className='input-group-prepend'>
+              <span className='input-group-text' id='inputGroup-sizing-sm'>
                 Length
               </span>
             </div>
             <input
               type='text'
-              class='form-control'
+              className='form-control'
               aria-label='Small'
               aria-describedby='inputGroup-sizing-sm'></input>
-            <div class='input-group-prepend'>
-              <span class='input-group-text' id='inputGroup-sizing-sm'>
+            <div className='input-group-prepend'>
+              <span className='input-group-text' id='inputGroup-sizing-sm'>
                 Date Caught
               </span>
             </div>
             <input
               type='text'
-              class='form-control'
+              className='form-control'
               aria-label='Small'
               aria-describedby='inputGroup-sizing-sm'></input>
-            <div class='input-group-prepend'>
-              <span class='input-group-text' id='inputGroup-sizing-sm'>
+            <div className='input-group-prepend'>
+              <span className='input-group-text' id='inputGroup-sizing-sm'>
                 Location Caught
               </span>
             </div>
             <input
               type='text'
-              class='form-control'
+              className='form-control'
               aria-label='Small'
               aria-describedby='inputGroup-sizing-sm'></input>
             <button>Add</button>

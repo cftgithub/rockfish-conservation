@@ -24,7 +24,6 @@ class App extends Component {
                         status={fish.status}
                     />
                 ))}
-
             </Wrapper>
         );
     }
