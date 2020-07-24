@@ -1,29 +1,10 @@
 .homepage {
-    /* background-image: url("../../images/ocean2.jpeg"); */
     width: 100vw;
-    height: 100vh;
     padding: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     z-index: -1;
 }
 
-.purpose-box {
-    margin: -150px 170px 0px 170px;
-    z-index: 2;
-}
-
-.purpose {
-    color: white;
-    font-size: 45px;
-    font-weight: bold;
-    font-family: 'Bebas Neue', cursive;
-}
-
-.purpose-text {
-    color: white;
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
+.cards {
+    position: absolute;
+    z-index: 1;
 }
