@@ -10,21 +10,41 @@ class App extends Component {
     state = {
         fish
     };
+    componentDidMount() {
+        window.jQuery('.btn').popover();
+    }
+    // moreInfo = id => {
+    //     const fish = this.state.fish.filter()
+    // }
 
     render() {
         return (
-            <Wrapper>
+            <>
                 <h1 className="title">Rockfish Identification</h1>
-                {this.state.fish.map(fish => (
-                    <Species
-                        key={fish.id}
-                        id={fish.id}
-                        name={fish.commonName}
-                        image={fish.image}
-                        status={fish.status}
-                    />
-                ))}
-            </Wrapper>
+                <button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="hover"
+                    title="Good" data-content="Populations of these species seem healthy and able to withstand current fishing pressures">Good</button>
+                <button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="hover"
+                    title="Vulnerable" data-content="There is reason to believe the species may become threatened in the foreseeable future. 
+                They are susceptible to bycatch or are undergoing heavy fishing pressure and their populations have not been adequately assessed. 
+                Populations may be doing well in some regions but poor in other regions.">Vulnerable</button>
+                <button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="hover"
+                    title="Threatened" data-content="Federally listed as threatened; the species is likely to become endangered in the foreseeable future">Threatened</button>
+                <button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="hover"
+                    title="Endangered">Endangered</button>
+                <button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="hover"
+                    title="Unknown">Unknown</button>
+                <Wrapper>
+                    {this.state.fish.map(fish => (
+                        <Species
+                            key={fish.id}
+                            id={fish.id}
+                            name={fish.commonName}
+                            image={fish.image}
+                            status={fish.status}
+                        />
+                    ))}
+                </Wrapper>
+            </>
         );
     }
 }
