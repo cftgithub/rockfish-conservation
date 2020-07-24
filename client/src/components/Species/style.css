@@ -24,4 +24,14 @@
 
 ul {
   list-style-type: none;
+  padding: 0;
 }
+
+/* .wrapper {
+  background-color: #c7ae63;
+  background-image: url("https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  display: flex;
+  flex-flow: row wrap;
+  padding: 50px 100px;
+  justify-content: space-around;
+} */
