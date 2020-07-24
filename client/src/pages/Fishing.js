@@ -1,6 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
+import Heading from "../components/Header";
 
-const Fishing = () => <h1>Fishing Page</h1>
-
+class Fishing extends Component {
+    render() {
+        return (
+            <>
+                <Heading title={"Fishing Page"} />
+            </>
+        );
+    }
+}
 
 export default Fishing;
