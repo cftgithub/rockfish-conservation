@@ -3,7 +3,7 @@ import "./style.css";
 
 function Footer() {
     return (
-        <footer id="sticky-footer" className="footer">
+        <footer className="footer">
             <div className="container">
                 <p className="text-center">Rockfish Conservation 2020</p>
             </div>
