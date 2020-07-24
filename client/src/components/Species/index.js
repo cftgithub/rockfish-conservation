@@ -3,7 +3,7 @@ import "./style.css";
 
 function Species(props) {
     return (
-        <div className="card">
+        <div className="card species-card">
             <div className="img-card" onClick={() => props.click(props.id)}>
                 <img className="fish" alt={props.name} src={props.image} />
             </div>
