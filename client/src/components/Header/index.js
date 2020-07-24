@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.css";
 
-function Heading() {
+function Heading(props) {
     return (
         <div className="hero">
-            <h1 className="title">Rockfish Identification</h1>
+            <h1 className="title"> {props.title} </h1>
         </div>
     );
 }
