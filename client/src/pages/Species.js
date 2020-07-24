@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Species from "../components/Species";
 import Wrapper from "../components/Wrapper";
 import Heading from "../components/Header";
+import Buttons from "../components/Buttons";
 
 import fish from "../fish.json";
 // import "../App.css";
@@ -23,6 +24,7 @@ class App extends Component {
         return (
             <>
                 <Heading />
+                <Buttons />
                 <Wrapper>
                     {this.state.fish.map(fish => (
                         <Species

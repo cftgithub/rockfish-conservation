@@ -1,11 +1,10 @@
 import React from "react";
 import "./style.css";
 
-function Heading() {
+function Buttons() {
     return (
-        <div className="hero">
-            <h1 className="title">Rockfish Identification</h1>
-                {/* <button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="hover"
+        <div className="buttons">
+                <button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="hover"
                     title="Good" data-content="Populations of these species seem healthy and able to withstand current fishing pressures.">Good</button>
                 <button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="hover"
                     title="Vulnerable" data-content="There is reason to believe the species may become threatened in the foreseeable future. 
@@ -18,9 +17,9 @@ function Heading() {
                 <button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="hover"
                     title="Unknown" data-content="We simply do not know how these species are doing. 
                     Rockfish are difficult to study and it is not always possible to get an assessment of specific species populations. 
-                    This is perhaps the worst category since we could think there is no problem when there is really a major one!">Unknown</button> */}
+                    This is perhaps the worst category since we could think there is no problem when there is really a major one!">Unknown</button>
         </div>
     );
 }
 
-export default Heading;
+export default Buttons;
