@@ -1,58 +1,67 @@
 import React from "react";
-import { Link } from "react-router-dom";
-// import "./Navbar.css";
+import { NavLink } from "react-router-dom";
+import "./style.css";
 
 function Navbar() {
   return (
     // link tag changes page path without reloading the entire page
-    <nav className="navbar bg-light navbar-light fixed-top">
+    <nav className="navbar fixed-top">
       <div className="container-fluid">
         <div className="navbar-header">
-          <Link className="navbar-brand" to="/">
+          <NavLink className="navbar-brand" to="/">
             Rockfish Conservation
-        </Link>
+          </NavLink>
         </div>
         <ul className="nav nav-tabs mr-auto">
           <li className="nav-item nav-link">
-            <Link to="/"
+            <NavLink to="/"
               className={
                 window.location.pathname === "/" ||
                   window.location.pathname === "/home"
                   ? "active"
                   : ""
               }
+              activeStyle={{ color: "white" }}
             >
-              Home</Link>
+              Home</NavLink>
           </li>
           <li className="nav-item nav-link">
-            <Link to="/species"
+            <NavLink to="/species"
               className={
                 window.location.pathname === "/species" ? "active" : ""}
+              activeStyle={{ color: "white" }}
+              style={{ color: "white" }}
             >
-              Species Identification</Link>
+              Species Identification</NavLink>
           </li>
           <li className="nav-item nav-link">
-            <Link to="/creel"
+            <NavLink to="/creel"
               className={
                 window.location.pathname === "/creel" ? "active" : ""}
+              activeStyle={{ color: "white" }}
+              style={{ color: "white" }}
             >
-              Creel</Link>
+              Creel</NavLink>
           </li>
           <li className="nav-item nav-link">
-            <Link to="/fishing"
+            <NavLink to="/fishing"
               className={
                 window.location.pathname === "/fishing" ? "active" : ""}
+              activeStyle={{ color: "white" }}
+              style={{ color: "white" }}
             >
-              Fishing</Link>
+              Fishing</NavLink>
           </li>
         </ul>
         <div className="login">
-          <Link to="/login"
+          <NavLink to="/login"
             className={
               window.location.pathname === "/login" ? "active" : ""}
+            activeStyle={{ color: "white" }} 
+            style={{ color: "white" }}
           >
             Login
-        </Link>
+        </NavLink>
         </div>
       </div>
     </nav>

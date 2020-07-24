@@ -1,3 +1,14 @@
-a.active {
-    padding-left: 20px;
+.navbar {
+    /* background-color: rgb(252, 111, 46); */
+    background-color: rgb(248, 85, 35);
+}
+
+.navbar-brand {
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+}
+
+.nav-item .login {
+    font-family: 'Montserrat', sans-serif;
 }

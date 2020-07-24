@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Footer () {
+function Footer() {
     return (
         <footer id="sticky-footer" className="footer py-4">
             <div className="container">
