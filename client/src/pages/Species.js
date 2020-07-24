@@ -23,7 +23,7 @@ class App extends Component {
     render() {
         return (
             <>
-                <Heading />
+                <Heading title={"Rockfish Identification"}/>
                 <Buttons />
                 <Wrapper>
                     {this.state.fish.map(fish => (
