@@ -5,7 +5,7 @@ import "./style.css";
 function Navbar() {
   return (
     // link tag changes page path without reloading the entire page
-    <nav className="navbar fixed-top">
+    <nav className="navbar">
       <div className="container-fluid">
         <div className="navbar-header">
           <NavLink className="navbar-brand" to="/">
