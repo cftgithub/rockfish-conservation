@@ -21,8 +21,7 @@ class Home extends Component {
                     loop
                     muted
                     playsInline
-                    src={video}
-                    className="background-video">
+                    src={video}>
                     <ControlBar disabled />
                     <LoadingSpinner disabled />
                 </Player>

@@ -14,18 +14,6 @@ function Navbar() {
         </div>
         <ul className="nav nav-tabs mr-auto">
           <li className="nav-item nav-link">
-            <NavLink to="/"
-              className={
-                window.location.pathname === "/" ||
-                  window.location.pathname === "/home"
-                  ? "active"
-                  : ""
-              }
-              activeStyle={{ color: "white" }}
-            >
-              Home</NavLink>
-          </li>
-          <li className="nav-item nav-link">
             <NavLink to="/species"
               className={
                 window.location.pathname === "/species" ? "active" : ""}
