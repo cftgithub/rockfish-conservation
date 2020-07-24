@@ -1,6 +1,16 @@
 .buttons {
     margin-top: 80px;
 }
+
 .btn {
     margin-right: 10px;
+    background-color: rgb(1, 36, 56);
+}
+
+.popover {
+border: 2px solid rgb(1, 36, 56);
+}
+
+.arrow {
+border-right-color: red !important;
 }
