@@ -10,6 +10,10 @@
     z-index: 1;
 }
 
+.home-card:hover {
+    margin-top: 50px;
+}
+
 .card-title {
     font-size: 45px;
     font-weight: bold;

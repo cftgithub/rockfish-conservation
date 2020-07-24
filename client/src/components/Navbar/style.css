@@ -24,7 +24,6 @@
 
 .nav-item .login {
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
 }
 
 .nav-tabs {
@@ -37,7 +36,7 @@
 }
 
 a:hover {
-
+    margin-top: -5px;
 }
 
 .login {
@@ -45,4 +44,14 @@ a:hover {
     font-family: 'Bebas Neue', cursive;
     font-size: 25px;
     margin-top: 7px;
+}
+
+.login:hover {
+    color: white;
+    font-size: 30px;
+    margin-right: -3px;
+    margin-left: -13.5px;
+    margin-bottom: -3px;
+    margin-top: 2px;
+    text-decoration: none;
 }
