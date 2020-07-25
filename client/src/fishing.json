@@ -1,0 +1,130 @@
+[
+    {
+        "id": 1,
+        "name": "Inverted Jig",
+        "image": "https://www.adfg.alaska.gov/static/fishing/images/sport/fishinginfo/rockfish/deepwater-release.jpg",
+        "status": "Safe",
+        "description": "A weighted jig that hooks into the fish's mouth.  The line is tied on the bottom of the jig so that it hooks upside-down.  The fish is then descended using a fishing rod.  When at the appropriate depht, a quick yank will release the device.",
+        "clicked": false
+    },
+    {
+        "id": 2,
+        "name": "RokLees Fish Descender",
+        "image": "./images/roklees.PNG",
+        "status": "Safe",
+        "description": "A weighted device that clamps onto the fish's mouth.  The fish is then descended using a fishing rod.  At the appropriate depht, a quick yank releases the device.",
+        "clicked": false
+    },
+    {
+        "id": 3,
+        "name": "SeaQualizer Descender",
+        "image": "./images/seaQualizer.PNG",
+        "description": "Another commercial device for safely descending fish followed by a quick release.",
+        "status": "Safe",
+        "clicked": false
+    },
+    {
+        "id": 4,
+        "name": "Milk Crate",
+        "image": "https://wildlife.ca.gov/Portals/0/Images/marine/groundfish/MilkCrate.jpg",
+        "status": "Safe",
+        "description":  "Place the milk crate upside down on top of the fish in the water and descend it to the appropriate depth.  Then simply pull the crate back up while the fish swims away!",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "name": "Circle Hook",
+        "image": "./images/circleHook.PNG",
+        "status": "Safe",
+        "description": "Specially designed hooks that do less damage and are easier to unhook.  In general, the hook cannot be swallowed by the fish and can only hook on the edge of the lip.",
+        "clicked": false
+    },
+    {
+        "id": 6,
+        "name": "Regular Hook",
+        "image": "./images/regularHook.PNG",
+        "status": "Unsafe",
+        "description": "Fish can easily swallow these hooks, causing severe injury.",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "name": "Regular Jig",
+        "image": "./images/regularJigHead.PNG",
+        "status": "Unsafe",
+        "description": "This is a jig for catching a fish, not releasing it.  To release a fish, the line has to be tied to the bottom of the hook, not the eye.",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "name": "Cast Net",
+        "image": "./images/castNet.PNG",
+        "status": "Unsafe",
+        "description": "Cast nets are good for catching bait fish near the surface.  They cannot reach deep enough to safely release a rockfish and the net cannot be undone in the water.",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "name": "Dip Net",
+        "image": "./images/dipNet.PNG",
+        "status": "Unsafe",
+        "description": "Dip nets cannot reach deep enough to safely release a rockfish.  Fish will likely just float near the surface and die.",
+        "clicked": false
+    },
+    {
+        "id": 10,
+        "name": "Gaff Hook",
+        "image": "./images/gaffHook.PNG",
+        "status": "Unsafe",
+        "description": "If a gaff hook is used to land the fish, it will not survive being released.  Do not gaff unless you are going to eat the fish!",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "name": "BlackTip Decompression Tool",
+        "image": "./images/blackTip.PNG",
+        "status": "Safe",
+        "description": "Another commercial device for safely descending fish followed by a quick release.",
+        "clicked": false
+    },
+    {
+        "id": 12,
+        "name": "Shelton Descender",
+        "image": "./images/shelton.PNG",
+        "status": "Safe",
+        "description": "Another commercial device for safely descending fish followed by a quick release.",
+        "clicked": false
+    },
+    {
+        "id": 13,
+        "name": "Bridge Net",
+        "image": "./images/bridgeNet.PNG",
+        "status": "Unsafe",
+        "description": "Even if on a long enough line to descend the net to a proper depth, this net is designed to be underneath the fish.  Fish experiencing barotrama will float, thus the net will sink and the fish will float to the surface.",
+        "clicked": false
+    },
+    {
+        "id": 14,
+        "name": "Dumping",
+        "image": "./images/fishDump.PNG",
+        "status": "Unsafe",
+        "description": "Dumping fish into water can cause shock and injury, not to mention a fish with barotrama will simply just float at the surface.",
+        "clicked": false
+    },
+    {
+        "id": 15,
+        "name": "Venting",
+        "image": "./images/venting.PNG",
+        "status": "Unsafe",
+        "description": "This is a controversial method that involves puncturing the swim bladder to release pressure.  This used to be a preferred method, but it can cause infection and injury to the fish.  There are now better ways!",
+        "clicked": false
+    },
+    {
+        "id": 16,
+        "name": "Crab Cage",
+        "image": "./images/crabCage.PNG",
+        "status": "Unsafe",
+        "description": "A crab cage may be used to descend a fish to proper depth, but the fish will not be able to get out of the cage...Oops!",
+        "clicked": false
+    }
+]
