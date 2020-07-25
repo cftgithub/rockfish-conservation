@@ -1,0 +1,32 @@
+.card-body.creel{
+  margin-bottom: 20px;
+  background-color:#f1dbaa;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+}
+
+.wrapper >.creelpage{
+  background-image: url(../../assets/images/ocean.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; 
+}
+.container.creel{
+  color: antiquewhite;
+}
+.card-title.creel{
+  color: black
+}
+.input-group-text.creel{
+  background-color: #f1dbaa;
+  border-color: #f1dbaa;
+}
+.add-btn{
+  border-radius: 5px;
+}
+.delete-btn{
+  border-radius: 5px;
+}
+.update-btn{
+  border-radius: 5px;
+}
