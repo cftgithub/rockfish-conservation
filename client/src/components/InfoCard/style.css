@@ -1,14 +1,13 @@
 .home-card {
     position: relative;
     color: white;
-    background-color: rgba(100, 109, 117, 0.6);
+    background-color: rgba(100, 109, 117, 0.7);
     margin: 25px;
     margin-top: 60px;
-    width: 20rem;
+    width: 22rem;
     padding: 5px;
     border: none;
     z-index: 1;
-    scroll-behavior: smooth;
 }
 
 .home-card:hover {
@@ -19,6 +18,8 @@
 .card-title {
     font-size: 45px;
     font-weight: bold;
+    height: 100px;
+    vertical-align: center;
     margin-bottom: 25px;
     font-family: 'Bebas Neue', cursive;
 }

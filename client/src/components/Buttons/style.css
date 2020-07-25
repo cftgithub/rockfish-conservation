@@ -7,8 +7,13 @@
     background-color: rgb(1, 36, 56);
 }
 
-.popover {
+.popover .good {
 border: 2px solid rgb(1, 36, 56);
+background-color: green;
+}
+
+.popover .vulnerable {
+    background-color: yellow;
 }
 
 .arrow {
