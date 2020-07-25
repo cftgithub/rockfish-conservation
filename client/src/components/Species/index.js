@@ -6,7 +6,7 @@ function Species(props) {
     return (
         <>
             <div className="card species-card">
-                <div className="img-card" onClick={() => props.click(props.id)}>
+                <div className="img-card">
                     <img className="fish" alt={props.name} src={props.image} />
                 </div>
                 <div className="content">
@@ -20,14 +20,14 @@ function Species(props) {
                     </ul>
                 </div>
                 {/* <Modal /> */}
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#fishModal">
                     Learn More</button>
 
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal fade" id="fishModal" tabindex="-1" role="dialog" aria-labelledby="fishModalTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalCenterTitle">{props.title}</h5>
+                                <h5 class="modal-title" id="fishModalTitle">{props.title}</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
