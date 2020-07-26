@@ -30,7 +30,9 @@ render() {
         <>
             <div className="card species-card">
                 <div className="img-card">
+
                     <img className="fish" alt={this.props.name} src={this.props.image} />
+
                 </div>
                 <div className="content">
                     <ul>
@@ -43,6 +45,7 @@ render() {
                     </ul>
                 </div>
                 {/* <Modal /> */}
+
                 <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#infoModal" onClick={this.modalId}>
                     Learn More</button>
             </div>
@@ -58,6 +61,7 @@ render() {
                             <div className="modal-header">
                                 <h5 className="modal-title" id="fishModalTitle">{this.state.modalTitle}</h5>
                                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
