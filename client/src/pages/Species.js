@@ -40,9 +40,9 @@ class App extends Component {
                             image={fish.image}
                             status={fish.status}
                             title={fish.commonName}
-                            sciName={"Scientific Name: " + fish.sciName}
-                            location={"Location: " + fish.location}
-                            biology={fish.biology}
+                            // sciName={"Scientific Name: " + fish.sciName}
+                            // location={"Location: " + fish.location}
+                            // biology={fish.biology}
                         />
                     ))}
                     {/* <Modal /> */}
