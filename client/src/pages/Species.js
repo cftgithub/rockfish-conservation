@@ -3,6 +3,7 @@ import Species from "../components/Species";
 import Wrapper from "../components/Wrapper";
 import Heading from "../components/Header";
 import Buttons from "../components/Buttons";
+// import Modal from "../components/Modal";
 
 import fish from "../fish.json";
 // import "../App.css";
@@ -23,7 +24,12 @@ class App extends Component {
     render() {
         return (
             <>
-                <Heading title={"Rockfish Identification"}/>
+                <Heading title={"Rockfish Identification"} />
+                {/* <Buttons title={"Good"}/>
+                <Buttons title={"Vulnerable"}/>
+                <Buttons title={"Threatened"}/>
+                <Buttons title={"Endangered"}/>
+                <Buttons title={"Unknown"}/> */}
                 <Buttons />
                 <Wrapper>
                     {this.state.fish.map(fish => (
@@ -33,8 +39,13 @@ class App extends Component {
                             name={fish.commonName}
                             image={fish.image}
                             status={fish.status}
+                            title={fish.commonName}
+                            sciName={"Scientific Name: " + fish.sciName}
+                            location={"Location: " + fish.location}
+                            biology={fish.biology}
                         />
                     ))}
+                    {/* <Modal /> */}
                 </Wrapper>
             </>
         );

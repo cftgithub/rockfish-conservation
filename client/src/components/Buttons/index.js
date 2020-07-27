@@ -6,11 +6,7 @@ function Buttons() {
         <div className="buttons">
                 <button id="good" type="button" class="btn btn-secondary good" data-toggle="popover" data-trigger="hover"
                     title="Good" data-content="Populations of these species seem healthy and able to withstand current fishing pressures.">Good</button>
-
-
-
-
-                <button type="button" class="btn btn-secondary vulnerable" data-toggle="popover" data-trigger="hover"
+                <button id="vul" type="button" class="btn btn-secondary" data-toggle="popover" data-trigger="hover"
                     title="Vulnerable" data-content="There is reason to believe the species may become threatened in the foreseeable future. 
                 They are susceptible to bycatch or are undergoing heavy fishing pressure and their populations have not been adequately assessed. 
                 Populations may be doing well in some regions but poor in other regions.">Vulnerable</button>
@@ -25,5 +21,13 @@ function Buttons() {
         </div>
     );
 }
+
+// function Buttons(props) {
+//     return (
+//         <div className="buttons">
+//                 <button type="button" class="btn btn-secondary" data-toggle="popover" data-trigger="hover" title="Good" data-content="Populations of these species seem healthy and able to withstand current fishing pressures."> {props.title} </button>
+//         </div>
+//     );
+// }
 
 export default Buttons;
