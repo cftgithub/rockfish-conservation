@@ -1,4 +1,7 @@
 .footer {
+  position: fixed;
+  bottom: 0;
+  display: block;
   width: 100%;
   padding: 12px;
   background: rgb(1, 36, 56);

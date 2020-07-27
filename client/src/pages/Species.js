@@ -10,46 +10,48 @@ import fish from "../fish.json";
 
 // Code below handles append
 class App extends Component {
-    // Sets this.state.fish to the fish json array
-    state = {
-        fish
-    };
-    componentDidMount() {
-        window.jQuery('.btn').popover();
-    }
-    // moreInfo = id => {
-    //     const fish = this.state.fish.filter()
-    // }
+  // Sets this.state.fish to the fish json array
+  state = {
+    fish
+  };
+  componentDidMount() {
+    window.jQuery('.btn').popover();
+  }
+  // moreInfo = id => {
+  //     const fish = this.state.fish.filter()
+  // }
 
-    render() {
-        return (
-            <>
-                <Heading title={"Rockfish Identification"} />
-                {/* <Buttons title={"Good"}/>
+ 
+
+  render() {
+    return (
+      <>
+        <Heading title={'Rockfish Identification'} />
+        {/* <Buttons title={"Good"}/>
                 <Buttons title={"Vulnerable"}/>
                 <Buttons title={"Threatened"}/>
                 <Buttons title={"Endangered"}/>
                 <Buttons title={"Unknown"}/> */}
-                <Buttons />
-                <Wrapper>
-                    {this.state.fish.map(fish => (
-                        <Species
-                            key={fish.id}
-                            id={fish.id}
-                            name={fish.commonName}
-                            image={fish.image}
-                            status={fish.status}
-                            title={fish.commonName}
-                            sciName={"Scientific Name: " + fish.sciName}
-                            location={"Location: " + fish.location}
-                            biology={fish.biology}
-                        />
-                    ))}
-                    {/* <Modal /> */}
-                </Wrapper>
-            </>
-        );
-    }
+        <Buttons />
+        <Wrapper>
+          {this.state.fish.map((fish, index) => {
+            return <Species
+              key={index}
+              id={fish.id}
+              name={fish.commonName}
+              image={fish.image}
+              status={fish.status}
+              title={fish.commonName}
+              sciName={'Scientific Name: ' + fish.sciName}
+              location={'Location: ' + fish.location}
+              biology={fish.biology}
+            />
+            })}
+          {/* <Modal /> */}
+        </Wrapper>
+      </>
+    );
+  }
 }
 
 export default App;

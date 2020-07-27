@@ -4,7 +4,8 @@
     background-color: rgba(100, 109, 117, 0.7);
     margin: 25px;
     margin-top: 60px;
-    width: 22rem;
+    width: 20rem;
+    margin-bottom: 60px;
     padding: 5px;
     border: none;
     z-index: 1;
@@ -12,7 +13,7 @@
 
 .home-card:hover {
     margin-top: 50px;
-    margin-bottom: 35px;
+    margin-bottom: 70px;
 }
 
 .card-title {
