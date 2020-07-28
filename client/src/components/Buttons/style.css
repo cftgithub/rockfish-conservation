@@ -7,8 +7,24 @@
     background-color: rgb(1, 36, 56);
 }
 
-.popover {
-border: 2px solid rgb(1, 36, 56);
+#popGood {
+    background-color: green;
+}
+
+#popVul {
+    background-color: yellow;
+}
+
+#popThreat {
+    background-color: orange;
+}
+
+#popEndanger {
+    background-color: red;
+}
+
+#popUnknown {
+    background-color: grey;
 }
 
 .arrow {
