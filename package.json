@@ -29,6 +29,7 @@
     "nodemon": "^2.0.4"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "express": "^4.17.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.9.25",
