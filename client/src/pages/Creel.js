@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import { List, ListItem } from '../components/List';
 
 class Creel extends Component {
   state = {
@@ -14,12 +15,10 @@ class Creel extends Component {
 
   loadCatches = () => {
     API.getCreels()
-      .then((res) =>
-      
-        this.setState({ catches: res.data, species: "", length: 0 })
-        
+      .then(res =>
+        this.setState({ catches: res.data })
       )
-      .catch((err) => console.log(err));
+      .catch(err => console.log(err));
   };
 
   render() {
@@ -95,9 +94,19 @@ class Creel extends Component {
           <div className='card col-6 text-center float-left'>
             <div className='card-body creel text-center'>
               <h5 className='card-title creel text-center '>Catch History</h5>
-              <p className='card-text' id='catches'>
-                {this.state.catches}
-              </p>
+              <List>
+                {this.state.catches.map(caught => {
+                  return (
+                    <ListItem key={caught._id}>
+                      <a href={'/creels/' + caught._id}>
+                        <strong>
+                          {caught.species} Length: {caught.length}
+                        </strong>
+                      </a>
+                    </ListItem>
+                  );
+                })}
+              </List>
             </div>
           </div>
         </div>
