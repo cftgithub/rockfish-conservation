@@ -1,7 +1,27 @@
 import React, { Component } from "react";
-import "../components/Creel"
+import API from "../utils/API";
 
 class Creel extends Component {
+  state = {
+    catches: [],
+    species: "",
+    length: 0
+  };
+
+  componentDidMount() {
+    this.loadCatches();
+  }
+
+  loadCatches = () => {
+    API.getCreels()
+      .then((res) =>
+      
+        this.setState({ catches: res.data, species: "", length: 0 })
+        
+      )
+      .catch((err) => console.log(err));
+  };
+
   render() {
     return (
       <div className='creelpage'>
@@ -74,10 +94,10 @@ class Creel extends Component {
           </div>
           <div className='card col-6 text-center float-left'>
             <div className='card-body creel text-center'>
-              <h5 className='card-title creel text-center '>
-                Enter Rockfish data.
-              </h5>
-              <p className='card-text'></p>
+              <h5 className='card-title creel text-center '>Catch History</h5>
+              <p className='card-text' id='catches'>
+                {this.state.catches}
+              </p>
             </div>
           </div>
         </div>

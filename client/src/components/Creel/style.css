@@ -3,16 +3,12 @@
   background-color:#f1dbaa;
   border-radius: 2px;
   position: relative;
-  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  
 }
 
-.wrapper >.creelpage{
-  background-image: url(../../assets/images/ocean.jpg);
-  background-size: cover;
-  background-repeat: no-repeat; 
-}
+
 .container.creel{
-  color: antiquewhite;
+  color: rgb(0, 0, 0);
 }
 .card-title.creel{
   color: black
