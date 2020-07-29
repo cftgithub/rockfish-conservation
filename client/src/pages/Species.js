@@ -12,31 +12,29 @@ import fish from "../fish.json";
 class App extends Component {
   // Sets this.state.fish to the fish json array
   state = {
-    fish
+    fish,
+    filteredFish: fish
   };
   componentDidMount() {
     window.jQuery('.btn').popover();
   }
 
-  // const [filter, setFilter] = useState('All');
-  // moreInfo = id => {
-  //     const fish = this.state.fish.filter()
-  // }
-
- 
+  buttonFilter = (status) => {
+    if (status === "All") {
+      this.setState({ filteredFish: fish })
+    } else {
+      var filteredFish = this.state.fish.filter((fish) => { return fish.status === status })
+      this.setState({ filteredFish });
+    }
+  };
 
   render() {
     return (
       <>
         <Heading title={'Rockfish Identification'} />
-        {/* <Buttons title={"Good"}/>
-                <Buttons title={"Vulnerable"}/>
-                <Buttons title={"Threatened"}/>
-                <Buttons title={"Endangered"}/>
-                <Buttons title={"Unknown"}/> */}
-        <Buttons />
+        <Buttons filterFish={this.buttonFilter.bind(this)} />
         <Wrapper>
-          {this.state.fish.map((fish, index) => {
+          {this.state.filteredFish.map((fish, index) => {
             return <Species
               key={index}
               id={fish.id}
@@ -47,8 +45,9 @@ class App extends Component {
               sciName={'Scientific Name: ' + fish.sciName}
               location={'Location: ' + fish.location}
               biology={fish.biology}
+              setFilter={this.buttonFilter}
             />
-            })}
+          })}
           {/* <Modal /> */}
         </Wrapper>
       </>
