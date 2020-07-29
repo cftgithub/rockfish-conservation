@@ -7,17 +7,28 @@
     background-color: rgb(1, 36, 56);
 }
 
-.popover .good {
-border: 2px solid rgb(1, 36, 56);
-background-color: green;
+#popGood {
+    background-color: green;
 }
 
-.popover .vulnerable {
+#popVul {
     background-color: yellow;
 }
 
+#popThreat {
+    background-color: orange;
+}
+
+#popEndanger {
+    background-color: red;
+}
+
+#popUnknown {
+    background-color: grey;
+}
+
 .arrow {
-border-right-color: red !important;
+    border-right-color: red !important;
 }
 
 /* .popover {

@@ -1,0 +1,13 @@
+.creelpage {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    padding: 0;
+    z-index: -1;
+}
+
+.cards {
+    position: absolute;
+    z-index: 2;
+    padding-bottom: 30px!important;
+}

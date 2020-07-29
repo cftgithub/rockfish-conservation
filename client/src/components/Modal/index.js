@@ -1,18 +1,30 @@
 import React from "react";
-import fish from '../../fish.json';
 import "./style.css";
 
-const Modal = ({ handleClose, show, children, props }) => {
-    const showHideClassName = show ? "modal display-block" : "modal display-none";
+class Modal extends React.Component {
+  
+// toggleModal = e => {
+//     this.props.onClick(this.props.show); 
+// };
 
-    return (
-        <div className={showHideClassName} id={props.id}>
-          <section className="modal-main">
-            {children}
-            <button onClick={handleClose}>Close</button>
-          </section>
-        </div>
-    );
+hideModal = () => {
+    this.props.onClick(this.props.show);
+}
+
+render() {
+    if(!this.props.show) {
+        return null;
+    }
+
+    // return (        
+    //     <>
+    //     <div id="modal">
+    //         <h5>{this.props.children}</h5>
+    //     </div>
+    //     <div>
+    //         <button onClick={this.hideModal}>&times;</button>
+    //     </div>
+    // );
 
 
     // // CHIAFONGS STUFF >>>
