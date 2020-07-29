@@ -12,34 +12,30 @@
     }
 
 #popGood {
+    color: rgb(34, 134, 4);
     background-color: rgb(53, 211, 5);
 }
 
-h3 {
-    background-color: green;
-
-}
-
 #popVul {
-    background-color: rgb(248, 248, 74);
+    color:  rgb(121, 121, 13);
+    background-color: rgb(248, 248, 47);
 }
 
 #popThreat {
-    background-color: rgb(250, 179, 48);
+    color: rgb(151, 100, 6);
+    background-color: orange;
 }
 
 #popEndanger {
+    color: rgb(129, 4, 4);
     background-color: rgb(228, 13, 13);
 }
 
 #popUnknown {
+    color: rgb(65, 63, 63);
     background-color: rgb(177, 174, 174);
 }
 
 .arrow {
 border-right-color: red !important;
 }
-
-/* .popover {
-    background-color: red;
-} */

@@ -17,6 +17,8 @@ class App extends Component {
   componentDidMount() {
     window.jQuery('.btn').popover();
   }
+
+  // const [filter, setFilter] = useState('All');
   // moreInfo = id => {
   //     const fish = this.state.fish.filter()
   // }
