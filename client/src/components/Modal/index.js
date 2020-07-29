@@ -19,9 +19,7 @@ render() {
     return (        
         <>
         <div id="modal">
-            <h5>{this.props.children}</h5>
-        </div>
-        <div>
+            <h6>{this.props.children}</h6>
             <button onClick={this.hideModal}>&times;</button>
         </div>
         </>

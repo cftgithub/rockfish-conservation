@@ -58,8 +58,9 @@ render() {
                     Learn More</button>
             </div>
             <Modal show={this.state.show} onClick={this.hideModal}>
-                {this.state.sciName}
-                {this.state.location}
+                {this.state.title}
+                {this.state.sciName}<br />
+                {this.state.location}<br />
                 {this.state.biology}
             </Modal>
             </>

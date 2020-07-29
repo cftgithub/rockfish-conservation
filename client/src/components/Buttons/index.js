@@ -56,7 +56,7 @@ const popVul = (
     </Popover>
   );
 
-function Buttons() {
+function Buttons(props) {
     return (
         <div className="buttons">
             <OverlayTrigger trigger="hover" overlay={popGood}>
