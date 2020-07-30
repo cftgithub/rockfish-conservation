@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import DeleteBtn from "../components/DeleteBtn";
+import EditBtn from "../components/EditBtn"
 import API from "../utils/API";
-import { List, ListItem } from '../components/List';
+import { List, ListItem } from "../components/List";
 
 class Creel extends Component {
   state = {
@@ -16,6 +18,12 @@ class Creel extends Component {
   loadCatches = () => {
     API.getCreels()
       .then((res) => this.setState({ catches: res.data }))
+      .catch((err) => console.log(err));
+  };
+
+  deleteCreel = (id) => {
+    API.deleteCreel(id)
+      .then((res) => this.loadCatches())
       .catch((err) => console.log(err));
   };
 
@@ -90,32 +98,18 @@ class Creel extends Component {
             <div className='card-body creel text-center'>
               <h5 className='card-title creel text-center '>Catch History</h5>
               <List>
-                {this.state.catches.map(caught => {
+                {this.state.catches.map((caught) => {
                   return (
                     <ListItem key={caught._id}>
-                      <a href={'/creels/' + caught._id}>
+                      <a href={"/creels/" + caught._id}>
                         <strong>
                           {caught.species} Length: {caught.length}
                         </strong>
                       </a>
-                      <div class='content-body'>
-                        <div class='content-buttons'>
-                          <button
-                            href='#'
-                            class='edit-button bg-danger float-right'
-                            data-id='{{this._id}}'>
-                            Delete
-                          </button>
-                        </div>
-                        <div class='content-buttons'>
-                          <button
-                            href='#'
-                            class='delete-button bg-info float-right'
-                            data-id='{{this._id}}'>
-                            Edit
-                          </button>
-                        </div>
-                      </div>
+                      <br></br>
+                      <DeleteBtn onClick={() => this.deleteCreel(caught._id)} />
+                      <EditBtn onClick={() => this.updateCreel(caught._id)} />
+
                     </ListItem>
                   );
                 })}
