@@ -4,9 +4,9 @@
         "commonName": "Black Rockfish",
         "sciName": "Sebastes melanops",
         "image": "https://www.fishbase.se/images/species/Semel_u9.jpg",
-        "status": "Good",
         "location": "Aleutian Islands to Baja California.",
         "biology": "Grow up to 63 cm and 4.8 kg.  At maturity, fish are between 30 and 42 cm in length. Can live up to 50 years. Enjoy rocky reefs and deep open water.",
+        "status": "Good",
         "clicked": false
     },
     {
@@ -14,9 +14,9 @@
         "commonName": "Blue Rockfish",
         "sciName": "Sebastes mystinus",
         "image": "https://www.fishbase.se/images/species/Semys_u3.jpg",
-        "status": "Good",
         "location": "Vancouver, Canada to Baja California.",
         "biology": "Grow up to 61 cm and 3.8 kg. Can live up to 44 years.  Enjoys reefs and kelp beds.  Can be found in entire water column.",
+        "status": "Good",
         "clicked": false
     },
     {
