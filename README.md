@@ -58,3 +58,5 @@ _Available on project board._
 * Heroku
 * UML/Plant UML
 
+*URL's showing where the fish images are from can be found in the [fish.json](./src/fish.json) file.  Fishing equipment images were clipped from various government and shopping sites.*
+
