@@ -4,9 +4,8 @@ import Wrapper from "../components/Wrapper";
 import Heading from "../components/Header";
 import Buttons from "../components/Buttons";
 import References from "../components/References";
-// import Modal from "../components/Modal";
-
 import fish from "../fish.json";
+// import Modal from "../components/Modal";
 // import "../App.css";
 
 // Code below handles append
