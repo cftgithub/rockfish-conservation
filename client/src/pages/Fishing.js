@@ -5,12 +5,12 @@ import Heading from "../components/Header";
 import Fishing from "../fishing.json";
 import References from "../components/References";
 
-class fishing extends Component {
+class App extends Component {
 
     render() {
         return (
             <>
-                <Heading title={"Fishing Page"} />
+                <Heading title={"Safe Fishing"} />
                 <Wrapper>
                     {Fishing.map(fish => (
                         <SafeFishing
@@ -19,6 +19,7 @@ class fishing extends Component {
                             name={fish.name}
                             image={fish.image}
                             status={fish.status}
+                            description={fish.description}
                         />
                     ))}
                 </Wrapper>
@@ -28,4 +29,4 @@ class fishing extends Component {
     }
 }
 
-export default fishing;
+export default App;

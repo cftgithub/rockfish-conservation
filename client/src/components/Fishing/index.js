@@ -15,6 +15,9 @@ function SafeFishing(props) {
                     <li>
                         <em>{"Status: " + props.status}</em>
                     </li>
+                    {/* <li>
+                        <em>{"Description: " + props.description}</em>
+                    </li> */}
                 </ul>
             </div>
         </div>
