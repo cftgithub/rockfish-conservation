@@ -7,30 +7,35 @@
     background-color: rgb(1, 36, 56);
 }
 
+.popover {
+    border: 2px solid rgb(1, 36, 56);
+    }
+
 #popGood {
-    background-color: green;
+    color: rgb(34, 134, 4);
+    background-color: rgb(53, 211, 5);
 }
 
 #popVul {
-    background-color: yellow;
+    color:  rgb(121, 121, 13);
+    background-color: rgb(248, 248, 47);
 }
 
 #popThreat {
+    color: rgb(151, 100, 6);
     background-color: orange;
 }
 
 #popEndanger {
-    background-color: red;
+    color: rgb(129, 4, 4);
+    background-color: rgb(228, 13, 13);
 }
 
 #popUnknown {
-    background-color: grey;
+    color: rgb(65, 63, 63);
+    background-color: rgb(177, 174, 174);
 }
 
 .arrow {
     border-right-color: red !important;
 }
-
-/* .popover {
-    background-color: red;
-} */
