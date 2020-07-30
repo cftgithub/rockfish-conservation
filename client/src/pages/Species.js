@@ -3,6 +3,7 @@ import Species from "../components/Species";
 import Wrapper from "../components/Wrapper";
 import Heading from "../components/Header";
 import Buttons from "../components/Buttons";
+import References from "../components/References";
 // import Modal from "../components/Modal";
 
 import fish from "../fish.json";
@@ -50,6 +51,7 @@ class App extends Component {
           })}
           {/* <Modal /> */}
         </Wrapper>
+        <References />
       </>
     );
   }

@@ -1,0 +1,10 @@
+.refList {
+    list-style-type: none;
+}
+
+.refList li {
+    display: block;
+    float: left;
+    margin: 0 10px;
+    text-decoration: underline;
+}

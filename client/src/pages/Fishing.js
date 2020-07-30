@@ -3,6 +3,7 @@ import Wrapper from "../components/Wrapper";
 import SafeFishing from "../components/Fishing";
 import Heading from "../components/Header";
 import Fishing from "../fishing.json";
+import References from "../components/References";
 
 class fishing extends Component {
 
@@ -21,6 +22,7 @@ class fishing extends Component {
                         />
                     ))}
                 </Wrapper>
+                <References />
             </>
         );
     }
