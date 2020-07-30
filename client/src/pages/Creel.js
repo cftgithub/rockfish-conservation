@@ -15,10 +15,8 @@ class Creel extends Component {
 
   loadCatches = () => {
     API.getCreels()
-      .then(res =>
-        this.setState({ catches: res.data })
-      )
-      .catch(err => console.log(err));
+      .then((res) => this.setState({ catches: res.data }))
+      .catch((err) => console.log(err));
   };
 
   render() {
@@ -49,7 +47,7 @@ class Creel extends Component {
                 aria-describedby='inputGroup-sizing-sm'></input>
               <div className='input-group-prepend'>
                 <span
-                  className='input-group-text creel'
+                  className='input-group-text creel mt-1'
                   id='inputGroup-sizing-sm'>
                   Length
                 </span>
@@ -61,7 +59,7 @@ class Creel extends Component {
                 aria-describedby='inputGroup-sizing-sm'></input>
               <div className='input-group-prepend'>
                 <span
-                  className='input-group-text creel'
+                  className='input-group-text creel mt-1'
                   id='inputGroup-sizing-sm'>
                   Date Caught
                 </span>
@@ -73,7 +71,7 @@ class Creel extends Component {
                 aria-describedby='inputGroup-sizing-sm'></input>
               <div className='input-group-prepend'>
                 <span
-                  className='input-group-text creel'
+                  className='input-group-text creel mt-1'
                   id='inputGroup-sizing-sm'>
                   Location Caught
                 </span>
@@ -86,9 +84,6 @@ class Creel extends Component {
                 aria-describedby='inputGroup-sizing-sm'></input>
               <br></br>
               <button className='add-btn  bg-success'>Add</button>
-              <br></br>
-              <button className='update-btn mb-3 mr-3 bg-info'>Update</button>
-              <button className='delete-btn mb-3 mt-2 bg-danger'>Delete</button>
             </div>
           </div>
           <div className='card col-6 text-center float-left'>
@@ -103,6 +98,24 @@ class Creel extends Component {
                           {caught.species} Length: {caught.length}
                         </strong>
                       </a>
+                      <div class='content-body'>
+                        <div class='content-buttons'>
+                          <button
+                            href='#'
+                            class='edit-button bg-danger float-right'
+                            data-id='{{this._id}}'>
+                            Delete
+                          </button>
+                        </div>
+                        <div class='content-buttons'>
+                          <button
+                            href='#'
+                            class='delete-button bg-info float-right'
+                            data-id='{{this._id}}'>
+                            Edit
+                          </button>
+                        </div>
+                      </div>
                     </ListItem>
                   );
                 })}
