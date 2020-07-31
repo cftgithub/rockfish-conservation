@@ -9,7 +9,7 @@ class Login extends Component {
     };
 
     signUp = () => {
-        API.
+        // API
     };
 
     deleteCreel = (id) => {
