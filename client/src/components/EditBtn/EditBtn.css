@@ -1,0 +1,7 @@
+.edit-btn {
+  background-color: rgb(248, 209, 35);
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  box-shadow: 1px 1px 3px gray;
+}

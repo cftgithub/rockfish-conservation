@@ -8,7 +8,7 @@
 
 .header-box {
     background-color: rgba(100, 109, 117, 0.8);
-    width: 100vw;
+    padding: 10px;
 }
 
 .title {
@@ -22,4 +22,31 @@
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
+}
+
+.catch-card {
+    border: none;
+    width: 600px;
+    margin: 50px 25px 80px 25px;
+}
+
+.catch-title {
+    color: rgba(100, 109, 117);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 60px;
+    padding: 10px;
+}
+
+.list-group-item {
+    border: none;
+}
+
+.list-group-item:hover {
+    border: none;
+}
+
+.catch-text {
+    color: rgba(100, 109, 117);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
 }

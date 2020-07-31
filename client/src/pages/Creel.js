@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import "./style.css";
 import API from "../utils/API";
-import { List, ListItem } from '../components/List';
+import { ListItem } from '../components/List';
 import CreelForm from "../components/CreelForm";
+import DeleteBtn from "../components/DeleteBtn";
+import EditBtn from "../components/EditBtn";
 import Heading from "../components/Header";
+import { Card } from "react-bootstrap";
 import { Player, ControlBar, LoadingSpinner } from 'video-react';
 import "../../node_modules/video-react/dist/video-react.css";
 import video from "../assets/videos/video.mp4";
@@ -21,10 +24,14 @@ class Creel extends Component {
 
   loadCatches = () => {
     API.getCreels()
-      .then(res =>
-        this.setState({ catches: res.data })
-      )
-      .catch(err => console.log(err));
+      .then((res) => this.setState({ catches: res.data }))
+      .catch((err) => console.log(err));
+  };
+
+  deleteCreel = (id) => {
+    API.deleteCreel(id)
+      .then((res) => this.loadCatches())
+      .catch((err) => console.log(err));
   };
 
   render() {
@@ -47,27 +54,32 @@ class Creel extends Component {
             title="Creel" 
             subtitle="Track your catches to help scientists monitor wild populations."
           />
-          <CreelForm />
-
-          <div className='card col-6 text-center float-left'>
-            <div className='card-body creel text-center'>
-              <h5 className='card-title creel text-center '>Catch History</h5>
-              <List>
-                {this.state.catches.map(caught => {
-                  return (
-                    <ListItem key={caught._id}>
-                      <a href={'/creels/' + caught._id}>
-                        <strong>
-                          {caught.species} Length: {caught.length}
-                        </strong>
-                      </a>
-                    </ListItem>
-                  );
-                })}
-              </List>
+          <div className="row">
+            <div className='col-6 text-center'>
+              <CreelForm />
+            </div>
+            <div className="col-6 text-center">
+              <Card className="catch-card">
+                <Card.Body>
+                  <Card.Title className="catch-title">Catch History</Card.Title>
+                  {this.state.catches.map((caught) => {
+                    return (
+                      <ListItem key={caught._id}>
+                        <a href={"/creels/" + caught._id}>
+                          <strong className="catch-text">
+                            {caught.species} Length: {caught.length}
+                          </strong>
+                        </a>
+                        <DeleteBtn onClick={() => this.deleteCreel(caught._id)} />
+                        <EditBtn onClick={() => this.updateCreel(caught._id)} />
+                      </ListItem>
+                    );
+                  })}
+                </Card.Body>
+              </Card>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
       </>
     );
