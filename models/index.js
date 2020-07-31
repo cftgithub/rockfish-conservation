@@ -1,3 +1,4 @@
 module.exports = {
-    Creel: require("./creelSchema")
+    Creel: require("./creelSchema"),
+    Login: require("./login")
 };
