@@ -8,14 +8,8 @@ class Login extends Component {
         length: 0
     };
 
-    componentDidMount() {
-        this.loadCatches();
-    }
-
-    loadCatches = () => {
-        API.getCreels()
-            .then((res) => this.setState({ catches: res.data }))
-            .catch((err) => console.log(err));
+    signUp = () => {
+        API.
     };
 
     deleteCreel = (id) => {
@@ -48,6 +42,7 @@ class Login extends Component {
                             <input
                                 type='text'
                                 className='form-control'
+                                id="fname"
                                 aria-label='Small'
                                 aria-describedby='inputGroup-sizing-sm'></input>
                             <div className='input-group-prepend'>
@@ -60,6 +55,7 @@ class Login extends Component {
                             <input
                                 type='text'
                                 className='form-control'
+                                id="lname"
                                 aria-label='Small'
                                 aria-describedby='inputGroup-sizing-sm'></input>
                             <div className='input-group-prepend'>
@@ -72,6 +68,7 @@ class Login extends Component {
                             <input
                                 type='text'
                                 className='form-control'
+                                id="newUname"
                                 aria-label='Small'
                                 aria-describedby='inputGroup-sizing-sm'></input>
                             <div className='input-group-prepend'>
@@ -84,10 +81,11 @@ class Login extends Component {
                             <input
                                 type='text'
                                 className='form-control'
+                                id="newPword"
                                 aria-label='Small'
                                 aria-describedby='inputGroup-sizing-sm'></input>
                             <br></br>
-                            <button className='add-btn  bg-success'>Sign Up</button>
+                            <button className='add-btn bg-success' id="signBtn">Sign Up</button>
                         </div>
                     </div>
                     <div className='card col-6 text-center float-left'>
@@ -103,6 +101,7 @@ class Login extends Component {
                             <input
                                 type='text'
                                 className='form-control'
+                                id="uname"
                                 aria-label='Small'
                                 aria-describedby='inputGroup-sizing-sm'></input>
                             <div className='input-group-prepend'>
@@ -115,6 +114,7 @@ class Login extends Component {
                             <input
                                 type='text'
                                 className='form-control'
+                                id="pword"
                                 aria-label='Small'
                                 aria-describedby='inputGroup-sizing-sm'></input>
                             <button className='add-btn  bg-success'>Login</button>
