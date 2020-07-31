@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import DeleteBtn from "../components/DeleteBtn";
+import EditBtn from "../components/EditBtn"
 import API from "../utils/API";
-import { List, ListItem } from '../components/List';
+import { List, ListItem } from "../components/List";
 
 class Creel extends Component {
   state = {
@@ -15,10 +17,14 @@ class Creel extends Component {
 
   loadCatches = () => {
     API.getCreels()
-      .then(res =>
-        this.setState({ catches: res.data })
-      )
-      .catch(err => console.log(err));
+      .then((res) => this.setState({ catches: res.data }))
+      .catch((err) => console.log(err));
+  };
+
+  deleteCreel = (id) => {
+    API.deleteCreel(id)
+      .then((res) => this.loadCatches())
+      .catch((err) => console.log(err));
   };
 
   render() {
@@ -49,7 +55,7 @@ class Creel extends Component {
                 aria-describedby='inputGroup-sizing-sm'></input>
               <div className='input-group-prepend'>
                 <span
-                  className='input-group-text creel'
+                  className='input-group-text creel mt-1'
                   id='inputGroup-sizing-sm'>
                   Length
                 </span>
@@ -61,7 +67,7 @@ class Creel extends Component {
                 aria-describedby='inputGroup-sizing-sm'></input>
               <div className='input-group-prepend'>
                 <span
-                  className='input-group-text creel'
+                  className='input-group-text creel mt-1'
                   id='inputGroup-sizing-sm'>
                   Date Caught
                 </span>
@@ -73,7 +79,7 @@ class Creel extends Component {
                 aria-describedby='inputGroup-sizing-sm'></input>
               <div className='input-group-prepend'>
                 <span
-                  className='input-group-text creel'
+                  className='input-group-text creel mt-1'
                   id='inputGroup-sizing-sm'>
                   Location Caught
                 </span>
@@ -86,23 +92,24 @@ class Creel extends Component {
                 aria-describedby='inputGroup-sizing-sm'></input>
               <br></br>
               <button className='add-btn  bg-success'>Add</button>
-              <br></br>
-              <button className='update-btn mb-3 mr-3 bg-info'>Update</button>
-              <button className='delete-btn mb-3 mt-2 bg-danger'>Delete</button>
             </div>
           </div>
           <div className='card col-6 text-center float-left'>
             <div className='card-body creel text-center'>
               <h5 className='card-title creel text-center '>Catch History</h5>
               <List>
-                {this.state.catches.map(caught => {
+                {this.state.catches.map((caught) => {
                   return (
                     <ListItem key={caught._id}>
-                      <a href={'/creels/' + caught._id}>
+                      <a href={"/creels/" + caught._id}>
                         <strong>
                           {caught.species} Length: {caught.length}
                         </strong>
                       </a>
+                      <br></br>
+                      <DeleteBtn onClick={() => this.deleteCreel(caught._id)} />
+                      <EditBtn onClick={() => this.updateCreel(caught._id)} />
+
                     </ListItem>
                   );
                 })}
