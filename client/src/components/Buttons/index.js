@@ -75,7 +75,7 @@ function Buttons({ filterFish }) {
       <OverlayTrigger trigger={['hover', 'focus']} placement="left" overlay={popUnk}>
         <Button onClick={() => { filterFish("Unknown") }} variant="info">Unknown</Button>
       </OverlayTrigger>
-      <Button variant="info" href="#">Play Game</Button>
+      <Button variant="info" href="https://cftgithub.github.io/rockfishGame/" target="_blank">Play Game</Button>
     </div>
   );
 }
