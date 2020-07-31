@@ -42,11 +42,11 @@ class Creel extends Component {
         </Player>
       </div>
       <div className="col-lg-12 col-md-auto p-0 d-flex justify-content-center text-center cards">
-        <div className='container creel'>
-          <Heading title="Creel" />
-          <h4 className='text-center mb-3'>
-            Track your catches to help scientists monitor wild populations.
-          </h4>
+        <div className='container-fluid creel'>
+          <Heading 
+            title="Creel" 
+            subtitle="Track your catches to help scientists monitor wild populations."
+          />
           <CreelForm />
 
           <div className='card col-6 text-center float-left'>
