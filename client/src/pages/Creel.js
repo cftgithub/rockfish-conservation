@@ -10,6 +10,9 @@ import { Card } from "react-bootstrap";
 import { Player, ControlBar, LoadingSpinner } from 'video-react';
 import "../../node_modules/video-react/dist/video-react.css";
 import video from "../assets/videos/video.mp4";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { logoutUser } from "../../actions/authActions";
 
 class Creel extends Component {
   state = {
@@ -34,7 +37,13 @@ class Creel extends Component {
       .catch((err) => console.log(err));
   };
 
+  onLogoutClick = e => {
+    e.preventDefault();
+    this.props.logoutUser();
+  };
+
   render() {
+    const { user } = this.props.auth;
     return (
       <>
       <div className="creelpage container-fluid text-center">
@@ -50,6 +59,7 @@ class Creel extends Component {
       </div>
       <div className="col-lg-12 col-md-auto p-0 d-flex justify-content-center text-center cards">
         <div className='container-fluid creel'>
+            <button onClick={this.onLogoutClick}>Logout</button>
           <Heading 
             title="Creel" 
             subtitle="Track your catches to help scientists monitor wild populations."
@@ -86,4 +96,14 @@ class Creel extends Component {
   }
 }
 
-export default Creel;
+Creel.propTypes = {
+  logoutUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+export default connect(
+  mapStateToProps,
+  { logoutUser }
+)(Creel);

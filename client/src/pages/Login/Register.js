@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 // import API from "../../utils/API";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { registerUser } from "../../actions/authActions";
+import classnames from "classnames";
 
 class Register extends Component {
     state = {
@@ -9,6 +13,20 @@ class Register extends Component {
         password2: "",
         errors: {}
     };
+
+    componentDidMount() {
+        if (this.props.auth.isAuthenticated) {
+            this.props.history.push("/dashboard");
+        }
+    }
+    
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.errors) {
+            this.setState({
+                errors: nextProps.errors
+            });
+        }
+    }
 
     onChange = e => {
         this.setState({ [e.target.id]: e.target.value });
@@ -20,7 +38,7 @@ class Register extends Component {
             password: this.state.password,
             password2: this.state.password2
         };
-        console.log(newUser);
+        this.props.registerUser(newUser, this.props.history); 
     };
 
     render() {
@@ -46,29 +64,36 @@ class Register extends Component {
                                     id='inputGroup-sizing-sm'>
                                     Username
                                 </span>
+                                <span className="red-text">{errors.name}</span>
                             </div>
                             <input
                                 onChange={this.onChange}
                                 value={this.state.username}
                                 error={errors.username}
                                 type='text'
-                                className='form-control'
+                                className={classnames("", {
+                                    invalid: errors.username
+                                    })}  
                                 id="newUsername"
                                 aria-label='Small'
-                                aria-describedby='inputGroup-sizing-sm'></input>
+                                aria-describedby='inputGroup-sizing-sm'>
+                            </input>
                             <div className='input-group-prepend'>
                                 <span
                                     className='input-group-text creel mt-1'
                                     id='inputGroup-sizing-sm'>
                                     Password
                                 </span>
+                                <span className="red-text">{errors.password}</span>
                             </div>
                             <input
                                 onChange={this.onChange}
                                 value={this.password}
                                 error={errors.password}
                                 type='password'
-                                className='form-control'
+                                className={classnames("", {
+                                    invalid: errors.username
+                                    })}  
                                 id="newpassword"
                                 aria-label='Small'
                                 aria-describedby='inputGroup-sizing-sm'></input>
@@ -78,13 +103,16 @@ class Register extends Component {
                                     id='inputGroup-sizing-sm'>
                                     Confirm Password
                                 </span>
+                                <span className="red-text">{errors.password2}</span>
                             </div>
                             <input
                                 onChange={this.onChange}
                                 value={this.password2}
                                 error={errors.password2}
                                 type='password'
-                                className='form-control'
+                                className={classnames("", {
+                                    invalid: errors.username
+                                    })} 
                                 id="confPassword"
                                 aria-label='Small'
                                 aria-describedby='inputGroup-sizing-sm'></input>
@@ -99,4 +127,16 @@ class Register extends Component {
     }
 }
 
-export default Register;
+Register.propTypes = {
+    registerUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+});
+export default connect(
+    mapStateToProps,
+    { registerUser }
+)(withRouter(Register));
