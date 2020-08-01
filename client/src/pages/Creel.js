@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DeleteBtn from "../components/DeleteBtn";
 import EditBtn from "../components/EditBtn"
+import { Input, SubmitBtn } from "../components/SubmitBtn";
 import API from "../utils/API";
 import { List, ListItem } from "../components/List";
 
@@ -8,7 +9,7 @@ class Creel extends Component {
   state = {
     catches: [],
     species: "",
-    length: 0
+    length: []
   };
 
   componentDidMount() {
@@ -27,6 +28,28 @@ class Creel extends Component {
       .catch((err) => console.log(err));
   };
 
+  handleInputChange = event => {
+    const { name, value} = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    alert('New Info Was Submitted: ' + this.state.value)
+    event.preventDefault();
+    if (this.state.species && this.state.length && this.state.dateCaught && this.state.locationCaught){
+      API.saveCreel({
+        species: this.state.species,
+        length: this.state.length,
+        dateCaught: this.state.dateCaught,
+        locationCaught: this.state.locationCaught
+      })
+      .then(res => this.loadCatches())
+      .catch(err => console.log(err));
+    }
+  };
+
   render() {
     return (
       <div className='creelpage'>
@@ -42,56 +65,41 @@ class Creel extends Component {
               </h5>
               <p className='card-text'></p>
               <div className='input-group-prepend'>
-                <span
-                  className='input-group-text creel'
-                  id='inputGroup-sizing-sm'>
-                  Species
-                </span>
+                <Input
+                  value={this.state.species}
+                  onChange={this.handleInputChange}
+                  name='species'
+                  placeholder='Species (required)'
+                />
               </div>
-              <input
-                type='text'
-                className='form-control'
-                aria-label='Small'
-                aria-describedby='inputGroup-sizing-sm'></input>
               <div className='input-group-prepend'>
-                <span
-                  className='input-group-text creel mt-1'
-                  id='inputGroup-sizing-sm'>
-                  Length
-                </span>
+                <Input
+                  value={this.state.length}
+                  onChange={this.handleInputChange}
+                  name='length'
+                  placeholder='Length (required)'
+                />
               </div>
-              <input
-                type='text'
-                className='form-control'
-                aria-label='Small'
-                aria-describedby='inputGroup-sizing-sm'></input>
               <div className='input-group-prepend'>
-                <span
-                  className='input-group-text creel mt-1'
-                  id='inputGroup-sizing-sm'>
-                  Date Caught
-                </span>
+                <Input
+                  value={this.state.dateCaught}
+                  onChange={this.handleInputChange}
+                  name='dateCaught'
+                  placeholder='dateCaught (required)'
+                />
               </div>
-              <input
-                type='text'
-                className='form-control'
-                aria-label='Small'
-                aria-describedby='inputGroup-sizing-sm'></input>
               <div className='input-group-prepend'>
-                <span
-                  className='input-group-text creel mt-1'
-                  id='inputGroup-sizing-sm'>
-                  Location Caught
-                </span>
+                <Input
+                  value={this.state.locationCaught}
+                  onChange={this.handleInputChange}
+                  name='locationCaught'
+                  placeholder='Location Caught (required)'
+                />
               </div>
-
-              <input
-                type='text'
-                className='form-control'
-                aria-label='Small'
-                aria-describedby='inputGroup-sizing-sm'></input>
               <br></br>
-              <button className='add-btn  bg-success'>Add</button>
+              <SubmitBtn
+                disabled={!(this.state.species && this.state.length)}
+                onClick={this.handleFormSubmit}>Submit</SubmitBtn>
             </div>
           </div>
           <div className='card col-6 text-center float-left'>
@@ -109,7 +117,6 @@ class Creel extends Component {
                       <br></br>
                       <DeleteBtn onClick={() => this.deleteCreel(caught._id)} />
                       <EditBtn onClick={() => this.updateCreel(caught._id)} />
-
                     </ListItem>
                   );
                 })}
