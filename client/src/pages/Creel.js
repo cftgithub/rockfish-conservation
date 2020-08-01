@@ -10,6 +10,7 @@ import { Card } from "react-bootstrap";
 import { Player, ControlBar, LoadingSpinner } from "video-react";
 import "../../node_modules/video-react/dist/video-react.css";
 import video from "../assets/videos/video.mp4";
+import { SubmitBtn } from "../components/SubmitBtn";
 
 class Creel extends Component {
   state = {
@@ -52,6 +53,7 @@ class Creel extends Component {
             <div className='row'>
               <div className='col-6 text-center'>
                 <CreelForm />
+                <SubmitBtn />
               </div>
               <div className='col-6 text-center'>
                 <Card className='catch-card'>

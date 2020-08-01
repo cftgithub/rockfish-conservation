@@ -1,1 +1,1 @@
-export {Input, TextArea, SubmitBtn } from "./SubmitBtn"
+export { SubmitBtn } from "./SubmitBtn"
