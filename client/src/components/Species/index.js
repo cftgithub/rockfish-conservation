@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import Modal from "../Modal";
 import "./style.css";
 import fish from "../../fish.json";
-import { Modal, Button } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 
 class Species extends Component {
 state={
@@ -12,8 +12,7 @@ state={
     modalTitle: "",
     sciName: "",
     location: "",
-    biology: "",
-    show: false
+    biology: ""
 }
 
 showModal = () => {

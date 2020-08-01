@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import API from "../../utils/API";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
@@ -15,7 +15,7 @@ class Login extends Component {
 
     componentDidMount() {
         if (this.props.auth.isAuthenticated) {
-            this.props.history.push("/dashboard");
+            this.props.history.push("/creels");
         }
     }
 
@@ -31,6 +31,8 @@ class Login extends Component {
     }
 
     onChange = e => {
+        console.log(e.target.id);
+        console.log(e.target.value);
         this.setState({ [e.target.id]: e.target.value });
     };
     onSubmit = e => {
@@ -39,7 +41,7 @@ class Login extends Component {
             username: this.state.username,
             password: this.state.password,
         };
-        this.props.loginUser(userData);
+        this.props.loginUser(userInfo);
     };
 
     render() {
@@ -69,11 +71,11 @@ class Login extends Component {
                             </div>
                             <input
                                 onChange={this.onChange}
-                                value={this.state.username}
-                                error={errors.username}
+                                value={this.state.uname}
+                                error={errors.uname}
                                 type='text'
                                 className={classnames("", {
-                                    invalid: errors.username || errors.usernotfound
+                                    invalid: errors.uname || errors.unamenotfound
                                 })}
                                 id="uname"
                                 aria-label='Small'
@@ -91,11 +93,11 @@ class Login extends Component {
                             </div>
                             <input
                                 onChange={this.onChange}
-                                value={this.state.password}
-                                error={errors.password}
+                                value={this.state.pword}
+                                error={errors.pword}
                                 type='password'
                                 className={classnames("", {
-                                    invalid: errors.password || errors.passwordincorrect
+                                    invalid: errors.pword || errors.pwordincorrect
                                 })}
                                 id="pword"
                                 aria-label='Small'

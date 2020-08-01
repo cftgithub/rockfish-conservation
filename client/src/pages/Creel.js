@@ -12,7 +12,7 @@ import "../../node_modules/video-react/dist/video-react.css";
 import video from "../assets/videos/video.mp4";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { logoutUser } from "../../actions/authActions";
+import { logoutUser } from "../actions/authActions";
 
 class Creel extends Component {
   state = {
@@ -43,7 +43,7 @@ class Creel extends Component {
   };
 
   render() {
-    const { user } = this.props.auth;
+    // const { user } = this.props.auth;
     return (
       <>
       <div className="creelpage container-fluid text-center">

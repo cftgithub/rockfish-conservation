@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import API from "../../utils/API";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
@@ -64,15 +64,15 @@ class Register extends Component {
                                     id='inputGroup-sizing-sm'>
                                     Username
                                 </span>
-                                <span className="red-text">{errors.name}</span>
+                                    <span className="red-text">{errors.newUsername}</span>
                             </div>
                             <input
                                 onChange={this.onChange}
-                                value={this.state.username}
-                                error={errors.username}
+                                value={this.state.newUsername}
+                                error={errors.newUsername}
                                 type='text'
                                 className={classnames("", {
-                                    invalid: errors.username
+                                    invalid: errors.newUsername
                                     })}  
                                 id="newUsername"
                                 aria-label='Small'
@@ -84,15 +84,15 @@ class Register extends Component {
                                     id='inputGroup-sizing-sm'>
                                     Password
                                 </span>
-                                <span className="red-text">{errors.password}</span>
+                                    <span className="red-text">{errors.newpassword}</span>
                             </div>
                             <input
                                 onChange={this.onChange}
-                                value={this.password}
-                                error={errors.password}
+                                    value={this.state.newpassword}
+                                    error={errors.newpassword}
                                 type='password'
                                 className={classnames("", {
-                                    invalid: errors.username
+                                    invalid: errors.newpassword
                                     })}  
                                 id="newpassword"
                                 aria-label='Small'
@@ -103,15 +103,15 @@ class Register extends Component {
                                     id='inputGroup-sizing-sm'>
                                     Confirm Password
                                 </span>
-                                <span className="red-text">{errors.password2}</span>
+                                    <span className="red-text">{errors.confPassword}</span>
                             </div>
                             <input
                                 onChange={this.onChange}
-                                value={this.password2}
-                                error={errors.password2}
+                                    value={this.state.confPassword}
+                                    error={errors.confPassword}
                                 type='password'
                                 className={classnames("", {
-                                    invalid: errors.username
+                                    invalid: errors.confPassword
                                     })} 
                                 id="confPassword"
                                 aria-label='Small'
