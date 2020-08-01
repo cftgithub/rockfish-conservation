@@ -1,0 +1,20 @@
+form {
+    margin: 50px 25px 80px 25px;
+}
+
+.form-label {
+    width: 200px;
+    background-color: rgba(100, 109, 117, 0.8);
+    color: white;
+    border: none;
+}
+
+.input-group {
+    margin: 25px;
+    width: 600px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.creel-input {
+    border: none;
+}

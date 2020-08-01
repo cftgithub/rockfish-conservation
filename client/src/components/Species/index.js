@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import Modal from "../Modal";
+// import Modal from "../Modal";
 import "./style.css";
 import fish from "../../fish.json";
+import { Modal, Button } from 'react-bootstrap';
 
 class Species extends Component {
 state={
@@ -11,7 +12,8 @@ state={
     modalTitle: "",
     sciName: "",
     location: "",
-    biology: ""
+    biology: "",
+    show: false
 }
 
 showModal = () => {
@@ -33,16 +35,16 @@ modalId = () => {
     this.setState({ sciName: this.props.sciName });
     this.setState({ location: this.props.location });
     this.setState({ biology: this.props.biology });
-  };
+};
+
+
 
 render() {
     return (
            <>
            <div className="card species-card">
                 <div className="img-card">
-
                     <img className="fish" alt={this.props.name} src={this.props.image} />
-
                 </div>
                 <div className="content">
                     <ul>
