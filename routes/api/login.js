@@ -1,10 +1,16 @@
-const router = require("express").Router();
-const authController = require("../../controller/authController");
+// const router = require("express").Router();
+// const authController = require("../../controller/authController");
 
-router
-    .route("/:id")
-    .get(authController.findById)
-    .put(authController.update)
-    .delete(authController.remove);
+// router.route("/").get(authController.findAll).post(authController.create);
 
-module.exports = router;
+// router.route("/register").get(authController.register);
+
+// router.route("/login").get(authController.login);
+
+// router
+//     .route("/:id")
+//     .get(authController.findById)
+//     .put(authController.update)
+//     .delete(authController.remove);
+
+// module.exports = router;

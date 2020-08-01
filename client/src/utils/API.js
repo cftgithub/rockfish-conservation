@@ -12,5 +12,5 @@ export default {
     },
     saveCreel :function(creelData) {
         return axios.post("/api/creels/",creelData);
-    }
+    },
 };

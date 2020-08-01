@@ -47,6 +47,15 @@ function Navbar() {
             Login
           </NavLink>
         </div>
+        <div className="register">
+          <NavLink to="/register"
+            className={window.location.pathname === "/register" ? "active" : ""}
+            activeStyle={{ color: "white" }}
+            style={{ color: "white", textDecoration: "none" }}
+          >
+            Register New User
+          </NavLink>
+        </div>
       </div>
     </nav>
   );

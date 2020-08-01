@@ -2,10 +2,11 @@ import React, { Component } from "react";
 // import API from "../../utils/API";
 import { Link } from "react-router-dom";
 
-class Login extends Component {
+class Register extends Component {
     state = {
         username: "",
         password: "",
+        password2: "",
         errors: {}
     };
 
@@ -14,11 +15,12 @@ class Login extends Component {
     };
     onSubmit = e => {
         e.preventDefault();
-        const userInfo = {
+        const newUser = {
             username: this.state.username,
             password: this.state.password,
+            password2: this.state.password2
         };
-        console.log(userInfo);
+        console.log(newUser);
     };
 
     render() {
@@ -27,14 +29,17 @@ class Login extends Component {
         return (
             <div>
                 <div className='container creel'>
-                    <h1 className='text-center'>Login</h1>
+                    <h1 className='text-center'>Sign Up</h1>
                     <h4 className='text-center mb-3'>
-                        Login to track your catches in order to help scientists monitor wild populations.
+                        Create a new account to track your catches in order to help scientists monitor wild populations.
                      </h4>
                 <form noValidate onSubmit={this.onSubmit}>
                     <div className='card col-6 text-center float-left'>
                         <div className='card-body creel text-center'>
-                            <h5 className='card-title creel text-center '>Existing User Login</h5>
+                            <h5 className='card-title creel text-center '>
+                                Create New Account
+                            </h5>
+                            <p className='card-text'></p>
                             <div className='input-group-prepend'>
                                 <span
                                     className='input-group-text creel'
@@ -48,7 +53,7 @@ class Login extends Component {
                                 error={errors.username}
                                 type='text'
                                 className='form-control'
-                                id="uname"
+                                id="newUsername"
                                 aria-label='Small'
                                 aria-describedby='inputGroup-sizing-sm'></input>
                             <div className='input-group-prepend'>
@@ -60,14 +65,31 @@ class Login extends Component {
                             </div>
                             <input
                                 onChange={this.onChange}
-                                value={this.state.password}
+                                value={this.password}
                                 error={errors.password}
                                 type='password'
                                 className='form-control'
-                                id="pword"
+                                id="newpassword"
                                 aria-label='Small'
                                 aria-describedby='inputGroup-sizing-sm'></input>
-                            <button className='add-btn  bg-success' type="submit">Login</button>
+                            <div className='input-group-prepend'>
+                                <span
+                                    className='input-group-text creel mt-1'
+                                    id='inputGroup-sizing-sm'>
+                                    Confirm Password
+                                </span>
+                            </div>
+                            <input
+                                onChange={this.onChange}
+                                value={this.password2}
+                                error={errors.password2}
+                                type='password'
+                                className='form-control'
+                                id="confPassword"
+                                aria-label='Small'
+                                aria-describedby='inputGroup-sizing-sm'></input>
+                            <br></br>
+                            <button className='add-btn bg-success' type="submit">Sign Up</button>
                         </div>
                     </div>
                 </form>
@@ -77,4 +99,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default Register;

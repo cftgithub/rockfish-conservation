@@ -3,16 +3,14 @@ var passport = require("passport");
 var authController = require('./authController.js');
 const { session } = require("passport");
 
-module.exports = function (app) {
-    app.get("/users", function (req, res) {
-        db.Users.findAll({
-        }).then(function (data) {
-            console.log(data);
-            res.send(data);
-        });
-    });
+module.exports = {
+    findAll: function (req, res) {
+        db.Users
+            .find(req.query)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+    },
 
-    app.get('/users/register', authController.register);
 
     app.get('/users/login', authController.login);
 
