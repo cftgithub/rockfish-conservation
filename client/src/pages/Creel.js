@@ -60,8 +60,8 @@ class Creel extends Component {
             </div>
             <div className="col-6 text-center">
               <Card className="catch-card">
+                <Card.Title className="catch-title">Catch History</Card.Title>
                 <Card.Body>
-                  <Card.Title className="catch-title">Catch History</Card.Title>
                   {this.state.catches.map((caught) => {
                     return (
                       <ListItem key={caught._id}>
