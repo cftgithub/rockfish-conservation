@@ -7,12 +7,18 @@ import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
 
 class Register extends Component {
-    state = {
+    constructor() {
+    super();
+    this.state = {
         username: "",
         password: "",
         password2: "",
-        errors: {}
-    };
+        errors: {},
+        value: ""
+        };  
+    this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this); 
+    }
 
     componentDidMount() {
         if (this.props.auth.isAuthenticated) {
@@ -29,8 +35,9 @@ class Register extends Component {
     }
 
     onChange = e => {
-        this.setState({ [e.target.id]: e.target.value });
+        this.setState({ value: e.target.value });
     };
+
     onSubmit = e => {
         e.preventDefault();
         const newUser = {
