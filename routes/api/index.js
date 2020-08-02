@@ -3,6 +3,6 @@ const creelRoutes = require("./creels");
 const userRoutes = require("./users");
 
 router.use("/creels", creelRoutes);
-router.use("/user", userRoutes);
+router.use("/users", userRoutes);
 
 module.exports = router;
