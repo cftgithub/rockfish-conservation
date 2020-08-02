@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const creelRoutes = require("./creels");
-// const authRoutes = require("./login");
+const userRoutes = require("./users");
 
 router.use("/creels", creelRoutes);
-// router.use("/users", authRoutes);
+router.use("/user", userRoutes);
 
 module.exports = router;
