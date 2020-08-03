@@ -40,13 +40,34 @@ function Navbar() {
         </ul>
         <div className="login">
           <NavLink to="/login"
-            className={window.location.pathname === "/login" ? "active" : ""}
+            className={window.location.pathname === "/login" ? "active nav-login" : "nav-login"}
             activeStyle={{ color: "white" }} 
             style={{ color: "white", textDecoration: "none" }}
           >
             Login
           </NavLink>
         </div>
+
+        {/* Simulate a smartphone / tablet */}
+        <div className="mobile-container">
+
+          {/* Top Navigation Menu */}
+          <div className="topnav">
+            <div id="myNavLinks">
+              <a href="#news">News</a>
+              <a href="#contact">Contact</a>
+              <a href="#about">About</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i className="fa fa-bars"></i>
+            </a>
+          </div>
+
+        </div>
+
+
+
+
       </div>
     </nav>
   );

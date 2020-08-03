@@ -51,3 +51,13 @@
     margin-top: 2px;
     text-decoration: none;
 }
+
+@media screen and (max-width: 415px){
+    .nav-tabs {
+        display: none;
+    }
+    
+    .nav-login {
+        display: none;
+    }
+}
