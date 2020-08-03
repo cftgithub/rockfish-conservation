@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./style.css";
 import API from "../utils/API";
-import {List, ListItem } from "../components/List";
+import { List, InputGroup} from "../components/List";
 import CreelForm from "../components/CreelForm";
 import DeleteBtn from "../components/DeleteBtn";
 import EditBtn from "../components/EditBtn";
@@ -23,6 +23,14 @@ class Creel extends Component {
     this.loadCatches();
   }
 
+  onSubmit = e => {
+    e.preventDefault();
+  };
+
+  OnChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });  
+  }
+
   loadCatches = () => {
     API.getCreels()
       .then((res) => this.setState({ catches: res.data }))
@@ -33,6 +41,14 @@ class Creel extends Component {
     API.deleteCreel(id)
       .then((res) => this.loadCatches())
       .catch((err) => console.log(err));
+  };
+
+  saveCreel = () => {
+    console.log();
+    API.saveCreel()
+    .then((res) => {
+      console.log('Creel Saved!')
+    });
   };
 
   render() {
@@ -53,7 +69,7 @@ class Creel extends Component {
             <div className='row'>
               <div className='col-6 text-center'>
                 <CreelForm />
-                <SubmitBtn />
+                <SubmitBtn onSubmit={this.onSubmit} />
               </div>
               <div className='col-6 text-center'>
                 <Card className='catch-card'>
@@ -61,22 +77,23 @@ class Creel extends Component {
                     <Card.Title className='catch-title'>
                       Catch History
                     </Card.Title>
-                    {this.state.catches.map((caught) => {
+                    {this.state.catches.length> 0 ? this.state.catches.map((caught) => {
                       return (
                         <List>
-                        <ListItem key={caught._id}>
-                          <a href={"/creels/" + caught._id}>
-                            <strong className='catch-text'>
-                              {caught.species} Length: {caught.length}
-                            </strong>
-                          </a>
-                          <DeleteBtn
-                            onClick={() => this.deleteCreel(caught._id)}
-                          />
-                          <EditBtn
-                            onClick={() => this.updateCreel(caught._id)}
-                          />
-                        </ListItem>
+                          <ListItem key={caught._id}>
+                            <a href={"/creels/" + caught._id}>
+                              <strong className='catch-text'>
+                                Species: {caught.species}, Length:{" "}
+                                {caught.length}
+                              </strong>
+                            </a>
+                            <DeleteBtn
+                              onClick={() => this.deleteCreel(caught._id)}
+                            />
+                            <EditBtn
+                              onClick={() => this.updateCreel(caught._id)}
+                            />
+                          </ListItem>
                         </List>
                       );
                     })}
