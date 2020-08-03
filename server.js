@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const passport = require("passport");
-const session = require("session");
+const session = require("express-session");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -29,7 +29,7 @@ app.use(passport.session());
 app.use(routes);
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/creelDB");
 
-require('./config/pass.js')(passport, db.Users);
+require('./config/pass.js')(passport);
 // Define API routes here
 
 // Send every other request to the React app
