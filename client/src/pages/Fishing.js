@@ -4,6 +4,7 @@ import SafeFishing from "../components/Fishing";
 import Heading from "../components/Header";
 import Fishing from "../fishing.json";
 import References from "../components/References";
+import { Button } from "react-bootstrap";
 
 class App extends Component {
 
@@ -11,6 +12,8 @@ class App extends Component {
         return (
             <>
                 <Heading title={"Safe Fishing"} />
+                <div>                <Button id="game" variant="info" href="https://rileychatwin.github.io/Fishy/." target="_blank">Play Game</Button></div>
+
                 <Wrapper>
                     {Fishing.map(fish => (
                         <SafeFishing
