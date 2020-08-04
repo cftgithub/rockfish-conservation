@@ -52,7 +52,20 @@
     text-decoration: none;
 }
 
-@media screen and (max-width: 415px){
+.mobile-container {
+    display: none;
+}
+
+/* @media screen and (max-width: 415px){
+    .nav-box {
+        display: none;
+    }
+
+    .mobile-container {
+        display: inline;
+        
+    }
+
     .nav-tabs {
         display: none;
     }
@@ -60,4 +73,8 @@
     .nav-login {
         display: none;
     }
-}
+
+    .icon {
+        color: white;
+    }
+} */
