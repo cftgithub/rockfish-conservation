@@ -47,6 +47,7 @@ render() {
                     <img className="fish" alt={this.props.name} src={this.props.image} />
                 </div>
                 <div className="content">
+                    fdafdsafadfas
                     <ul>
                         <li>
                             <strong>{this.props.name}</strong>
@@ -60,7 +61,9 @@ render() {
                     Learn More</button>
             </div>
             <Modal show={this.state.show} onClick={this.hideModal}>
-                {this.state.title}
+                <div id="title">{this.state.title}</div>
+                <Modal.Header closeButton>Test</Modal.Header>
+                <Modal.Title id='ModalHeader'>A Title Goes here</Modal.Title>
                 {this.state.sciName}<br />
                 {this.state.location}<br />
                 {this.state.biology}
