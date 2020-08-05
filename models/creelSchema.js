@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const creelSchema = new Schema({
     species:  { type: String },
-    length: { type: Number, min: 1 , max: 4 },
+    length: { type: Number},
     dateCaught: { type: Date, default: Date.now },
     locationCaught: { type: String }
 });
