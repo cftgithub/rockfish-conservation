@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import Modal from "../Modal";
 import "./style.css";
 import fish from "../../fish.json";
-import { Modal } from 'react-bootstrap';
+import { Modal, CardDeck } from 'react-bootstrap';
 
 class Species extends Component {
     state = {
@@ -40,7 +40,7 @@ class Species extends Component {
 
     render() {
         return (
-            <>
+            <CardDeck>
                 <div className="card species-card">
                     <div className="img-card">
                         <img className="fish" alt={this.props.name} src={this.props.image} />
@@ -67,7 +67,7 @@ class Species extends Component {
                     {this.state.location}<br />
                     {this.state.biology}
                 </Modal>
-            </>
+            </CardDeck>
         );
     }
 }
