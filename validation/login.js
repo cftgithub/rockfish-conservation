@@ -4,22 +4,17 @@ const isEmpty = require("is-empty");
 module.exports = function validateLoginInput(data) {
     let errors = {};
 
-    //convert empty fields to empty strings
     data.email = !isEmpty(data.email) ? data.email : "";
     data.password = !isEmpty(data.password) ? data.password : "";
 
-    //email checks- they are logging in with their email
-    //the username will display on their profile/etc
-    //to protect the email - so it's only really used to login
     if (Validator.isEmpty(data.email)) {
-        errors.email = "Email field is required";
+        errors.email = "Stay clam and just enter a valid e-mail.";
     } else if (!Validator.isEmail(data.email)) {
-        errors.email = "Email is invalid";
+        errors.email = "That e-mail smelt bad.";
     }
 
-    //password checks
     if (Validator.isEmpty(data.password)) {
-        errors.password = "Password field is required";
+        errors.password = "You're still on the hook to provide a password.";
     }
 
     return {

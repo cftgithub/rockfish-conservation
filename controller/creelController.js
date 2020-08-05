@@ -2,7 +2,6 @@ const db = require("../models");
 
 module.exports = {
   findAll: function(req, res) {
-    console.log(req.query);
     db.Creel
       .find(req.query)
       .then(dbModel => res.json(dbModel))
@@ -15,7 +14,6 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
-    console.log(req.body);
       db.Creel
       .create({species: req.body.species, length: req.body.length})
       .then(dbModel => res.json(dbModel))
