@@ -7,7 +7,6 @@ module.exports = function (app) {
     app.get("/users", function (req, res) {
         db.Users.findAll({
         }).then(function (data) {
-            console.log(data);
             res.send(data);
         });
     });
@@ -32,13 +31,11 @@ module.exports = function (app) {
 
     app.get('/users/authenticate', function (req, res) {
         if (req.session.passport) {
-            console.log(req.session.passport.user);
             db.Users.findOne({
                 where: {
                     id: req.session.passport.user
                 }
             }).then(function (user) {
-                console.log(user.dataValues);
                 res.send(user.dataValues);
             });
         }
