@@ -5,6 +5,7 @@ import { List, InputGroup } from "../components/List";
 import CreelForm from "../components/CreelForm";
 import DeleteBtn from "../components/DeleteBtn";
 //import EditBtn from "../components/EditBtn";
+import Profile from "../components/Profile";
 import Heading from "../components/Header";
 import { Card } from "react-bootstrap";
 import { Player, ControlBar, LoadingSpinner } from "video-react";
@@ -71,6 +72,7 @@ class Creel extends Component {
         </div>
         <div className='col-lg-12 col-md-auto p-0 d-flex justify-content-center text-center cards'>
           <div className='container-fluid creel'>
+            <Profile />
             <Heading
               title='Creel'
               subtitle='Track your catches to help scientists monitor wild populations.'

@@ -12,7 +12,6 @@ import Fishing from "./pages/Fishing";
 import Register from "./components/Auth/Register";
 import Login from "./components/Auth/Login";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-import Profile from "./components/Profile";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
@@ -50,7 +49,7 @@ function App() {
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
           <Switch>
-            <PrivateRoute exact path="/profile" component={Profile} />
+            <PrivateRoute exact path="/creel" component={Creel} />
           </Switch>
         </Wrapper>
         <Footer />

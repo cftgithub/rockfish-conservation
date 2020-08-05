@@ -35,7 +35,7 @@ export const loginUser = (userData, history) => dispatch => {
             // Set current user
             dispatch(setCurrentUser(decoded));
         })
-        .then(res => history.push("/profile"))
+        .then(res => history.push("/creel"))
         .catch(err =>
             dispatch({
                 type: GET_ERRORS,

@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const users = require("./routes/api/users");
-// const routes = require("./routes");
+const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// app.use(routes);
+app.use(routes);
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/creelDB", { useNewUrlParser: true, useUnifiedTopology: true });
 
