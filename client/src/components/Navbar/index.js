@@ -9,9 +9,11 @@ function Nav() {
       <Navbar className="desktop-navbar">
         <div className="container-fluid nav-box">
           <div className="navbar-header">
-            <NavLink className="navbar-brand" to="/">
-              Rockfish Conservation
-            </NavLink>
+            <NavLink to="/" 
+              className="navbar-brand" 
+              activeStyle={{ color: "white" }}
+            >
+              Rockfish Conservation</NavLink>
           </div>
           <ul className="nav nav-tabs mr-auto">
             <li className="nav-item nav-link">

@@ -10,7 +10,8 @@ export default {
     deleteCreel: function(id) {
         return axios.delete("/api/creels/" + id);
     },
-    saveCreel :function(creelData) {
-        return axios.post("/api/creels/",creelData);
+    saveCreel: function(creelData) {
+        return axios.post("/api/creels/", creelData);
+        
     }
 };

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { Navbar, Dropdown } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 import "./style.css";
 
 class MobileNavbar extends Component {
@@ -24,12 +24,10 @@ class MobileNavbar extends Component {
     return (
       <>
         <Navbar className="navbar mobile-navbar">
-          <div className="navbar-header">
+          <div className="mobile-navbar-header">
             <NavLink className="navbar-brand" to="/">
               Rockfish Conservation
             </NavLink>
-          
-
             <nav>
               <i
                 className="fa fa-bars"
@@ -52,50 +50,6 @@ class MobileNavbar extends Component {
               </ul>
             </nav>
           </div>
-
-          {/* <button className="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
-            <span>
-              <i className="fa fa-bars"></i>
-            </span>
-          </button>
-
-          <div className="collapse navbar-collapse" id="navbarDropdown">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item nav-link">
-                <NavLink to="/species"
-                  className={window.location.pathname === "/species" ? "active" : ""}
-                  activeStyle={{ color: "white" }}
-                  style={{ color: "white" }}
-                >
-                  Species Identification</NavLink>
-              </li>
-              <li className="nav-item nav-link">
-                <NavLink to="/creel"
-                  className={window.location.pathname === "/creel" ? "active" : ""}
-                  activeStyle={{ color: "white" }}
-                  style={{ color: "white" }}
-                >
-                  Creel</NavLink>
-              </li>
-              <li className="nav-item nav-link">
-                <NavLink to="/fishing"
-                  className={window.location.pathname === "/fishing" ? "active" : ""}
-                  activeStyle={{ color: "white" }}
-                  style={{ color: "white" }}
-                >
-                  Fishing</NavLink>
-              </li>
-              <li className="nav-item nav-link">
-                <NavLink to="/login"
-                  className={window.location.pathname === "/login" ? "active nav-login" : "nav-login"}
-                  activeStyle={{ color: "white" }}
-                  style={{ color: "white", textDecoration: "none" }}
-                >
-                  Login
-                </NavLink>
-              </li>
-            </ul>
-          </div> */}
         </Navbar>
       </>
     );

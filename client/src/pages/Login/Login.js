@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 
-class Login extends Component {
+class LoginPage extends Component {
     state = {
         catches: [],
         species: "",
@@ -126,4 +126,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default LoginPage;

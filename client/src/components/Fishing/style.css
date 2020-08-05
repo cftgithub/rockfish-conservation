@@ -17,9 +17,15 @@
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
 }
 
-.content {
+.fishcontent {
   text-align: center;
   padding-bottom: 8px;
+  height: 75%;
+  width: 400px;
+}
+
+#game {
+  height:auto;
 }
 
 ul {

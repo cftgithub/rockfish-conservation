@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "./style.css";
 import API from "../utils/API";
-import {List, ListItem } from "../components/List";
+import { List, InputGroup } from "../components/List";
 import CreelForm from "../components/CreelForm";
 import DeleteBtn from "../components/DeleteBtn";
-import EditBtn from "../components/EditBtn";
+//import EditBtn from "../components/EditBtn";
+import Profile from "../components/Profile";
 import Heading from "../components/Header";
 import { Card } from "react-bootstrap";
 import { Player, ControlBar, LoadingSpinner } from "video-react";
@@ -13,15 +14,36 @@ import video from "../assets/videos/video.mp4";
 import { SubmitBtn } from "../components/SubmitBtn";
 
 class Creel extends Component {
-  state = {
-    catches: [],
-    species: "",
-    length: 0
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      catches: [],
+      species: "",
+      length: 0
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
 
   componentDidMount() {
     this.loadCatches();
   }
+
+  handleChange(event) {
+    this.setState({ [event.target.name]: event.target.value });
+  }
+  
+  handleFormSubmit = event => {
+    event.preventDefault();    
+    if (this.state.species && this.state.length){
+      this.saveCreel({
+        species: this.state.species,
+        length: this.state.length
+      })
+      // .then(res => this.loadCatches())
+      // .catch(err => console.log(err));
+    }
+  };
 
   loadCatches = () => {
     API.getCreels()
@@ -35,6 +57,10 @@ class Creel extends Component {
       .catch((err) => console.log(err));
   };
 
+  saveCreel = (species,length) => {
+    API.saveCreel(species,length).then((res) => this.loadCatches());
+  };
+
   render() {
     return (
       <>
@@ -46,14 +72,15 @@ class Creel extends Component {
         </div>
         <div className='col-lg-12 col-md-auto p-0 d-flex justify-content-center text-center cards'>
           <div className='container-fluid creel'>
+            <Profile />
             <Heading
               title='Creel'
               subtitle='Track your catches to help scientists monitor wild populations.'
             />
             <div className='row'>
               <div className='col-6 text-center'>
-                <CreelForm />
-                <SubmitBtn />
+                <CreelForm onChange={this.handleChange} />
+                <SubmitBtn onClick={this.handleFormSubmit} />
               </div>
               <div className='col-6 text-center'>
                 <Card className='catch-card'>
@@ -64,19 +91,18 @@ class Creel extends Component {
                     {this.state.catches.map((caught) => {
                       return (
                         <List>
-                        <ListItem key={caught._id}>
-                          <a href={"/creels/" + caught._id}>
-                            <strong className='catch-text'>
-                              {caught.species} Length: {caught.length}
-                            </strong>
-                          </a>
-                          <DeleteBtn
-                            onClick={() => this.deleteCreel(caught._id)}
-                          />
-                          <EditBtn
-                            onClick={() => this.updateCreel(caught._id)}
-                          />
-                        </ListItem>
+                          <InputGroup key={caught._id}>
+                            <a href={"/creels/" + caught._id}>
+                              <strong className='catch-text'>
+                                Species: {caught.species}, Length:{" "}
+                                {caught.length}
+                              </strong>
+                            </a>
+                            <DeleteBtn
+                              onClick={() => this.deleteCreel(caught._id)}
+                            />
+                            
+                          </InputGroup>
                         </List>
                       );
                     })}

@@ -7,7 +7,9 @@ export function SubmitBtn(props) {
       className='submit-btn bg-success text-dark btn-sm align-items-center'
       {...props}
       role='button'
-      tabIndex='0'>
+      tabIndex='0'
+      type='submit'
+      onSubmit={ props.handleFormSubmit }>
       Submit
     </span>
   );
