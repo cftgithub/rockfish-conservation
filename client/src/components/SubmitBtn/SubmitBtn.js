@@ -9,7 +9,7 @@ export function SubmitBtn(props) {
       role='button'
       tabIndex='0'
       type='submit'
-      onClick={props.onSubmit}>
+      onSubmit={ props.handleFormSubmit }>
       Submit
     </span>
   );

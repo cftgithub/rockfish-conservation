@@ -3,10 +3,15 @@ const creelController = require("../../controller/creelController");
 
 router.route("/").get(creelController.findAll).post(creelController.create);
 
+
 router
   .route("/:id")
   .get(creelController.findById)
   .put(creelController.update)
-  .delete(creelController.remove);
+  .delete(creelController.remove)
+  .post(creelController.create);
 
+
+  
+  
 module.exports = router;

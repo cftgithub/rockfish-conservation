@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./style.css";
 import API from "../utils/API";
-import { List, InputGroup} from "../components/List";
+import { List, InputGroup } from "../components/List";
 import CreelForm from "../components/CreelForm";
 import DeleteBtn from "../components/DeleteBtn";
-import EditBtn from "../components/EditBtn";
+//import EditBtn from "../components/EditBtn";
 import Heading from "../components/Header";
 import { Card } from "react-bootstrap";
 import { Player, ControlBar, LoadingSpinner } from "video-react";
@@ -13,23 +13,36 @@ import video from "../assets/videos/video.mp4";
 import { SubmitBtn } from "../components/SubmitBtn";
 
 class Creel extends Component {
-  state = {
-    catches: [],
-    species: "",
-    length: 0
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      catches: [],
+      species: "",
+      length: 0
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
 
   componentDidMount() {
     this.loadCatches();
   }
 
-  onSubmit = e => {
-    e.preventDefault();
-  };
-
-  OnChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });  
+  handleChange(event) {
+    this.setState({ [event.target.name]: event.target.value });
   }
+  
+  handleFormSubmit = event => {
+    event.preventDefault();    
+    if (this.state.species && this.state.length){
+      this.saveCreel({
+        species: this.state.species,
+        length: this.state.length
+      })
+      // .then(res => this.loadCatches())
+      // .catch(err => console.log(err));
+    }
+  };
 
   loadCatches = () => {
     API.getCreels()
@@ -43,12 +56,8 @@ class Creel extends Component {
       .catch((err) => console.log(err));
   };
 
-  saveCreel = () => {
-    console.log();
-    API.saveCreel()
-    .then((res) => {
-      console.log('Creel Saved!')
-    });
+  saveCreel = (species,length) => {
+    API.saveCreel(species,length).then((res) => this.loadCatches());
   };
 
   render() {
@@ -68,8 +77,8 @@ class Creel extends Component {
             />
             <div className='row'>
               <div className='col-6 text-center'>
-                <CreelForm />
-                <SubmitBtn onSubmit={this.onSubmit} />
+                <CreelForm onChange={this.handleChange} />
+                <SubmitBtn onClick={this.handleFormSubmit} />
               </div>
               <div className='col-6 text-center'>
                 <Card className='catch-card'>
@@ -77,10 +86,10 @@ class Creel extends Component {
                     <Card.Title className='catch-title'>
                       Catch History
                     </Card.Title>
-                    {this.state.catches.length> 0 ? this.state.catches.map((caught) => {
+                    {this.state.catches.map((caught) => {
                       return (
                         <List>
-                          <ListItem key={caught._id}>
+                          <InputGroup key={caught._id}>
                             <a href={"/creels/" + caught._id}>
                               <strong className='catch-text'>
                                 Species: {caught.species}, Length:{" "}
@@ -90,10 +99,8 @@ class Creel extends Component {
                             <DeleteBtn
                               onClick={() => this.deleteCreel(caught._id)}
                             />
-                            <EditBtn
-                              onClick={() => this.updateCreel(caught._id)}
-                            />
-                          </ListItem>
+                            
+                          </InputGroup>
                         </List>
                       );
                     })}
