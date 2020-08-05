@@ -12,6 +12,7 @@ import API from "../../utils/API";
 import "../../../node_modules/video-react/dist/video-react.css";
 // import video from "../assets/videos/video.mp4";
 // import { SubmitBtn } from "../components/SubmitBtn";
+import Wrapper from "../../components/Wrapper";
 
 class MobileCreel extends Component {
     constructor(props) {
@@ -64,7 +65,13 @@ class MobileCreel extends Component {
     render() {
         return (
             <>
-                <h1>This is mobile responsive</h1>
+                <Wrapper style={{ 
+                    backgroundColor: "green",
+                    height: "100vh",
+                    width: "100vw"
+                }}>
+                    Testing
+                </Wrapper>
             </>
         );
     }
