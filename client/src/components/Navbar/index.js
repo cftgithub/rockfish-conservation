@@ -1,13 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import MediaQuery from 'react-responsive';
 import "./style.css";
+import { Navbar } from "react-bootstrap";
 
-function Navbar() {
+function Nav() {
   return (
     <>
-    <MediaQuery minDeviceWidth={992} device={{ deviceWidth: 1600 }} className="desktop">
-      <nav className="navbar">
+      <Navbar className="desktop-navbar">
         <div className="container-fluid nav-box">
           <div className="navbar-header">
             <NavLink className="navbar-brand" to="/">
@@ -43,23 +42,16 @@ function Navbar() {
           <div className="login">
             <NavLink to="/login"
               className={window.location.pathname === "/login" ? "active nav-login" : "nav-login"}
-              activeStyle={{ color: "white" }} 
+              activeStyle={{ color: "white" }}
               style={{ color: "white", textDecoration: "none" }}
             >
               Login
             </NavLink>
           </div>
         </div>
-      </nav>
-    </MediaQuery>
-    <MediaQuery minDeviceWidth={768} maxDeviceWidth={991} className="tablet">
-      <p>You are a tablet</p>
-    </MediaQuery>
-    <MediaQuery maxDeviceWidth={767} className="mobile">
-      <p>You are a mobile phone</p>
-    </MediaQuery>
+      </Navbar>
     </>
   );
 }
 
-export default Navbar;
+export default Nav;

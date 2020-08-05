@@ -1,4 +1,4 @@
-.navbar {
+.desktop-navbar {
     background-color: rgb(248, 85, 35);
     position: sticky;
     top: 0;
@@ -51,30 +51,3 @@
     margin-top: 2px;
     text-decoration: none;
 }
-
-.mobile-container {
-    display: none;
-}
-
-/* @media screen and (max-width: 415px){
-    .nav-box {
-        display: none;
-    }
-
-    .mobile-container {
-        display: inline;
-        
-    }
-
-    .nav-tabs {
-        display: none;
-    }
-    
-    .nav-login {
-        display: none;
-    }
-
-    .icon {
-        color: white;
-    }
-} */

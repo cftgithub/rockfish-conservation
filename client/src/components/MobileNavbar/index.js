@@ -1,73 +1,105 @@
-import React from "react";
-import { Navbar } from "react-bootstrap";
+import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import MediaQuery from 'react-responsive';
+import { Navbar, Dropdown } from "react-bootstrap";
 import "./style.css";
 
-const Desktop = ({ children }) => {
-  const isDesktop = useMediaQuery({ minWidth: 992 })
-  return isDesktop ? children : null
-}
-const Tablet = ({ children }) => {
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
-  return isTablet ? children : null
-}
-const Mobile = ({ children }) => {
-  const isMobile = useMediaQuery({ maxWidth: 767 })
-  return isMobile ? children : null
-}
-const Default = ({ children }) => {
-  const isNotMobile = useMediaQuery({ minWidth: 768 })
-  return isNotMobile ? children : null
-}
+class MobileNavbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isExpanded: false
+    };
+  }
 
-function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
+  handleToggle(e) {
+    e.preventDefault();
+    this.setState({
+      isExpanded: !this.state.isExpanded
+    });
+  }
+
+  render() {
+    const { isExpanded } = this.state;
+
+    return (
+      <>
+        <Navbar className="navbar mobile-navbar">
+          <div className="navbar-header">
+            <NavLink className="navbar-brand" to="/">
+              Rockfish Conservation
+            </NavLink>
+          
+
+            <nav>
+              <i
+                className="fa fa-bars"
+                aria-hidden="true"
+                onClick={e => this.handleToggle(e)}
+              />
+              <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
+                <NavLink className="navlink" activeClassName="active" to="/species">
+                  <li className="mobile-nav-links">Species Indentification</li>
+                </NavLink>
+                <NavLink className="navlink" activeClassName="active" to="/creel">
+                  <li className="mobile-nav-links">Creel</li>
+                </NavLink>
+                <NavLink className="navlink" activeClassName="active" to="/fishing">
+                  <li className="mobile-nav-links">Fishing</li>
+                </NavLink>
+                <NavLink className="navlink" activeClassName="active" to="/login">
+                  <li className="mobile-nav-links">Login</li>
+                </NavLink>
+              </ul>
+            </nav>
+          </div>
+
+          {/* <button className="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarDropdown" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+            <span>
+              <i className="fa fa-bars"></i>
+            </span>
+          </button>
+
+          <div className="collapse navbar-collapse" id="navbarDropdown">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item nav-link">
+                <NavLink to="/species"
+                  className={window.location.pathname === "/species" ? "active" : ""}
+                  activeStyle={{ color: "white" }}
+                  style={{ color: "white" }}
+                >
+                  Species Identification</NavLink>
+              </li>
+              <li className="nav-item nav-link">
+                <NavLink to="/creel"
+                  className={window.location.pathname === "/creel" ? "active" : ""}
+                  activeStyle={{ color: "white" }}
+                  style={{ color: "white" }}
+                >
+                  Creel</NavLink>
+              </li>
+              <li className="nav-item nav-link">
+                <NavLink to="/fishing"
+                  className={window.location.pathname === "/fishing" ? "active" : ""}
+                  activeStyle={{ color: "white" }}
+                  style={{ color: "white" }}
+                >
+                  Fishing</NavLink>
+              </li>
+              <li className="nav-item nav-link">
+                <NavLink to="/login"
+                  className={window.location.pathname === "/login" ? "active nav-login" : "nav-login"}
+                  activeStyle={{ color: "white" }}
+                  style={{ color: "white", textDecoration: "none" }}
+                >
+                  Login
+                </NavLink>
+              </li>
+            </ul>
+          </div> */}
+        </Navbar>
+      </>
+    );
   }
 }
 
-function MobileNavbar() {
-  return (
-    <>
-      {/* Simulate a smartphone / tablet */}
-      <div className="mobile-container">
-
-      {/* Top Navigation Menu */}
-
-        <div id="myNavLinks">
-          <a href="#news">News</a>
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
-        </div>
-        <a href="javascript:void(0);" className="icon" onclick="myFunction()">
-          <i className="fa fa-bars"></i>
-        </a>
-
-
-
-
-
-
-
-          <MediaQuery minDeviceWidth={1224} className="desktop">
-            <p>You are a desktop or laptop</p>
-          </MediaQuery>
-          <MediaQuery minDeviceWidth={768} maxDeviceWidth={991} className="tablet">
-            <p>You are a tablet</p>
-          </MediaQuery>
-          <MediaQuery maxDeviceWidth={767} className="mobile">
-            <p>You are a mobile phone</p>
-          </MediaQuery>
-
-
-
-      </div>
-    </>
-  );
-}
-
-// export default MobileNavbar;
+export default MobileNavbar;
