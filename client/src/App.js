@@ -48,7 +48,7 @@ function App() {
             <PrivateRoute exact path="/creel" component={Creel} />
           </Switch>
         </Wrapper>
-        <Footer />
+        <Footer /> 
       </MediaQuery>
       <MediaQuery maxDeviceWidth={767}>
         <MobileNavbar />
