@@ -88,7 +88,7 @@ class LoginPage extends Component {
                                     <button className='add-btn bg-success' id="signBtn">Sign Up</button>
                                 </div>
                             </div>
-                            <div className='card col-6 text-center float-left'>
+                            <div className='card col-6 text-center float-right'>
                                 <div className='card-body creel text-center'>
                                     <h5 className='card-title creel text-center '>Existing User Login</h5>
                                     <div className='input-group-prepend'>
