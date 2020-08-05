@@ -8,6 +8,24 @@
     z-index: -1;
 }
 
+.header-box {
+    background-color: rgba(100, 109, 117, 0.8);
+    padding: 10px;
+}
+
+.title {
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.subtitle {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
 .catch-card {
     border: none;
     width: 600px;

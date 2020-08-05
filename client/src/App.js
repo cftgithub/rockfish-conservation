@@ -9,12 +9,15 @@ import Home from "./pages/Home";
 import Species from "./pages/Species";
 import Creel from "./pages/Creel";
 import Fishing from "./pages/Fishing";
+import LoginPage from "./pages/Login/Login";
 import Register from "./components/Auth/Register";
 import Login from "./components/Auth/Login";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-import Navbar from "./components/Navbar";
+import Nav from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
+import MobileNavbar from "./components/MobileNavbar";
+import MediaQuery from 'react-responsive';
 
 if (localStorage.jwtToken) {
   const token = localStorage.jwtToken;
@@ -32,21 +35,31 @@ function App() {
   return (
     <Provider store={store}>
     <Router>
-      <div>
-        <Navbar />
+      <MediaQuery minDeviceWidth={768}>
+        <Nav />
         <Wrapper>
           <Route exact path="/" component={Home} />
           <Route exact path="/species" component={Species} />
           <Route exact path="/creel" component={Creel} />
           <Route exact path="/fishing" component={Fishing} />
           <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={Login} />
+          <Route exact path="/login" component={LoginPage} />
           <Switch>
             <PrivateRoute exact path="/creel" component={Creel} />
           </Switch>
         </Wrapper>
-        <Footer />
-      </div>
+        <Footer /> 
+      </MediaQuery>
+      <MediaQuery maxDeviceWidth={767}>
+        <MobileNavbar />
+        <Wrapper>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/species" component={Species} />
+          <Route exact path="/creel" component={Creel} />
+          <Route exact path="/fishing" component={Fishing} />
+          <Route exact path="/login" component={Login} />
+        </Wrapper>
+      </MediaQuery>
     </Router>
     </Provider>
   );
