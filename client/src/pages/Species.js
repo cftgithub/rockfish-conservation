@@ -8,9 +8,7 @@ import fish from "../fish.json";
 // import Modal from "../components/Modal";
 // import "../App.css";
 
-// Code below handles append
 class App extends Component {
-  // Sets this.state.fish to the fish json array
   state = {
     fish,
     filteredFish: fish

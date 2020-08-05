@@ -1,6 +1,14 @@
 .btn {
     margin-right: 10px;
     background-color: rgb(1, 36, 56);
+    width: 110px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .popover {

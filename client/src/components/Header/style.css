@@ -1,4 +1,17 @@
+.header-box {
+    background-color: rgba(100, 109, 117, 0.8);
+    padding: 20px 20px 0px 20px;
+}
+
 .title {
-    /* margin-top: 40px; */
-    color:  rgb(1, 36, 56);
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: bold;
+    font-size: 80px;
+}
+
+.subtitle {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
 }

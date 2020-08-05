@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import Modal from "../Modal";
 import "./style.css";
 import fish from "../../fish.json";
-import { Modal, CardDeck, Card } from 'react-bootstrap';
+import { Modal, CardDeck } from 'react-bootstrap';
 
 class Species extends Component {
     state = {
@@ -42,8 +42,9 @@ class Species extends Component {
         return (
             <CardDeck>
                 <div className="card species-card">
-                    <Card.Img className="fish" alt={this.props.name} src={this.props.image} />
-                    {/* </Card.Img> */}
+                    <div className="img-card">
+                        <img className="fish" alt={this.props.name} src={this.props.image} />
+                    </div>
                     <div className="content">
                         <ul>
                             <li>
