@@ -72,7 +72,6 @@ class Creel extends Component {
         </div>
         <div className='col-lg-12 col-md-auto p-0 d-flex justify-content-center text-center cards'>
           <div className='container-fluid creel'>
-            <Profile />
             <Heading
               title='Creel'
               subtitle='Track your catches to help scientists monitor wild populations.'

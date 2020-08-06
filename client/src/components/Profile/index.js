@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import { NavLink } from "react-router-dom";
 
 class Profile extends Component {
     onLogoutClick = e => {
@@ -10,8 +11,15 @@ class Profile extends Component {
     };
     render() {
         return (
-            <div>
-                <button onClick={this.onLogoutClick}>Logout</button>
+            <div className="login">
+                <NavLink to="/login"
+                    className={window.location.pathname === "/login" ? "active nav-login" : "nav-login"}
+                    activeStyle={{ color: "white" }}
+                    style={{ color: "white", textDecoration: "none" }}
+                    onClick={this.onLogoutClick}
+                >
+                    Logout
+                </NavLink>
             </div>
         );
     }
