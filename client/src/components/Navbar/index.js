@@ -1,10 +1,39 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { Component} from "react";
+import { NavLink, Link, withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import "./style.css";
 import { Navbar } from "react-bootstrap";
+import Profile from "../Profile";
+import { loginUser } from "../../actions/authActions";
 
-function Nav() {
-  return (
+class Nav extends Component {
+
+  renderButtons = () => {
+    if (this.props.auth.isAuthenticated) {
+      return (
+        <div>
+          <Profile />
+        </div>
+      );
+    } else {
+      return (
+        <div className="login">
+          <NavLink to="/login"
+            className={window.location.pathname === "/login" ? "active nav-login" : "nav-login"}
+            activeStyle={{ color: "white" }}
+            style={{ color: "white", textDecoration: "none" }}
+            onClick={this.handleChange}
+          >
+            Login
+          </NavLink>
+        </div>
+      )
+    }
+  };
+
+  render () {
+    return (
     <>
       <Navbar className="desktop-navbar">
         <div className="container-fluid nav-box">
@@ -41,19 +70,24 @@ function Nav() {
                 Fishing</NavLink>
             </li>
           </ul>
-          <div className="login">
-            <NavLink to="/login"
-              className={window.location.pathname === "/login" ? "active nav-login" : "nav-login"}
-              activeStyle={{ color: "white" }}
-              style={{ color: "white", textDecoration: "none" }}
-            >
-              Login
-            </NavLink>
-          </div>
+          <div className="activeButton">{this.renderButtons()}</div>
         </div>
       </Navbar>
     </>
-  );
+    )
+  }
 }
 
-export default Nav;
+Nav.propTypes = {
+  loginUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
+});
+export default connect(
+  mapStateToProps,
+  { loginUser }
+)(withRouter(Nav));
