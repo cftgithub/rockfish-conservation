@@ -3,22 +3,17 @@
   width: 200px;
 }
   
-/* .img-card {
+.img-card {
   height: 100%;
-  margin: 10px;
-  border: 5px solid rgb(161, 97, 36);
-} */
-
-.species-card {
-  margin-bottom: 20px;
-  background-color:#f1dbaa;
-  border-radius: 2px;
-  position: relative;
-  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  margin: 15px;
+  border: 5px solid rgb(2, 52, 82);
+  border-radius: 3px;
 }
 
-.card-deck {
-  padding: 10px;
+.species-card {
+  margin: 20px 10px;
+  background-color:#acc2c7;
+  box-shadow: 0 5px 10px rgb(45, 73, 88), 0 5px 10px rgb(45, 73, 88);
 }
 
 .content {
@@ -26,22 +21,27 @@
   padding-bottom: 8px;
 }
 
-.modalBtn {
-  text-align: center;
+#modalBtn {
+  width: 210px;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
-
-/* .modal-content #title {
-  font-size: 16px;
-  font-weight: bold;
-} */
 
 body {
   background-image: url(ocean.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#modalHeader {
+  background-color: #81adb8;
+  
+}
+
+#modalBody {
+  background-color: #b7d6dd;
 }
