@@ -9,7 +9,6 @@ class Register extends Component {
     constructor() {
         super();
         this.state = {
-            username: "",
             email: "",
             password: "",
             confPassword: "",
@@ -37,7 +36,6 @@ class Register extends Component {
     onSubmit = e => {
         e.preventDefault();
         const newUser = {
-            username: this.state.username,
             email: this.state.email,
             password: this.state.password,
             confPassword: this.state.confPassword
@@ -60,20 +58,6 @@ class Register extends Component {
                         <div className="input-field col s12">
                             <input
                                 onChange={this.onChange}
-                                value={this.state.username}
-                                error={errors.username}
-                                id="username"
-                                type="text"
-                                className={classnames("", {
-                                    invalid: errors.username
-                                })}
-                            />
-                            <label htmlFor="name">Username</label>
-                            <span className="red-text">{errors.username}</span>
-                        </div>
-                        <div className="input-field col s12">
-                            <input
-                                onChange={this.onChange}
                                 value={this.state.email}
                                 error={errors.email}
                                 id="email"
@@ -83,7 +67,7 @@ class Register extends Component {
                                 })}
                             />
                             <label htmlFor="email">Email</label>
-                            <span className="red-text">{errors.email}</span>
+                            <span className="redText">{errors.email}</span>
                         </div>
                         <div className="input-field col s12">
                             <input
@@ -97,7 +81,7 @@ class Register extends Component {
                                 })}
                             />
                             <label htmlFor="password">Password</label>
-                            <span className="red-text">{errors.password}</span>
+                            <span className="redText">{errors.password}</span>
                         </div>
                         <div className="input-field col s12">
                             <input
@@ -111,7 +95,7 @@ class Register extends Component {
                                 })}
                             />
                             <label htmlFor="confPassword">Confirm Password</label>
-                            <span className="red-text">{errors.confPassword}</span>
+                            <span className="redText">{errors.confPassword}</span>
                         </div>
                         <div>
                             <button type="submit">Sign up</button>

@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
+import "./style.css";
 
 class Login extends Component {
     constructor() {
@@ -32,8 +33,8 @@ class Login extends Component {
         this.setState({ [e.target.id]: e.target.value });
     };
 
-    onSubmit = e => {
-        e.preventDefault();
+    onSubmit = event => {
+        event.preventDefault();
 
         const userData = {
             email: this.state.email,
@@ -65,7 +66,7 @@ class Login extends Component {
                                 })}
                             />
                             <label htmlFor="email">Email</label>
-                            <span className="red-text">
+                            <span className="redText">
                                 {errors.email}
                                 {errors.emailnotfound}
                             </span>
@@ -82,7 +83,7 @@ class Login extends Component {
                                 })}
                             />
                             <label htmlFor="password">Password</label>
-                            <span className="red-text">
+                            <span className="redText">
                                 {errors.password}
                                 {errors.passwordincorrect}
                             </span>

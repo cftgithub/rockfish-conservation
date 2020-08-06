@@ -4,14 +4,9 @@ const isEmpty = require("is-empty");
 module.exports = function validateRegisterInput(data) {
     let errors = {};
 
-    data.username = !isEmpty(data.username) ? data.username : "";
     data.email = !isEmpty(data.email) ? data.email : "";
     data.password = !isEmpty(data.password) ? data.password : "";
     data.confPassword = !isEmpty(data.confPassword) ? data.confPassword : "";
-
-    if (Validator.isEmpty(data.username)) {
-        errors.username = "Please provide a username if you clam.";
-    }
 
     if (Validator.isEmpty(data.email)) {
         errors.email = "UnforTUNAtely, an e-mail is required.";
