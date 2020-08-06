@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./style.css";
 import fish from "../../fish.json";
-import { Modal } from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 
 class Species extends Component {
     state = {
@@ -44,14 +44,14 @@ class Species extends Component {
                             </li>
                         </ul>
                     </div>
-                    <button type="button" id="modalBtn" className="btn btn-primary" data-toggle="modal" data-target="#infoModal" onClick={this.showModal}>
-                        Learn More</button>
+                    <Button type="button" id="modalBtn" variant="info" data-toggle="modal" data-target="#infoModal" onClick={this.showModal}>
+                        Learn More</Button>
                 </div>
-                <Modal show={this.state.show} onClick={this.hideModal}>
-                    <Modal.Header id='ModalHeader' closeButton>
-                        <Modal.Title id='ModalTitle'>{this.props.title}</Modal.Title>
+                <Modal centered show={this.state.show} onClick={this.hideModal}>
+                    <Modal.Header id='modalHeader' closeButton>
+                        <Modal.Title id='contained-modal-title-vcenter'>{this.props.title}</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>
+                    <Modal.Body id='modalBody'>
                         <h5>{this.props.sciName}</h5>
                         <h6>{this.props.location}</h6>
                         <p>{this.props.biology}</p>

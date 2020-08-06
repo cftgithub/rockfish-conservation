@@ -1,9 +1,11 @@
 .btn {
-    margin-right: 10px;
     background-color: rgb(1, 36, 56);
     width: 110px;
 }
 
+a.btn {
+    margin-left: 15px;
+}
 .buttons {
     display: flex;
     justify-content: center;
