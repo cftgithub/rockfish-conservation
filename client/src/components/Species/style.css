@@ -17,9 +17,17 @@
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
 }
 
+.card-deck {
+  padding: 10px;
+}
+
 .content {
   text-align: center;
   padding-bottom: 8px;
+}
+
+.modalBtn {
+  text-align: center;
 }
 
 ul {
@@ -31,3 +39,9 @@ ul {
   font-size: 16px;
   font-weight: bold;
 } */
+
+body {
+  background-image: url(ocean.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
