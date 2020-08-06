@@ -19,7 +19,6 @@ router.post("/register", (req, res) => {
             return res.status(400).json({ email: "That e-mail already exists. That's in seine!" });
         } else {
             const newUser = new User({
-                username: req.body.username,
                 email: req.body.email,
                 password: req.body.password
             });

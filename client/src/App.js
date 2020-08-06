@@ -9,7 +9,6 @@ import Home from "./pages/Home";
 import Species from "./pages/Species";
 import Creel from "./pages/Creel";
 import Fishing from "./pages/Fishing";
-import LoginPage from "./pages/Login/Login";
 import Register from "./components/Auth/Register";
 import Login from "./components/Auth/Login";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
@@ -43,7 +42,7 @@ function App() {
           <Route exact path="/creel" component={Creel} />
           <Route exact path="/fishing" component={Fishing} />
           <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/login" component={Login} />
           <Switch>
             <PrivateRoute exact path="/creel" component={Creel} />
           </Switch>
