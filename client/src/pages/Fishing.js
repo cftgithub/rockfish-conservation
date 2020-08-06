@@ -11,7 +11,7 @@ class App extends Component {
     render() {
         return (
             <>
-                <Heading title={"Safe Fishing"} />
+                <Heading title={"Fishing Gear"} />
                 <div>                <Button id="game" variant="info" href="https://rileychatwin.github.io/Fishy/." target="_blank">Play Game</Button></div>
 
                 <Wrapper>

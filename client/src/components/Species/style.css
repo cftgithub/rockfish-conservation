@@ -1,3 +1,9 @@
+body {
+  background-image: url(ocean.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .fish {
   height: 175px;
   width: 200px;
@@ -12,17 +18,14 @@
 
 .species-card {
   margin: 20px 10px;
-  background-color:#acc2c7;
-  box-shadow: 0 5px 10px rgb(45, 73, 88), 0 5px 10px rgb(45, 73, 88);
+  background-color:#b5d1cc;
+  box-shadow: 6px 3px 3px rgb(68, 108, 117);
+  border: 1px solid rgb(4, 126, 156);
 }
 
 .content {
   text-align: center;
   padding-bottom: 8px;
-}
-
-#modalBtn {
-  width: 210px;
 }
 
 ul {
@@ -31,17 +34,20 @@ ul {
   margin: 0;
 }
 
-body {
-  background-image: url(ocean.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+#modalBtn {
+  width: 210px;
 }
 
 #modalHeader {
-  background-color: #81adb8;
-  
+  background-color: #a9d8f3;
+  border: 1px solid #68a3c5;
 }
 
 #modalBody {
-  background-color: #b7d6dd;
+  background-color: #c0d6e4;
+  border: 1px solid #68a3c5;
+}
+
+h1.title {
+  text-shadow: 1px 1px 20px rgb(1, 22, 34), 20px 20px 30px rgb(174, 221, 243), 60px 40px 40px rgb(161, 176, 184);
 }
