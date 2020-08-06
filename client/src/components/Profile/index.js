@@ -9,16 +9,9 @@ class Profile extends Component {
         this.props.logoutUser();
     };
     render() {
-        const { user } = this.props.auth;
-        console.log(user);
         return (
             <div>
-                <div className="row">
-                    <div className="col s12 center-align">
-                        <h4>Welcome, {user.username}!</h4>
-                        <button onClick={this.onLogoutClick}>Logout</button>
-                    </div>
-                </div>
+                <button onClick={this.onLogoutClick}>Logout</button>
             </div>
         );
     }
