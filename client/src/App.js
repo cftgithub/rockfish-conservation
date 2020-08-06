@@ -23,7 +23,7 @@ if (localStorage.jwtToken) {
   setAuthToken(token);
   const decoded = jwt_decode(token);
   store.dispatch(setCurrentUser(decoded));
-  const currentTime = Date.now() / 1000; 
+  const currentTime = Date.now() / 1000;
   if (decoded.exp < currentTime) {
     store.dispatch(logoutUser());
     window.location.href = "./login";
@@ -33,6 +33,35 @@ if (localStorage.jwtToken) {
 function App() {
   return (
     <Provider store={store}>
+<<<<<<< HEAD
+      <Router>
+        <MediaQuery minDeviceWidth={768}>
+          <Nav />
+          <Wrapper>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/species" component={Species} />
+            <Route exact path="/creel" component={Creel} />
+            <Route exact path="/fishing" component={Fishing} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={LoginPage} />
+            <Switch>
+              <PrivateRoute exact path="/creel" component={Creel} />
+            </Switch>
+          </Wrapper>
+          <Footer />
+        </MediaQuery>
+        <MediaQuery maxDeviceWidth={767}>
+          <MobileNavbar />
+          <Wrapper>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/species" component={Species} />
+            <Route exact path="/creel" component={Creel} />
+            <Route exact path="/fishing" component={Fishing} />
+            <Route exact path="/login" component={Login} />
+          </Wrapper>
+        </MediaQuery>
+      </Router>
+=======
     <Router>
       <MediaQuery minDeviceWidth={768}>
         <Nav />
@@ -60,6 +89,7 @@ function App() {
         </Wrapper>
       </MediaQuery>
     </Router>
+>>>>>>> fcc9f50b0188488d858db67d5e07d34075970c3a
     </Provider>
   );
 }

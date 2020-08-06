@@ -5,8 +5,7 @@ import Heading from "../components/Header";
 import Buttons from "../components/Buttons";
 import References from "../components/References";
 import fish from "../fish.json";
-// import Modal from "../components/Modal";
-// import "../App.css";
+import "../App.css";
 
 class App extends Component {
   state = {
@@ -46,7 +45,6 @@ class App extends Component {
               setFilter={this.buttonFilter}
             />
           })}
-          {/* <Modal /> */}
         </Wrapper>
         <References />
       </>
