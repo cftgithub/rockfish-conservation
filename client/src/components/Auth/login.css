@@ -1,0 +1,14 @@
+label {
+    margin-left: 5px;
+}
+
+.redText { 
+    display: block;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 5px;
+}
+
+button {
+    margin-left: 15px;
+}

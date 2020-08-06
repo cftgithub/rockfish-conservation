@@ -8,6 +8,12 @@
     z-index: -1;
 }
 
+.creel-header {
+    background-color: rgba(100, 109, 117, 0.5) !important;
+    padding: 0px !important;
+    margin: 0px 50px 0px 50px !important;
+}
+
 .catch-card {
     border: none;
     width: 600px;

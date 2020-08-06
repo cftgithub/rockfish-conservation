@@ -9,7 +9,6 @@ import Home from "./pages/Home";
 import Species from "./pages/Species";
 import Creel from "./pages/Creel";
 import Fishing from "./pages/Fishing";
-import LoginPage from "./pages/Login/Login";
 import MobileCreel from "./pages/MobileCreel/MobileCreel";
 import Register from "./components/Auth/Register";
 import Login from "./components/Auth/Login";
@@ -25,7 +24,7 @@ if (localStorage.jwtToken) {
   setAuthToken(token);
   const decoded = jwt_decode(token);
   store.dispatch(setCurrentUser(decoded));
-  const currentTime = Date.now() / 1000; 
+  const currentTime = Date.now() / 1000;
   if (decoded.exp < currentTime) {
     store.dispatch(logoutUser());
     window.location.href = "./login";
@@ -44,7 +43,7 @@ function App() {
           <Route exact path="/creel" component={Creel} />
           <Route exact path="/fishing" component={Fishing} />
           <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/login" component={Login} />
           <Switch>
             <PrivateRoute exact path="/creel" component={Creel} />
           </Switch>
