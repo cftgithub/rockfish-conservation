@@ -27,4 +27,4 @@ render() {
 }
 }
 
-export default Modal;
+// export default Modal;

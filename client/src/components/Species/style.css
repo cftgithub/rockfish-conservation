@@ -1,24 +1,26 @@
+body {
+  background-image: url(ocean.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .fish {
   height: 175px;
   width: 200px;
 }
   
-/* .img-card {
+.img-card {
   height: 100%;
-  margin: 10px;
-  border: 5px solid rgb(161, 97, 36);
-} */
-
-.species-card {
-  margin-bottom: 20px;
-  background-color:#f1dbaa;
-  border-radius: 2px;
-  position: relative;
-  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  margin: 15px;
+  border: 5px solid rgb(2, 52, 82);
+  border-radius: 3px;
 }
 
-.card-deck {
-  padding: 10px;
+.species-card {
+  margin: 20px 10px;
+  background-color:#b5d1cc;
+  box-shadow: 6px 3px 3px rgb(68, 108, 117);
+  border: 1px solid rgb(4, 126, 156);
 }
 
 .content {
@@ -26,22 +28,26 @@
   padding-bottom: 8px;
 }
 
-.modalBtn {
-  text-align: center;
-}
-
 ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
-/* .modal-content #title {
-  font-size: 16px;
-  font-weight: bold;
-} */
+#modalBtn {
+  width: 210px;
+}
 
-body {
-  background-image: url(ocean.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+#modalHeader {
+  background-color: #a9d8f3;
+  border: 1px solid #68a3c5;
+}
+
+#modalBody {
+  background-color: #c0d6e4;
+  border: 1px solid #68a3c5;
+}
+
+h1.title {
+  text-shadow: 1px 1px 20px rgb(1, 22, 34), 20px 20px 30px rgb(174, 221, 243), 60px 40px 40px rgb(161, 176, 184);
 }
