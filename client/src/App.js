@@ -8,7 +8,7 @@ import store from "./store";
 import Home from "./pages/Home";
 import Species from "./pages/Species";
 import Creel from "./pages/Creel";
-import Fishing from "./pages/Fishing";
+import Fishing from "./pages/Fishing/Fishing";
 import MobileCreel from "./pages/MobileCreel/MobileCreel";
 import Register from "./components/Auth/Register";
 import Login from "./components/Auth/Login";
