@@ -1,0 +1,23 @@
+.mobile-creel {
+    background-image: url("../../assets/images/ocean.png");
+    background-size: cover;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    z-index: -1;
+}
+
+.mobile-creel-header {
+    color: white;
+    margin-top: 80px;
+}
+
+.mobile-header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    text-shadow: 1px 1px 20px rgb(1, 22, 34), 20px 20px 30px rgb(174, 221, 243), 60px 40px 40px rgb(161, 176, 184);
+}

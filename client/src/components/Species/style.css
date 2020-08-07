@@ -1,7 +1,14 @@
-body {
-  background-image: url(ocean.jpg);
-  background-repeat: no-repeat;
+.speciespage {
+  background-image: url("../../assets/images/ocean.png");
   background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  z-index: -1;
 }
 
 .fish {
@@ -46,8 +53,4 @@ ul {
 #modalBody {
   background-color: #c0d6e4;
   border: 1px solid #68a3c5;
-}
-
-h1.title {
-  text-shadow: 1px 1px 20px rgb(1, 22, 34), 20px 20px 30px rgb(174, 221, 243), 60px 40px 40px rgb(161, 176, 184);
 }

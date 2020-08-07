@@ -64,12 +64,7 @@ class Creel extends Component {
   render() {
     return (
       <>
-        <div className='creelpage container-fluid text-center'>
-          <Player autoPlay loop muted playsInline src={video}>
-            <ControlBar disabled />
-            <LoadingSpinner disabled />
-          </Player>
-        </div>
+        <div className='creelpage container-fluid text-center'></div>
         <div className='col-lg-12 col-md-auto p-0 d-flex justify-content-center text-center cards'>
           <div className='container-fluid creel'>
             <div className="creel-header">
