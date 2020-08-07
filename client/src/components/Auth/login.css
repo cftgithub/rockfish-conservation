@@ -1,26 +1,25 @@
 label {
-    margin-left: 5px;
-    color: white;
+    padding: 3px 0px;
 }
 
 #charColor {
     color: white;
-    text-shadow: 1px 1px 3px rgb(1, 6, 20);
+    text-shadow: 1px 1px 3px rgb(1, 6, 20), 1px 1px 3px rgb(4, 26, 85);
+    padding: 0 200px;
 }
 
-a {
+#aLink {
     color: rgb(228, 241, 247);
-    text-shadow: 1px 1px 3px rgb(1, 6, 20);
-}
-
-#loginTitle {
-    color: white;
-    font-weight: bolder;
-    text-shadow: 1px 1px 20px rgb(1, 22, 34), 20px 20px 30px rgb(174, 221, 243), 60px 40px 40px rgb(161, 176, 184);
+    text-shadow: 1px 1px 3px rgb(1, 6, 20), 1px 1px 3px rgb(4, 26, 85), 1px 1px 3px rgb(4, 26, 85);
 }
 
 .container {
     text-align: center;
+}
+
+.form-control {
+    border: 1px solid rgb(97, 116, 136);
+    box-shadow: 2px 2px 2px rgb(105, 117, 131);
 }
 
 .redText { 
@@ -31,5 +30,41 @@ a {
 }
 
 button {
-    margin-left: 15px;
+    background-color: rgb(1, 36, 56);
+    color: white;
+    width: 100px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1200px){
+    #charColor {
+        padding: 0 100px;
+    }    
+}
+
+@media only screen and (max-width: 1000px){
+    #charColor {
+        padding: 0 50px;
+    }    
+}
+
+@media only screen and (max-width: 1000px){
+    #charColor {
+        padding: 0;
+    }
+    .title {
+        font-size: 70px;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .title {
+        font-size: 50px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    /* label {
+        padding: 5px;
+    } */
 }

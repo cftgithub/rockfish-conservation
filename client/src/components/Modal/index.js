@@ -3,10 +3,6 @@ import "./style.css";
 
 class Modal extends React.Component {
   
-// toggleModal = e => {
-//     this.props.onClick(this.props.show); 
-// };
-
 hideModal = () => {
     this.props.onClick(this.props.show);
 }

@@ -57,26 +57,28 @@ class Login extends Component {
                     <div className="row">
                         <div id="charColor" className="col-12 offset-s2">
                             <h4>Login to track your catches and help scientists monitor fish populations!</h4>
-                            <p>Don't have an account? <Link to="/register">Create one here!</Link></p>
+                            <p id="aLink">Don't have an account? <Link id="aLink" to="/register">Create one here!</Link></p>
                         </div>
                         <div id="charColor" className="col-12 offset-s2">
                             <form noValidate onSubmit={this.onSubmit}>
-                                <Form.Group controlId="email">
-                                    <Form.Control
-                                        onChange={this.onChange}
-                                        value={this.state.email}
-                                        error={errors.email}
-                                        type="email"
-                                        className={classnames("", {
-                                            invalid: errors.email || errors.emailnotfound
-                                        })}
+                                <div className="form-group-row">
+                                    <Form.Group controlId="email">
+                                        <Form.Control
+                                            onChange={this.onChange}
+                                            value={this.state.email}
+                                            error={errors.email}
+                                            type="email"
+                                            className={classnames("", {
+                                                invalid: errors.email || errors.emailnotfound
+                                            })}
                                         />
                                         <Form.Label>Email</Form.Label>
                                         <span className="redText">
                                             {errors.email}
                                             {errors.emailnotfound}
                                         </span>
-                                </Form.Group>
+                                    </Form.Group>
+                                </div>
                                 <div className="form-group-row">
                                     <Form.Group controlId="password">
                                         <Form.Control
@@ -94,9 +96,9 @@ class Login extends Component {
                                             {errors.passwordincorrect}
                                         </span>
                                     </Form.Group>
-                                    <div>
-                                        <button type="submit">Login</button>
-                                    </div>
+                                </div>
+                                <div>
+                                    <button type="submit">Login</button>
                                 </div>
                             </form>
                         </div>

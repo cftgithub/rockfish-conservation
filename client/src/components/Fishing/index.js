@@ -13,7 +13,7 @@ function SafeFishing(props) {
                         <strong>{props.name}</strong>
                     </li>
                     <li>
-                        <em>{  props.status}</em>
+                        <strong><em>{  props.status}</em></strong>
                     </li>
                      <li>
                         {props.description}
