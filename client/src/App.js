@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Species from "./pages/Species";
 import Creel from "./pages/Creel";
 import Fishing from "./pages/Fishing";
+import MobileCreel from "./pages/MobileCreel/MobileCreel";
 import Register from "./components/Auth/Register";
 import Login from "./components/Auth/Login";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
@@ -52,11 +53,11 @@ function App() {
       <MediaQuery maxDeviceWidth={767}>
         <MobileNavbar />
         <Wrapper>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/species" component={Species} />
-          <Route exact path="/creel" component={Creel} />
-          <Route exact path="/fishing" component={Fishing} />
-          <Route exact path="/login" component={Login} />
+          {/* <Route exact path="/" component={MobileHome} />
+          <Route exact path="/species" component={MobileSpecies} /> */}
+          <Route exact path="/creel" component={MobileCreel} />
+          {/* <Route exact path="/fishing" component={MobileFishing} />
+          <Route exact path="/login" component={MobileLogin} /> */}
         </Wrapper>
       </MediaQuery>
     </Router>
