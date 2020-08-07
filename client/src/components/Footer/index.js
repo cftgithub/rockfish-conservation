@@ -7,10 +7,9 @@ function Footer() {
     return (
         <footer className="footer">
             <Container>
-
-            <Row>
-                <References />
-            </Row>
+                <Row>
+                    <References />
+                </Row>
             </Container>
             <Container>
                 <Row>
