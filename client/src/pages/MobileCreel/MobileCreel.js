@@ -4,7 +4,7 @@ import { Form, InputGroup } from 'react-bootstrap';
 import API from "../../utils/API";
 // import { List, InputGroup } from "../components/List";
 import MobileCreelForm from "../../components/MobileCreelForm";
-// import DeleteBtn from "../components/DeleteBtn";
+import DeleteBtn from "../../components/DeleteBtn";
 // //import EditBtn from "../components/EditBtn";
 // import Profile from "../components/Profile";
 import Heading from "../../components/Header";
@@ -69,10 +69,36 @@ class MobileCreel extends Component {
         <div className='mobile-creel col-lg-12 col-md-auto p-0 d-flex justify-content-center text-center cards'>
           <div className='container-fluid creel'>
             <div className="mobile-creel-header">
-              Creel <br></br> Track your catches to help scientists monitor wild populations.
+              <h4 className="mobile-header">Track your catches to help scientists monitor wild populations.</h4>
             </div>
             <MobileCreelForm />
             <SubmitBtn />
+            <br></br>
+            <div className='card catch-card'>
+              <div className="card-body">
+                <div className='card-title catch-title'>
+                  Catch History
+                </div>
+                {this.state.catches.map((caught) => {
+                  return (
+                    <div className="list">
+                      <div className="input-group" key={caught._id}>
+                        <a href={"/creels/" + caught._id}>
+                          <strong className='catch-text'>
+                            Species: {caught.species}, Length:{" "}
+                            {caught.length}
+                          </strong>
+                        </a>
+                        <DeleteBtn
+                          onClick={() => this.deleteCreel(caught._id)}
+                        />
+                        
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </>

@@ -5,7 +5,7 @@ import { Form, InputGroup } from 'react-bootstrap';
 function MobileCreelForm(props) {
     return (
         <div className="container-fluid mobile-creel-box">
-            <Form>
+            <Form className="mobile-creel-form justify-content-center container-fluid">
                 <Form.Group controlId='creelInputForm' className="mobile-creel-form text-center justify-content-center">
                     <InputGroup size='lg' className='mobile-input-group'>
                         <Form.Control
