@@ -6,15 +6,11 @@
   padding: 12px;
   background: rgb(1, 36, 56);
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   font-family: 'Montserrat', sans-serif;
-  z-index: 3;
 }
 
 .text-center {
   margin: 0;
-}
-
-#page-content {
-  flex: 1 0 auto;
+  padding-top: 10px;
 }

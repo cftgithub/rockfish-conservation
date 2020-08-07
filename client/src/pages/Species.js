@@ -3,7 +3,6 @@ import Species from "../components/Species";
 import Wrapper from "../components/Wrapper";
 import Heading from "../components/Header";
 import Buttons from "../components/Buttons";
-import References from "../components/References";
 import fish from "../fish.json";
 import "../components/Species/style.css";
 
@@ -47,7 +46,6 @@ class App extends Component {
             />
           })}
         </Wrapper>
-        <References />
       </>
     );
   }

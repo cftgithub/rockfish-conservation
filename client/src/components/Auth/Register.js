@@ -54,56 +54,64 @@ class Register extends Component {
                 <div className='speciespage container-fluid text-center'></div>
                 <div className="container">
                     <div className="row">
-                        <div className="col s8 offset-s2">
+                        <div id="charColor" className="col-12 offset-s2">
                             <h4>Create an account to track your catches and help scientists monitor fish populations!</h4>
-                            <p>
-                                Already have an account? <Link to="/login">Log in here!</Link>
+                            <p id="aLink">
+                                Already have an account? <Link id="aLink" to="/login">Log in here!</Link>
                             </p>
                         </div>
-                        <form noValidate onSubmit={this.onSubmit}>
-                            <Form.Group controlId="email">
-                                <Form.Control
-                                    onChange={this.onChange}
-                                    value={this.state.email}
-                                    error={errors.email}
-                                    type="email"
-                                    className={classnames("", {
-                                        invalid: errors.email
-                                    })}
-                                />
-                                <Form.Label>Email</Form.Label>
-                                <span className="redText">{errors.email}</span>
-                            </Form.Group>
-                            <Form.Group controlId="password">
-                                <Form.Control
-                                    onChange={this.onChange}
-                                    value={this.state.password}
-                                    error={errors.password}
-                                    type="password"
-                                    className={classnames("", {
-                                        invalid: errors.password
-                                    })}
-                                />
-                                <Form.Label>Password</Form.Label>
-                                <span className="redText">{errors.password}</span>
-                            </Form.Group>
-                            <Form.Group controlId="confPassword">
-                                <Form.Control
-                                    onChange={this.onChange}
-                                    value={this.state.confPassword}
-                                    error={errors.confPassword}
-                                    type="password"
-                                    className={classnames("", {
-                                        invalid: errors.confPassword
-                                    })}
-                                />
-                                <Form.Label>Confirm Password</Form.Label>
-                                <span className="redText">{errors.confPassword}</span>
-                            </Form.Group>
-                            <div>
-                                <button type="submit">Sign up</button>
-                            </div>
-                        </form>
+                        <div id="charColor" className="col-12 offset-s2">
+                            <form noValidate onSubmit={this.onSubmit}>
+                                <div className="form-group-row">
+                                    <Form.Group controlId="email">
+                                        <Form.Control
+                                            onChange={this.onChange}
+                                            value={this.state.email}
+                                            error={errors.email}
+                                            type="email"
+                                            className={classnames("", {
+                                                invalid: errors.email
+                                            })}
+                                        />
+                                        <Form.Label>Email</Form.Label>
+                                        <span className="redText">{errors.email}</span>
+                                    </Form.Group>
+                                </div>
+                                <div className="form-group-row">
+                                    <Form.Group controlId="password">
+                                        <Form.Control
+                                            onChange={this.onChange}
+                                            value={this.state.password}
+                                            error={errors.password}
+                                            type="password"
+                                            className={classnames("", {
+                                                invalid: errors.password
+                                            })}
+                                        />
+                                        <Form.Label>Password</Form.Label>
+                                        <span className="redText">{errors.password}</span>
+                                    </Form.Group>
+                                </div>
+                                <div className="form-group-row">
+                                    <Form.Group controlId="confPassword">
+                                        <Form.Control
+                                            onChange={this.onChange}
+                                            value={this.state.confPassword}
+                                            error={errors.confPassword}
+                                            type="password"
+                                            className={classnames("", {
+                                                invalid: errors.confPassword
+                                            })}
+                                        />
+                                        <Form.Label>Confirm Password</Form.Label>
+                                        <span className="redText">{errors.confPassword}</span>
+                                    </Form.Group>
+                                </div>
+                                <div>
+                                    <button type="submit">Sign up</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </>

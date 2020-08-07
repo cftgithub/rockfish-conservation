@@ -7,7 +7,7 @@
     font-family: 'Bebas Neue', cursive;
     font-weight: bold;
     font-size: 80px;
-    text-shadow: 1px 1px 20px rgb(1, 22, 34), 20px 20px 30px rgb(174, 221, 243), 60px 40px 40px rgb(161, 176, 184);
+    text-shadow: 1px 1px 3px rgb(1, 6, 20), 1px 1px 3px rgb(1, 6, 20), 1px 1px 20px rgb(1, 22, 34), 20px 20px 30px rgb(174, 221, 243), 60px 40px 40px rgb(161, 176, 184);
 }
 
 .subtitle {
