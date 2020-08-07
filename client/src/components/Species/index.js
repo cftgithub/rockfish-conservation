@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./style.css";
 import fish from "../../fish.json";
-import { Modal, Button } from 'react-bootstrap';
+import { Modal, Button, Card } from 'react-bootstrap';
 
 class Species extends Component {
     state = {
@@ -30,23 +30,23 @@ class Species extends Component {
     render() {
         return (
             <>
-                <div className="card species-card">
-                    <div className="img-card">
-                        <img className="fish" alt={this.props.name} src={this.props.image} />
-                    </div>
-                    <div className="content">
-                        <ul>
-                            <li>
-                                <strong>{this.props.name}</strong>
-                            </li>
-                            <li>
-                                <em>{"Status: " + this.props.status}</em>
-                            </li>
-                        </ul>
-                    </div>
-                    <Button type="button" id="modalBtn" variant="info" data-toggle="modal" data-target="#infoModal" onClick={this.showModal}>
-                        Learn More</Button>
-                </div>
+                    <Card className="card species-card">
+                        <div className="img-card">
+                            <img className="fish" alt={this.props.name} src={this.props.image} />
+                        </div>
+                        <div className="content">
+                            <ul>
+                                <li>
+                                    <strong>{this.props.name}</strong>
+                                </li>
+                                <li>
+                                    <em>{"Status: " + this.props.status}</em>
+                                </li>
+                            </ul>
+                        </div>
+                        <Button type="button" id="modalBtn" variant="info" data-toggle="modal" data-target="#infoModal" onClick={this.showModal}>
+                            Learn More</Button>
+                    </Card>
                 <Modal centered show={this.state.show} onClick={this.hideModal}>
                     <Modal.Header id='modalHeader' closeButton>
                         <Modal.Title id='contained-modal-title-vcenter'>{this.props.title}</Modal.Title>

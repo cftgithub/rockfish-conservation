@@ -30,7 +30,7 @@ class App extends Component {
         <Heading title={'Rockfish Identification'} />
         <Buttons filterFish={this.buttonFilter.bind(this)} />
         <Wrapper>
-          <div className='speciespage container-fluid text-center'></div>
+          <div className='speciespage text-center'></div>
           {this.state.filteredFish.map((fish, index) => {
             return <Species
               key={index}
