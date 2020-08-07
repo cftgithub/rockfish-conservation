@@ -28,7 +28,7 @@ app.use(routes);
 
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/creelDB", { useNewUrlParser: true, useUnifiedTopology: true });
 
-var MONGODB_URI = process.env.MOGODB_URI || "mongodb://localhost/creelDB";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/creelDB";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }, function (error) {
     if (error) {
         console.log(error);
