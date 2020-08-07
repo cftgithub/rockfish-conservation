@@ -5,6 +5,9 @@ import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
 import "./login.css";
+import Heading from "../Header";
+import { Form } from "react-bootstrap";
+
 
 class Login extends Component {
     constructor() {
@@ -48,7 +51,8 @@ class Login extends Component {
         const { errors } = this.state;
         return (
             <>
-                <h1 id="loginTitle">Creel Login Page</h1>
+                <Heading title={'Creel Login Page'} />
+                <div className='speciespage container-fluid text-center'></div>
                 <div className="container">
                     <div className="row">
                         <div id="charColor" className="col-12 offset-s2">
@@ -57,43 +61,39 @@ class Login extends Component {
                         </div>
                         <div id="charColor" className="col-12 offset-s2">
                             <form noValidate onSubmit={this.onSubmit}>
-                                <div className="form-group-row">
-                                    <div className="input-field col s12">
-                                        <input
-                                            onChange={this.onChange}
-                                            value={this.state.email}
-                                            error={errors.email}
-                                            id="email"
-                                            type="email"
-                                            className={classnames("", {
-                                                invalid: errors.email || errors.emailnotfound
-                                            })}
+                                <Form.Group controlId="email">
+                                    <Form.Control
+                                        onChange={this.onChange}
+                                        value={this.state.email}
+                                        error={errors.email}
+                                        type="email"
+                                        className={classnames("", {
+                                            invalid: errors.email || errors.emailnotfound
+                                        })}
                                         />
-                                        <label htmlFor="email">Email</label>
+                                        <Form.Label>Email</Form.Label>
                                         <span className="redText">
                                             {errors.email}
                                             {errors.emailnotfound}
                                         </span>
-                                    </div>
-                                </div>
+                                </Form.Group>
                                 <div className="form-group-row">
-                                    <div className="input-field col s12">
-                                        <input
+                                    <Form.Group controlId="password">
+                                        <Form.Control
                                             onChange={this.onChange}
                                             value={this.state.password}
                                             error={errors.password}
-                                            id="password"
                                             type="password"
                                             className={classnames("", {
                                                 invalid: errors.password || errors.passwordincorrect
                                             })}
                                         />
-                                        <label htmlFor="password">Password</label>
+                                        <Form.Label>Password</Form.Label>
                                         <span className="redText">
                                             {errors.password}
                                             {errors.passwordincorrect}
                                         </span>
-                                    </div>
+                                    </Form.Group>
                                     <div>
                                         <button type="submit">Login</button>
                                     </div>

@@ -13,7 +13,6 @@ function MobileCreelForm(props) {
                             placeholder='species'
                             aria-describedby='inputGroupPrepend'
                             name='species'
-                            id='creel-species-input'
                             className='mobile-creel-input'
                             onChange={props.onChange}
                         />
@@ -24,7 +23,6 @@ function MobileCreelForm(props) {
                             placeholder='length (inches)'
                             aria-describedby='inputGroupPrepend'
                             name='length'
-                            id='creel-length-input'
                             className='mobile-creel-input'
                             onChange={props.onChange}
                         />
@@ -35,7 +33,6 @@ function MobileCreelForm(props) {
                             placeholder='mm/dd/yyyy'
                             aria-describedby='inputGroupPrepend'
                             name='date'
-                            id='creel-date-input'
                             className='mobile-creel-input'
                             onChange={props.onChange}
                         />
@@ -46,7 +43,6 @@ function MobileCreelForm(props) {
                             placeholder='location'
                             aria-describedby='inputGroupPrepend'
                             name='location'
-                            id='creel-location-input'
                             className='mobile-creel-input'
                             onChange={props.onChange}
                         />

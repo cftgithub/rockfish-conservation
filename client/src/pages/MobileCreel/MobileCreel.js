@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import "./style.css";
-import { Form, InputGroup } from 'react-bootstrap';
+// import { Form, InputGroup } from 'react-bootstrap';
 import API from "../../utils/API";
 // import { List, InputGroup } from "../components/List";
 import MobileCreelForm from "../../components/MobileCreelForm";
 import DeleteBtn from "../../components/DeleteBtn";
 // //import EditBtn from "../components/EditBtn";
 // import Profile from "../components/Profile";
-import Heading from "../../components/Header";
+// import Heading from "../../components/Header";
 // import { Card } from "react-bootstrap";
 // import { Player, ControlBar, LoadingSpinner } from "video-react";
 import "../../../node_modules/video-react/dist/video-react.css";
 // import video from "../assets/videos/video.mp4";
 import { SubmitBtn } from "../../components/SubmitBtn";
-import Wrapper from "../../components/Wrapper";
+// import Wrapper from "../../components/Wrapper";
 
 class MobileCreel extends Component {
   constructor(props) {
