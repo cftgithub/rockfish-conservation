@@ -27,7 +27,7 @@ function CreelForm(props) {
           <InputGroup size='lg' className='input-group'>
             <InputGroup.Prepend>
               <InputGroup.Text id='inputGroupPrepend' className='form-label'>
-                Length
+                Length (inches)
               </InputGroup.Text>
             </InputGroup.Prepend>
             <Form.Control

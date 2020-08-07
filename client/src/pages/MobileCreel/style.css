@@ -1,0 +1,11 @@
+.mobile-creel {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background-color: white;
+}
+
+.mobile-creel-header {
+    color: white;
+    background-color: rgb(20, 94, 94)
+}

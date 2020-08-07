@@ -52,13 +52,11 @@ function App() {
       </MediaQuery>
       <MediaQuery maxDeviceWidth={767}>
         <MobileNavbar />
-        <Wrapper>
           {/* <Route exact path="/" component={MobileHome} />
           <Route exact path="/species" component={MobileSpecies} /> */}
           <Route exact path="/creel" component={MobileCreel} />
           {/* <Route exact path="/fishing" component={MobileFishing} />
           <Route exact path="/login" component={MobileLogin} /> */}
-        </Wrapper>
       </MediaQuery>
     </Router>
     </Provider>

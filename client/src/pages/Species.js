@@ -5,7 +5,7 @@ import Heading from "../components/Header";
 import Buttons from "../components/Buttons";
 import References from "../components/References";
 import fish from "../fish.json";
-import "../App.css";
+import "../components/Species/style.css";
 
 class App extends Component {
   state = {
