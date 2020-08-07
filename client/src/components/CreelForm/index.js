@@ -19,7 +19,6 @@ function CreelForm(props) {
               placeholder='what kind of rock fish did you catch?'
               aria-describedby='inputGroupPrepend'
               name='species'
-              id='creel-species-input'
               className='creel-input'
               onChange={props.onChange}
             />
@@ -35,7 +34,6 @@ function CreelForm(props) {
               placeholder='how long is your fish?'
               aria-describedby='inputGroupPrepend'
               name='length'
-              id='creel-length-input'
               className='creel-input'
               onChange={props.onChange}
             />
@@ -51,7 +49,6 @@ function CreelForm(props) {
               placeholder='mm/dd/yyyy'
               aria-describedby='inputGroupPrepend'
               name='date'
-              id='creel-date-input'
               className='creel-input'
               onChange={props.onChange}
             />
@@ -67,7 +64,6 @@ function CreelForm(props) {
               placeholder='where did you catch it?'
               aria-describedby='inputGroupPrepend'
               name='location'
-              id='creel-location-input'
               className='creel-input'
               onChange={props.onChange}
             />
