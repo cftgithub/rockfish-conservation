@@ -6,6 +6,7 @@ import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
 import "./login.css";
 import Heading from "../Header";
+import { Form } from "react-bootstrap";
 
 class Register extends Component {
     constructor() {
@@ -60,48 +61,45 @@ class Register extends Component {
                             </p>
                         </div>
                         <form noValidate onSubmit={this.onSubmit}>
-                            <div className="input-field col s12">
-                                <input
+                            <Form.Group controlId="email">
+                                <Form.Control
                                     onChange={this.onChange}
                                     value={this.state.email}
                                     error={errors.email}
-                                    id="email"
                                     type="email"
                                     className={classnames("", {
                                         invalid: errors.email
                                     })}
                                 />
-                                <label htmlFor="email">Email</label>
+                                <Form.Label>Email</Form.Label>
                                 <span className="redText">{errors.email}</span>
-                            </div>
-                            <div className="input-field col s12">
-                                <input
+                            </Form.Group>
+                            <Form.Group controlId="password">
+                                <Form.Control
                                     onChange={this.onChange}
                                     value={this.state.password}
                                     error={errors.password}
-                                    id="password"
                                     type="password"
                                     className={classnames("", {
                                         invalid: errors.password
                                     })}
                                 />
-                                <label htmlFor="password">Password</label>
+                                <Form.Label>Password</Form.Label>
                                 <span className="redText">{errors.password}</span>
-                            </div>
-                            <div className="input-field col s12">
-                                <input
+                            </Form.Group>
+                            <Form.Group controlId="confPassword">
+                                <Form.Control
                                     onChange={this.onChange}
                                     value={this.state.confPassword}
                                     error={errors.confPassword}
-                                    id="confPassword"
                                     type="password"
                                     className={classnames("", {
                                         invalid: errors.confPassword
                                     })}
                                 />
-                                <label htmlFor="confPassword">Confirm Password</label>
+                                <Form.Label>Confirm Password</Form.Label>
                                 <span className="redText">{errors.confPassword}</span>
-                            </div>
+                            </Form.Group>
                             <div>
                                 <button type="submit">Sign up</button>
                             </div>
