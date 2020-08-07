@@ -21,7 +21,6 @@ class Home extends Component {
                     loop
                     muted
                     playsInline
-                    fluid={false}
                     src={video}>
                     <ControlBar disabled />
                     <LoadingSpinner disabled />
