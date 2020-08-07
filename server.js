@@ -6,7 +6,7 @@ const users = require("./routes/api/users");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
-const db = require("./config/keys");
+// const db = require("./config/keys");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -27,7 +27,7 @@ app.use(routes);
 
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/creelDB", { useNewUrlParser: true, useUnifiedTopology: true });
 
-var MONGODB_URI = process.env.MOGODB_URI || db;
+var MONGODB_URI = process.env.MOGODB_URI || "mongodb://localhost/creelDB";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }, function (error) {
     if (error) {
         console.log(error);
