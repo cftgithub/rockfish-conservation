@@ -86,7 +86,7 @@ class Creel extends Component {
                     </Card.Title>
                     {this.state.catches.map((caught) => {
                       return (
-                        <List>
+                        <List key={caught._id}>
                           <InputGroup key={caught._id}>
                             <a href={"/creels/" + caught._id}>
                               <strong className='catch-text'>
