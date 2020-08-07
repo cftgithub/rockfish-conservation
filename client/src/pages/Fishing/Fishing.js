@@ -14,8 +14,7 @@ class App extends Component {
             <>
                 <div className='fishingpage container-fluid text-center'></div>
                 <Heading title={"Fishing Gear"} />
-                <div>                <Button id="game" variant="info" href="https://rileychatwin.github.io/Fishy/." target="_blank">Play Game</Button></div>
-
+                
                 <Wrapper>
                     {Fishing.map(fish => (
                         <SafeFishing
