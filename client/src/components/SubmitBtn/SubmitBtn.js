@@ -6,7 +6,6 @@ export function SubmitBtn(props) {
     <button
       className='btn submit-btn btn-lg align-items-center'
       {...props}
-      role='button'
       tabIndex='0'
       type='submit'
       onSubmit={ props.handleFormSubmit }>

@@ -5,6 +5,8 @@ import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
 import "./login.css";
+import Heading from "../Header";
+
 
 class Login extends Component {
     constructor() {
@@ -48,7 +50,8 @@ class Login extends Component {
         const { errors } = this.state;
         return (
             <>
-                <h1 id="loginTitle">Creel Login Page</h1>
+                <Heading title={'Creel Login Page'} />
+                <div className='speciespage container-fluid text-center'></div>
                 <div className="container">
                     <div className="row">
                         <div id="charColor" className="col-12 offset-s2">

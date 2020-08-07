@@ -4,7 +4,6 @@ import SafeFishing from "../../components/Fishing";
 import Heading from "../../components/Header";
 import Fishing from "../../fishing.json";
 import References from "../../components/References";
-import { Button } from "react-bootstrap";
 import "./style.css";
 
 class App extends Component {

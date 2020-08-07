@@ -5,12 +5,12 @@ import { List, InputGroup } from "../components/List";
 import CreelForm from "../components/CreelForm";
 import DeleteBtn from "../components/DeleteBtn";
 //import EditBtn from "../components/EditBtn";
-import Profile from "../components/Profile";
+// import Profile from "../components/Profile";
 import Heading from "../components/Header";
 import { Card } from "react-bootstrap";
-import { Player, ControlBar, LoadingSpinner } from "video-react";
+// import { Player, ControlBar, LoadingSpinner } from "video-react";
 import "../../node_modules/video-react/dist/video-react.css";
-import video from "../assets/videos/video.mp4";
+// import video from "../assets/videos/video.mp4";
 import { SubmitBtn } from "../components/SubmitBtn";
 
 class Creel extends Component {
