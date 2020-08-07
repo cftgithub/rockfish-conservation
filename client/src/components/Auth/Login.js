@@ -47,53 +47,62 @@ class Login extends Component {
     render() {
         const { errors } = this.state;
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col s8 offset-s2">
-                        <h4>Login to track your catches and help scientists monitor fish populations!</h4>
-                        <p>Don't have an account? <Link to="/register">Create one here!</Link></p>
+            <>
+                <h1 id="loginTitle">Creel Login Page</h1>
+                <div className="container">
+                    <div className="row">
+                        <div id="charColor" className="col-12 offset-s2">
+                            <h4>Login to track your catches and help scientists monitor fish populations!</h4>
+                            <p>Don't have an account? <Link to="/register">Create one here!</Link></p>
+                        </div>
+                        <div id="charColor" className="col-12 offset-s2">
+                            <form noValidate onSubmit={this.onSubmit}>
+                                <div className="form-group-row">
+                                    <div className="input-field col s12">
+                                        <input
+                                            onChange={this.onChange}
+                                            value={this.state.email}
+                                            error={errors.email}
+                                            id="email"
+                                            type="email"
+                                            className={classnames("", {
+                                                invalid: errors.email || errors.emailnotfound
+                                            })}
+                                        />
+                                        <label htmlFor="email">Email</label>
+                                        <span className="redText">
+                                            {errors.email}
+                                            {errors.emailnotfound}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="form-group-row">
+                                    <div className="input-field col s12">
+                                        <input
+                                            onChange={this.onChange}
+                                            value={this.state.password}
+                                            error={errors.password}
+                                            id="password"
+                                            type="password"
+                                            className={classnames("", {
+                                                invalid: errors.password || errors.passwordincorrect
+                                            })}
+                                        />
+                                        <label htmlFor="password">Password</label>
+                                        <span className="redText">
+                                            {errors.password}
+                                            {errors.passwordincorrect}
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <button type="submit">Login</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <form noValidate onSubmit={this.onSubmit}>
-                        <div className="input-field col s12">
-                            <input
-                                onChange={this.onChange}
-                                value={this.state.email}
-                                error={errors.email}
-                                id="email"
-                                type="email"
-                                className={classnames("", {
-                                    invalid: errors.email || errors.emailnotfound
-                                })}
-                            />
-                            <label htmlFor="email">Email</label>
-                            <span className="redText">
-                                {errors.email}
-                                {errors.emailnotfound}
-                            </span>
-                        </div>
-                        <div className="input-field col s12">
-                            <input
-                                onChange={this.onChange}
-                                value={this.state.password}
-                                error={errors.password}
-                                id="password"
-                                type="password"
-                                className={classnames("", {
-                                    invalid: errors.password || errors.passwordincorrect
-                                })}
-                            />
-                            <label htmlFor="password">Password</label>
-                            <span className="redText">
-                                {errors.password}
-                                {errors.passwordincorrect}
-                            </span>
-                        </div>
-                        <div>
-                            <button type="submit">Login</button>
-                        </div>
-                    </form>
                 </div>
-            </div>
+            </>
         );
     }
 }
