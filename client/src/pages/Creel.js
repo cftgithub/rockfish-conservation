@@ -47,7 +47,7 @@ class Creel extends Component {
 
   loadCatches = () => {
     API.getCreels()
-      .then((res) => this.setState({ catches: res.data, species: "", length: "" }))
+      .then((res) => this.setState({ catches: [res.data], species: "", length: "" }))
       .catch((err) => console.log(err));
   };
 
