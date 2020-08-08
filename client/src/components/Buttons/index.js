@@ -77,27 +77,27 @@ function Buttons({ filterFish }) {
   return (
     <div className="buttons">
       <Container>
-      <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popAll}>
-        <Button onClick={() => { filterFish("All") }} variant="info">All</Button>
-      </OverlayTrigger>
-      <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popGood}>
-        <Button onClick={() => { filterFish("Good") }} variant="info">Good</Button>
-      </OverlayTrigger>
-      <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popVul}>
-        <Button onClick={() => { filterFish("Vulnerable") }} variant="info">Vulnerable</Button>
-      </OverlayTrigger>
-      <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popThreat}>
-        <Button onClick={() => { filterFish("Threatened") }} variant="info">Threatened</Button>
-      </OverlayTrigger>
-      <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popEndanger}>
-        <Button onClick={() => { filterFish("Endangered") }} variant="info">Endangered</Button>
-      </OverlayTrigger>
-      <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popUnk}>
-        <Button onClick={() => { filterFish("Unknown") }} variant="info">Unknown</Button>
-      </OverlayTrigger>
-      <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popGame}>
-        <Button variant="info" href="https://cftgithub.github.io/rockfishGame/" target="_blank">Play Game</Button>
-      </OverlayTrigger>
+        <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popAll}>
+          <Button onClick={() => { filterFish("All") }} variant="info">All</Button>
+        </OverlayTrigger>
+        <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popGood}>
+          <Button onClick={() => { filterFish("Good") }} variant="info">Good</Button>
+        </OverlayTrigger>
+        <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popVul}>
+          <Button onClick={() => { filterFish("Vulnerable") }} variant="info">Vulnerable</Button>
+        </OverlayTrigger>
+        <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popThreat}>
+          <Button onClick={() => { filterFish("Threatened") }} variant="info">Threatened</Button>
+        </OverlayTrigger>
+        <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popEndanger}>
+          <Button onClick={() => { filterFish("Endangered") }} variant="info">Endangered</Button>
+        </OverlayTrigger>
+        <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popUnk}>
+          <Button onClick={() => { filterFish("Unknown") }} variant="info">Unknown</Button>
+        </OverlayTrigger>
+        <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popGame}>
+          <Button variant="info" href="https://cftgithub.github.io/rockfishGame/" target="_blank">Play Game</Button>
+        </OverlayTrigger>
       </Container>
     </div>
   );

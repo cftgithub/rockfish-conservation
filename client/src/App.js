@@ -34,31 +34,31 @@ if (localStorage.jwtToken) {
 function App() {
   return (
     <Provider store={store}>
-    <Router>
-      <MediaQuery minDeviceWidth={768}>
-        <Nav />
-        <Wrapper>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/species" component={Species} />
-          <Route exact path="/creel" component={Creel} />
-          <Route exact path="/fishing" component={Fishing} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={Login} />
-          <Switch>
-            <PrivateRoute exact path="/creel" component={Creel} />
-          </Switch>
-        </Wrapper>
-        <Footer /> 
-      </MediaQuery>
-      <MediaQuery maxDeviceWidth={767}>
-        <MobileNavbar />
+      <Router>
+        <MediaQuery minDeviceWidth={768}>
+          <Nav />
+          <Wrapper>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/species" component={Species} />
+            <Route exact path="/creel" component={Creel} />
+            <Route exact path="/fishing" component={Fishing} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
+            <Switch>
+              <PrivateRoute exact path="/creel" component={Creel} />
+            </Switch>
+          </Wrapper>
+          <Footer />
+        </MediaQuery>
+        <MediaQuery maxDeviceWidth={767}>
+          <MobileNavbar />
           {/* <Route exact path="/" component={MobileHome} />
           <Route exact path="/species" component={MobileSpecies} /> */}
           <Route exact path="/creel" component={MobileCreel} />
           {/* <Route exact path="/fishing" component={MobileFishing} />
           <Route exact path="/login" component={MobileLogin} /> */}
-      </MediaQuery>
-    </Router>
+        </MediaQuery>
+      </Router>
     </Provider>
   );
 }
