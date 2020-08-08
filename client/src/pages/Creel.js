@@ -84,6 +84,7 @@ class Creel extends Component {
                     <Card.Title className='catch-title'>
                       Catch History
                     </Card.Title>
+                    {console.log(this.state.catches)}
                     {this.state.catches.length > 0 ?  this.state.catches.map((caught) => {
                       return (
                         <List key={caught._id}>
