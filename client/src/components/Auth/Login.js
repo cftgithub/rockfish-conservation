@@ -7,7 +7,7 @@ import classnames from "classnames";
 import "./login.css";
 import Heading from "../Header";
 import { Form } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
 
 class Login extends Component {
     constructor() {
@@ -21,7 +21,8 @@ class Login extends Component {
 
     componentDidMount() {
         if (this.props.auth.isAuthenticated) {
-            this.props.history.push("/creel");
+            <Link to="/creel" />
+           // this.props.history.push("/creel");
         }
     }
 
