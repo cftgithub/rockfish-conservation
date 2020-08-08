@@ -25,9 +25,9 @@ class Creel extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  componentDidMount() {
-    this.loadCatches();
-  }
+  // componentDidMount() {
+  //   this.loadCatches();
+  // }
 
   handleChange(event) {
     this.setState({ [event.target.name]: event.target.value });
