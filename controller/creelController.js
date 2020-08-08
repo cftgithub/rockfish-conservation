@@ -4,7 +4,9 @@ module.exports = {
   findAll: function(req, res) {
     db.Creel
       .find()
-      .then(dbModel => res.json(dbModel.data))
+      .then(dbModel =>{ 
+        console.log(dbModel)
+        res.json(dbModel)})
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {
