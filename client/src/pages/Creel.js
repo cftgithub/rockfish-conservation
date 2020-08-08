@@ -84,7 +84,7 @@ class Creel extends Component {
                     <Card.Title className='catch-title'>
                       Catch History
                     </Card.Title>
-                    {this.state.catches.map((caught) => {
+                    {this.state.catches.length > 0 ?  this.state.catches.map((caught) => {
                       return (
                         <List key={caught._id}>
                           <InputGroup key={caught._id}>
@@ -101,7 +101,7 @@ class Creel extends Component {
                           </InputGroup>
                         </List>
                       );
-                    })}
+                    }) : ""  }
                   </Card.Body>
                 </Card>
               </div>
