@@ -12,7 +12,7 @@ class App extends Component {
             <>
                 <div className='fishingpage container-fluid text-center'></div>
                 <Heading title={"Fishing Gear"} />
-                
+
                 <Wrapper>
                     {Fishing.map(fish => (
                         <SafeFishing

@@ -5,9 +5,8 @@ const passport = require("passport");
 const users = require("./routes/api/users");
 const routes = require("./routes");
 const app = express();
-const PORT = process.env.PORT || 3001;
-// const db = require("./config/keys");
 const path = require("path");
+const PORT = process.env.PORT || 3001;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -26,15 +25,13 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(routes);
 
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/creelDB", { useNewUrlParser: true, useUnifiedTopology: true });
-
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/creelDB";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }, function (error) {
-    if (error) {
-        console.log(error);
-    } else {
-        console.log("mongoose connection successful");
-    }
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("mongoose connection successful");
+  }
 });
 
 app.use(passport.initialize());
