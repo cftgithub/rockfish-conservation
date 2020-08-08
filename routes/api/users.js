@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 const User = require("../../models/user");
-// require ("dotenv").config();
+require ("dotenv").config();
 
 router.post("/register", (req, res) => {
     const { errors, isValid } = validateRegisterInput(req.body);
