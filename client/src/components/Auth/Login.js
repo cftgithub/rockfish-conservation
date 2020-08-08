@@ -21,8 +21,8 @@ class Login extends Component {
 
     componentDidMount() {
         if (this.props.auth.isAuthenticated) {
-            <Link to="/creel" />
-           // this.props.history.push("/creel");
+             
+         window.location.href="/creel";
         }
     }
 
