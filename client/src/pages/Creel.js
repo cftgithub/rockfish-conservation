@@ -12,7 +12,7 @@ import { Card } from "react-bootstrap";
 import "../../node_modules/video-react/dist/video-react.css";
 // import video from "../assets/videos/video.mp4";
 import { SubmitBtn } from "../components/SubmitBtn";
-
+import axios from "axios"
 class Creel extends Component {
   constructor(props) {
     super(props);
@@ -67,6 +67,9 @@ class Creel extends Component {
 
   handleTest=()=>{
     this.loadCatches()   
+    axios.get("/api/creels").then(results=>{
+      console.log(results)
+    })
      alert("test")}
   render() {
     return (
