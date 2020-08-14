@@ -44,9 +44,9 @@ function App() {
             <Route exact path="/fishing" component={Fishing} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
-            <Switch>
+            {/* <Switch>
               <PrivateRoute exact path="/creel" component={Creel} />
-            </Switch>
+            </Switch> */}
           </Wrapper>
           <Footer />
         </MediaQuery>
