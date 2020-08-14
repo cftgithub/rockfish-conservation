@@ -54,7 +54,7 @@ function App() {
           <MobileNavbar />
           {/* <Route exact path="/" component={MobileHome} />
           <Route exact path="/species" component={MobileSpecies} /> */}
-          <Route exact path="/creel" component={MobileCreel} />
+          {/* <Route exact path="/creel" component={MobileCreel} /> */}
           {/* <Route exact path="/fishing" component={MobileFishing} />
           <Route exact path="/login" component={MobileLogin} /> */}
         </MediaQuery>

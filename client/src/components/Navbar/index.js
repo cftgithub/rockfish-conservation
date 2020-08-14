@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { NavLink, withRouter } from "react-router-dom";
+import {Link, NavLink, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { Navbar } from "react-bootstrap";
 import { loginUser } from "../../actions/authActions";
 import PropTypes from "prop-types";
 import Profile from "../Profile";
 import "./style.css";
+
 
 class Nav extends Component {
 
@@ -54,12 +55,12 @@ class Nav extends Component {
                   Species Identification</NavLink>
               </li>
               <li className="nav-item nav-link">
-                <NavLink to="/creel"
+                <Link to="/creel"
                   className={window.location.pathname === "/creel" ? "active" : ""}
                   activeStyle={{ color: "white" }}
                   style={{ color: "white" }}
                 >
-                  Creel</NavLink>
+                  Creel</Link>
               </li>
               <li className="nav-item nav-link">
                 <NavLink to="/fishing"
