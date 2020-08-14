@@ -21,7 +21,7 @@ class Login extends Component {
     componentDidMount() {
         if (this.props.auth.isAuthenticated) {
              
-         window.location.href="/creel";
+    
         }
     }
 
@@ -44,7 +44,9 @@ class Login extends Component {
             password: this.state.password
         };
 
-        this.props.loginUser(userData, this.props.history);
+        this.props.loginUser(userData, this.props.history)
+       
+        
     };
 
     render() {
