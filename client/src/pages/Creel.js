@@ -48,8 +48,8 @@ class Creel extends Component {
   loadCatches = () => {
     API.getCreels()
       .then(res =>{
-         this.setState({ catches: res }) 
-          console.log(res)
+         this.setState({ catches: res.data }) 
+          console.log(res.data)
         }  )
       .catch(err => console.log(err));
   };
