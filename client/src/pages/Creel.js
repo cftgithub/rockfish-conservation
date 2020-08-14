@@ -48,8 +48,9 @@ class Creel extends Component {
   loadCatches = () => {
     API.getCreels()
       .then(res =>{
-         this.setState({ catches: res.data }) 
-          console.log(res.data)
+         this.setState({ catches: res }) 
+        
+         console.log(res)
         }  )
       .catch(err => console.log(err));
   };
@@ -64,9 +65,13 @@ class Creel extends Component {
     API.saveCreel(species, length).then((res) => this.loadCatches());
   };
 
+  handleTest=()=>{
+    this.loadCatches()   
+     alert("test")}
   render() {
     return (
       <>
+     
         <div className='creelpage container-fluid text-center'></div>
         <div className='col-lg-12 col-md-auto p-0 d-flex justify-content-center text-center cards'>
           <div className='container-fluid creel'>
@@ -80,6 +85,7 @@ class Creel extends Component {
               <div className='col-6 text-center'>
                 <CreelForm onChange={this.handleChange} />
                 <SubmitBtn onClick={this.handleFormSubmit} />
+                <button onClick={this.handleTest}>test</button>
               </div>
               <div className='col-6 text-center'>
                 <Card className='catch-card'>
