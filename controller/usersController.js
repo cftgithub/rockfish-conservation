@@ -25,7 +25,7 @@ module.exports = function (app) {
     });
 
     app.post('/users/login', passport.authenticate('local-login', {
-        successRedirect: '/Creel',
+        successRedirect: '/creels',
         failureRedirect: '/'
     }));
 
@@ -42,7 +42,7 @@ module.exports = function (app) {
     });
 
     app.post('/users/register', passport.authenticate('local-register', {
-        successRedirect: '/Creel',
+        successRedirect: '/creels',
         failureRedirect: '/'
     }));
 
