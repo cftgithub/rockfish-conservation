@@ -48,9 +48,9 @@ class Creel extends Component {
   loadCatches = () => {
     API.getCreels()
       .then(res =>{
-         this.setState({ catches: res }) 
+         this.setState({ catches: res.data }) 
         
-         console.log(res)
+         console.log(res.data)
         }  )
       .catch(err => console.log(err));
   };
@@ -88,7 +88,7 @@ class Creel extends Component {
               <div className='col-6 text-center'>
                 <CreelForm onChange={this.handleChange} />
                 <SubmitBtn onClick={this.handleFormSubmit} />
-                <button onClick={this.handleTest}>test</button>
+                {/* <button onClick={this.handleTest}>test</button> */}
               </div>
               <div className='col-6 text-center'>
                 <Card className='catch-card'>
