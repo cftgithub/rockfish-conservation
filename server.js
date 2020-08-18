@@ -13,6 +13,8 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use(routes);
+
 if (process.env.NODE_ENV === "production") {
   // Express will serve up production assets
   app.use(express.static("client/build"));
@@ -23,7 +25,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.use(routes);
+
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/creelDB";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }, function (error) {
