@@ -23,14 +23,9 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true 
   }
 });
 
-app.use(passport.initialize());
-
-require("./config/pass")(passport);
-
-app.use("/api/users", users);
 
 
-app.use(routes);
+
 if (process.env.NODE_ENV === "production") {
   // Express will serve up production assets
   app.use(express.static("client/build"));
@@ -40,6 +35,13 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(index);
   });
 }
+
+app.use(passport.initialize());
+
+require("./config/pass")(passport);
+
+app.use("/api/users", users);
+app.use(routes);
 
 
 app.listen(PORT, () => {
