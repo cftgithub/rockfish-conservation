@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/creelDB";
+var MONGODB_URI = "mongodb://heroku_4txb6x7g:jhth8m1qvf3sa9b3na29ur6rb1@ds213199.mlab.com:13199/heroku_4txb6x7g"  
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }, function (error) {
   if (error) {
     console.log(error);

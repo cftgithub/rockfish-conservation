@@ -55,8 +55,8 @@ class Nav extends Component {
                   Species Identification</NavLink>
               </li>
               <li className="nav-item nav-link">
-                <Link to="/creel"
-                  className={window.location.pathname === "/creel" ? "active" : ""}
+                <Link to="/creels"
+                  className={window.location.pathname === "/creels" ? "active" : ""}
                   activeStyle={{ color: "white" }}
                   style={{ color: "white" }}
                 >

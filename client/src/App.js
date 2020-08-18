@@ -40,7 +40,7 @@ function App() {
           <Wrapper>
             <Route exact path="/" component={Home} />
             <Route exact path="/species" component={Species} />
-            <Route exact path="/creel" component={Creel} />
+            <Route exact path="/creels" component={Creel} />
             <Route exact path="/fishing" component={Fishing} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
