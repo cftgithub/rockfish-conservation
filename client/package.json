@@ -7,11 +7,8 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.3.0",
     "react-dom": "^16.13.1",
-<<<<<<< HEAD
-=======
     "react-responsive": "^8.1.0",
     "react-redux": "^7.2.1",
->>>>>>> b3a6e1922ec084420e7727f250546afe0e2be1c0
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
