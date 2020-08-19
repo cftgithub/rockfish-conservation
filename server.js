@@ -7,12 +7,8 @@ const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 
-<<<<<<< HEAD
-// Define middleware here
-=======
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
->>>>>>> b3a6e1922ec084420e7727f250546afe0e2be1c0
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
