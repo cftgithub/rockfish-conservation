@@ -3,8 +3,12 @@
 }
 
 .refList li {
-    display: block;
-    float: left;
-    margin: 0 10px;
+    display: inline;
+    padding: 0 10px;
     text-decoration: underline;
+    font-size: 10px;
+}
+
+#footLink {
+    color: white;
 }

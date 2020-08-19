@@ -1,0 +1,52 @@
+.mobile-navbar {
+    background-color: rgb(248, 85, 35);
+    position: sticky;
+    width: 100%;
+    z-index: 2;
+    padding: 0;
+}
+
+.mobile-navbar .navbar-brand {
+    color: white;
+    font-size: 30px;
+    margin: 8px 10px 0px 20px;
+}
+
+.mobile-navbar-header {
+    width: 100%;
+    display: block;
+}
+
+.fa-bars {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+ul.collapsed {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-height: 0;
+    
+}
+
+ul.is-expanded {
+    display: flex;
+    width: 100%;
+    max-height: 500px;
+    color: white;
+}
+
+.mobile-nav-links {
+    float: right;
+    padding: 5px 10px 5px 10px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}

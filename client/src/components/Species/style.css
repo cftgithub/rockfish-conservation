@@ -1,20 +1,33 @@
+.speciespage {
+  background-image: url("../../assets/images/ocean.png");
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  z-index: -1;
+}
+
 .fish {
   height: 175px;
   width: 200px;
 }
   
-/* .img-card {
-  height: 100%;
-  margin: 10px;
-  border: 5px solid rgb(161, 97, 36);
-} */
+.img-card {
+  margin: 15px;
+  border: 5px solid rgb(2, 52, 82);
+  border-radius: 3px;
+}
 
 .species-card {
-  margin-bottom: 20px;
-  background-color:#f1dbaa;
-  border-radius: 2px;
-  position: relative;
-  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  height: fit-content;
+  margin: 20px 10px;
+  background-color:#b5d1cc;
+  box-shadow: 6px 3px 3px rgb(68, 108, 117);
+  border: 1px solid rgb(4, 126, 156);
 }
 
 .content {
@@ -25,6 +38,21 @@
 ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+}
+
+#modalBtn {
+  width: 210px;
+}
+
+#modalHeader {
+  background-color: #a9d8f3;
+  border: 1px solid #68a3c5;
+}
+
+#modalBody {
+  background-color: #c0d6e4;
+  border: 1px solid #68a3c5;
 }
 
 

@@ -1,0 +1,67 @@
+label {
+    padding: 3px 0px;
+}
+
+#charColor {
+    color: white;
+    text-shadow: 1px 1px 3px rgb(8, 10, 15), 1px 1px 3px rgb(1, 6, 20), 1px 3px 6px rgb(4, 26, 85);
+    padding: 0 200px;
+}
+
+#aLink {
+    color: rgb(228, 241, 247);
+    text-shadow: 1px 1px 3px rgb(10, 13, 19), 1px 2px 6px rgb(10, 13, 20), 1px 3px 6px rgb(4, 26, 85);
+}
+
+.container {
+    text-align: center;
+}
+
+.form-control {
+    border: 1px solid rgb(97, 116, 136);
+    box-shadow: 2px 2px 2px rgb(105, 117, 131);
+}
+
+.redText { 
+    display: block;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: rgb(1, 36, 56);
+    color: white;
+    width: 100px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1200px){
+    #charColor {
+        padding: 0 100px;
+    }    
+}
+
+@media only screen and (max-width: 1000px){
+    #charColor {
+        padding: 0 50px;
+    }    
+}
+
+@media only screen and (max-width: 1000px){
+    #charColor {
+        padding: 0;
+    }
+    .title {
+        font-size: 70px;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .title {
+        font-size: 50px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+}

@@ -1,29 +1,23 @@
 /* THIS STYLESHEET IS FOR THE CREEL PAGE (client/src/pages/Creel.js) AND SHOULD BE ON THE SAME DIRECTORY AS Creel.js */
 
 .creelpage {
+    background-image: url("../assets/images/ocean.png");
+    background-size: cover;
+    background-position: fixed;
+    background-repeat: no-repeat;
     position: fixed;
     top: 0;
     width: 100vw;
+    height: 100vh;
     padding: 0;
     z-index: -1;
 }
 
-.header-box {
-    background-color: rgba(100, 109, 117, 0.8);
-    padding: 10px;
-}
-
-.title {
-    color: white;
-    font-family: 'Bebas Neue', cursive;
-    font-weight: bold;
-    font-size: 80px;
-}
-
-.subtitle {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+.creel-header {
+    padding: 0px !important;
+    margin: 0px 50px 0px 50px !important;
+    border-radius: 5px;
+    text-shadow: 1px 1px 20px rgb(1, 22, 34), 20px 20px 30px rgb(174, 221, 243), 60px 40px 40px rgb(161, 176, 184);
 }
 
 .catch-card {
@@ -51,4 +45,5 @@
     color: rgba(100, 109, 117);
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
+    box-shadow: none !important;
 }

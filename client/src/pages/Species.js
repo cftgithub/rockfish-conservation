@@ -3,14 +3,10 @@ import Species from "../components/Species";
 import Wrapper from "../components/Wrapper";
 import Heading from "../components/Header";
 import Buttons from "../components/Buttons";
-import References from "../components/References";
 import fish from "../fish.json";
-// import Modal from "../components/Modal";
-// import "../App.css";
+import "../components/Species/style.css";
 
-// Code below handles append
 class App extends Component {
-  // Sets this.state.fish to the fish json array
   state = {
     fish,
     filteredFish: fish
@@ -34,6 +30,7 @@ class App extends Component {
         <Heading title={'Rockfish Identification'} />
         <Buttons filterFish={this.buttonFilter.bind(this)} />
         <Wrapper>
+          <div className='speciespage text-center'></div>
           {this.state.filteredFish.map((fish, index) => {
             return <Species
               key={index}
@@ -48,9 +45,7 @@ class App extends Component {
               setFilter={this.buttonFilter}
             />
           })}
-          {/* <Modal /> */}
         </Wrapper>
-        <References />
       </>
     );
   }
