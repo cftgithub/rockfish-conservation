@@ -27,14 +27,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-<<<<<<< HEAD
-app.use(session({
-  secret: process.env.SALT,
-  resave: false,
-  saveUninitialized: true,
-  cookie: { maxAge: 24 * 60 * 60 * 1000 }
-})); 
-=======
 app.use(routes);
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/creelDB";
@@ -45,7 +37,6 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true 
     console.log("mongoose connection successful");
   }
 });
->>>>>>> b3a6e1922ec084420e7727f250546afe0e2be1c0
 
 app.use(passport.initialize());
 app.use(passport.session()); 
