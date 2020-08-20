@@ -5,7 +5,7 @@ class Test extends Component{
         creels: []
     }
     componentDidMount(){
-       API.getCreels().then(results => {
+       API.testCreels().then(results => {
            console.log (results)
        })
     }

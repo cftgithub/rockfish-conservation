@@ -13,6 +13,6 @@ router
   .post(creelController.create);
 
 
-  router.route("/test").get(testCreelController.findAll)
+   
   
 module.exports = router;
