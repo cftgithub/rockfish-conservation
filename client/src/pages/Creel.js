@@ -48,6 +48,7 @@ class Creel extends Component {
   loadCatches = () => {
     API.getCreels()
       .then(res => this.setState({ catches: res.data }))
+      .then(console.log(this.state.catches))
       .catch(err => console.log(err));
   };
 
@@ -85,7 +86,6 @@ class Creel extends Component {
                       Catch History
                     </Card.Title>
                     {this.state.catches.map((caught) => {
-                      console.log(caught + "test")
                       return (
                         <List key={caught._id}>
                           <InputGroup key={caught._id}>
