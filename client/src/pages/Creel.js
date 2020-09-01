@@ -85,6 +85,7 @@ class Creel extends Component {
                       Catch History
                     </Card.Title>
                     {this.state.catches.map((caught) => {
+                      console.log(caught + "test")
                       return (
                         <List key={caught._id}>
                           <InputGroup key={caught._id}>
