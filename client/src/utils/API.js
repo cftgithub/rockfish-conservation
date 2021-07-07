@@ -4,6 +4,9 @@ export default {
     getCreels: function() {
         return axios.get("/api/creels");
     },
+    testCreels: function() {
+        return axios.get("/api/testCreels");
+    },
     getCreel: function(id) {
         return axios.get("/api/creels/" + id);
     },

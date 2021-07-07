@@ -18,7 +18,7 @@ import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 import MobileNavbar from "./components/MobileNavbar";
 import MediaQuery from 'react-responsive';
-
+import Test from "./pages/test"
 if (localStorage.jwtToken) {
   const token = localStorage.jwtToken;
   setAuthToken(token);
@@ -44,6 +44,7 @@ function App() {
             <Route exact path="/fishing" component={Fishing} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/test" component={Test} />
             <Switch>
               <PrivateRoute exact path="/creel" component={Creel} />
             </Switch>
